@@ -24,11 +24,12 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib import admin
-from . import view,testdb,users,Login
+from . import view,testdb,users
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/',view.hello),
     url(r'^testdb/',testdb.testdb),
-    url(r'^users/',users.userList),
-    url(r'^login/',Login.login),
+    url(r'^users/userList',users.userList),
+    url(r'^users/login', users.login),
+    url(r'^users/register', users.register),
 ]
