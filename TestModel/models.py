@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from  django.db import models
-
+import datetime
 class Test(models.Model):
     name = models.CharField(max_length=20)
     title = models.CharField(max_length=200,default="",editable=False)
@@ -43,4 +43,19 @@ class User(models.Model):
 
     def __unicode__(self):
         return self.nickname
+
+class Book(models.Model):
+    link = models.CharField(max_length=255,default='')
+    image = models.CharField(max_length=255, default='')
+    title = models.CharField(max_length=255, default='')
+    desciption = models.CharField(max_length=255, default='')
+    category = models.CharField(max_length=255, default='')
+    author = models.CharField(max_length=255, default='')
+    name = models.CharField(max_length=255, default='')
+    status = models.BooleanField(default=False)
+    author_link = models.CharField(max_length=255, default='')
+    update_time = models.DateField(max_length=255, default=datetime.datetime.now())
+    downloadurl = models.CharField(max_length=255, default='')
+    def __unicode__(self):
+        return self.name
 

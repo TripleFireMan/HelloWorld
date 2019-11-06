@@ -45,7 +45,7 @@ def login(request):
         else:
             result = {'status': 'success', 'code': -1,
                       'data': {},
-                      'message': '登录失败,密码错粗'}
+                      'message': '登录失败,密码错误'}
             print(result)
             return HttpResponse([str(json.dumps(result))])
     except User.DoesNotExist:

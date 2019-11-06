@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^users/userList',users.userList),
     url(r'^users/login', users.login),
     url(r'^users/register', users.register),
+    url(r'^view/bookList',view.bookList),
 ]
