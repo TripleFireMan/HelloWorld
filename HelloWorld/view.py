@@ -85,3 +85,7 @@ def category(request):
     dic['result'] = List
     print(dic)
     return HttpResponse(json.dumps(dic))
+
+@csrf_exempt
+def testwebhook(request):
+    return HttpResponse('hehe')
