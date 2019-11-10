@@ -25,7 +25,7 @@ SECRET_KEY = '!lq6&3dj1f9ttdz34ugknhf)ac-4!s5is)tj=)j!4t5urj#@y^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.6.77','127.0.0.1','localhost','192.168.0.102']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'hello',
         'USER': 'root',  # 你的用户名
-        'PASSWORD': '88888888', # 你的密码
-        'HOST': '127.0.0.1', #你的IP地址
+        'PASSWORD': 'Chengyan#251', # 你的密码
+        'HOST': 'localhost', #你的IP地址
         'PORT': '3306',  # 你的端口号
     }
 }
