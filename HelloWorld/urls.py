@@ -25,6 +25,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from . import view,testdb,users
+from django.contrib.staticfiles.views import serve
+from django.urls import re_path
+
+def return_static(request, path, insecure=True, **kwargs):
+    return serve(request, path, insecure, **kwargs)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello/',view.hello),
@@ -35,4 +40,5 @@ urlpatterns = [
     url(r'^view/bookList',view.bookList),
     url(r'^view/category',view.category),
     url(r'^view/testwebhook', view.testwebhook),
+    re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
 ]
