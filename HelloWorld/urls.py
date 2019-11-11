@@ -40,5 +40,5 @@ urlpatterns = [
     url(r'^view/bookList',view.bookList),
     url(r'^view/category',view.category),
     url(r'^view/testwebhook', view.testwebhook),
-    re_path(r'^static/(?P<path>.*)$', return_static, name='collect_static'),  # 添加这行
+    re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
 ]
