@@ -74,9 +74,9 @@ class Book(models.Model):
         if category:
             objects = objects.filter(bookCategory_id=category)
         if keywords:
-            title_objects = objects.filter(title__icontains=keywords)
+            title_objects = objects.filter(name__icontains=keywords)
             author_objects = objects.filter(author__icontains=keywords)
-            descrotion_objects = objects.filter(desciption__icontains=keywords)
+            descrotion_objects = objects.filter(des__icontains=keywords)
             objects = author_objects | title_objects | descrotion_objects
         objects = objects.order_by('-update_time')
         return objects
