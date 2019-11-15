@@ -52,20 +52,18 @@ class BookCategory(models.Model):
         return self.name
 
 class Book(models.Model):
-    link = models.CharField(max_length=255,default='')
+    read_url = models.CharField(max_length=255, default='')
+    des = models.CharField(max_length=1000, default='')
     image = models.CharField(max_length=255, default='')
-    pic = models.CharField(max_length=255,default='')
-    title = models.CharField(max_length=255, default='')
-    desciption = models.CharField(max_length=255, default='')
     category = models.CharField(max_length=255, default='')
     author = models.CharField(max_length=255, default='')
-    name = models.CharField(max_length=255, default='')
-    status = models.BooleanField(default=False)
-    author_link = models.CharField(max_length=255, default='')
+    status = models.CharField(max_length=255, default='')
     update_time = models.DateField(max_length=255, default=timezone.now())
-    downloadurl = models.CharField(max_length=255, default='')
-    file_url    = models.CharField(max_length=255, default='')
-    bookCategory = models.ForeignKey(BookCategory,on_delete=models.CASCADE)
+    latest_chapter_name = models.CharField(max_length=255, default='')
+    latest_chapter_url = models.CharField(max_length=255, default='')
+    name = models.CharField(max_length=255, default='')
+    download_url = models.CharField(max_length=255, default='')
+    bookCategory = models.ForeignKey(BookCategory, on_delete=models.CASCADE)
     def __unicode__(self):
         return self.name
 
@@ -80,6 +78,7 @@ class Book(models.Model):
             author_objects = objects.filter(author__icontains=keywords)
             descrotion_objects = objects.filter(desciption__icontains=keywords)
             objects = author_objects | title_objects | descrotion_objects
+        objects = objects.order_by('-update_time')
         return objects
 
 class Chapter(models.Model):
