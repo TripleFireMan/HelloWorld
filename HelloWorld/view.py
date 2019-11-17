@@ -28,12 +28,12 @@ def hello(request):
     # print(request)
     os.system('cd /home/HelloWorld')
     os.system('git pull')
-    # os.system('sudo killall -9 uwsgi')
-    # os.system('sudo uwsgi uwsgi.ini')
+    os.system('sudo killall -9 uwsgi')
+    os.system('sudo uwsgi uwsgi.ini')
     os.system('nginx -s reload')
     return HttpResponse('success')
 def testGouzi(request):
-    return HttpResponse('66666666')
+    return HttpResponse('7777')
 
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
