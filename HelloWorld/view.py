@@ -24,8 +24,8 @@ def hello(request):
     context = {}
     context['hello'] = 'hello world'
     # print(request)
-    # os.system('cd /home/HelloWorld')
-    # os.system('git pull')
+    os.system('cd /home/HelloWorld')
+    os.system('git pull')
     # os.system('sudo killall -9 uwsgi')
     # os.system('uwsgi uwsgi.ini')
     # os.system('nginx -s reload')
