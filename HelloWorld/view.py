@@ -23,6 +23,7 @@ from django.views.decorators.csrf import csrf_exempt
 def hello(request):
     context = {}
     context['hello'] = 'hello world'
+    print(request)
     return render(request,'hello.html',context)
 
 class DateEncoder(json.JSONEncoder):
