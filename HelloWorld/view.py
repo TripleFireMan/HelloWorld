@@ -31,6 +31,8 @@ def hello(request):
     os.system('nginx -s reload')
     print('success')
     return HttpResponse('SUCCESSS')
+def testGouzi(request):
+    return HttpResponse('jUST DO IT')
 
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
