@@ -29,6 +29,7 @@ def hello(request):
     os.system('sudo killall -9 uwsgi')
     os.system('uwsgi uwsgi.ini')
     os.system('nginx -s reload')
+    print('success')
     return render(request,'hello.html',context)
 
 class DateEncoder(json.JSONEncoder):
