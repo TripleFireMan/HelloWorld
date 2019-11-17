@@ -20,6 +20,8 @@ import json
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
+
+@csrf_exempt
 def hello(request):
     # context = {}
     # context['hello'] = 'hello world'
