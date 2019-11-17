@@ -26,9 +26,9 @@ def hello(request):
     print(request)
     os.system('cd /home/HelloWorld')
     os.system('git pull')
-    os.system('sudo killall -9 uwsgi')
-    os.system('uwsgi uwsgi.ini')
-    os.system('nginx -s reload')
+    # os.system('sudo killall -9 uwsgi')
+    # os.system('uwsgi uwsgi.ini')
+    # os.system('nginx -s reload')
     return HttpResponse('SUCCESSS')
 def testGouzi(request):
     return HttpResponse('wahaha')
