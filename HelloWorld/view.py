@@ -30,7 +30,7 @@ def hello(request):
     os.system('uwsgi uwsgi.ini')
     os.system('nginx -s reload')
     print('success')
-    return render(request,'hello.html',context)
+    return HttpResponse('SUCCESSS')
 
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
