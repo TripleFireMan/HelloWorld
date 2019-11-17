@@ -32,7 +32,7 @@ def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/',view.hello),
+    url(r'^hello',view.hello),
     url(r'^justDoIt',view.testGouzi),
     url(r'^testdb/',testdb.testdb),
     url(r'^users/userList',users.userList),
