@@ -21,15 +21,15 @@ import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
 def hello(request):
-    context = {}
-    context['hello'] = 'hello world'
+    # context = {}
+    # context['hello'] = 'hello world'
     # print(request)
     # os.system('cd /home/HelloWorld')
     # os.system('git pull')
     # os.system('sudo killall -9 uwsgi')
     # os.system('uwsgi uwsgi.ini')
     # os.system('nginx -s reload')
-    return HttpResponse(json.dumps(context))
+    return HttpResponse('hellll')
 def testGouzi(request):
     return HttpResponse('fuck')
 
