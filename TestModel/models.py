@@ -72,7 +72,11 @@ class Book(models.Model):
         keywords = request.GET.get('keywords')
         print(category)
         if category:
-            objects = objects.filter(bookCategory_id=category)
+            if str(category) == '7':
+                print(category)
+                objects = objects.filter(status__icontains='完本')
+            else:
+                objects = objects.filter(bookCategory_id=category)
         if keywords:
             title_objects = objects.filter(name__icontains=keywords)
             author_objects = objects.filter(author__icontains=keywords)

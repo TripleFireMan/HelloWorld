@@ -1,3 +1,4 @@
 .idea
 db.sqlite3
 HelloWorld/__pycache__/
+HelloWorld/settings.py
