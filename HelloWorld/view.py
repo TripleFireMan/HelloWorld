@@ -100,3 +100,20 @@ def category(request):
 @csrf_exempt
 def testwebhook(request):
     return HttpResponse('hehe')
+
+@csrf_exempt
+def sheetUpdate(request):
+    sheetsJson = request.GET.get('content')
+    sheets = json.loads(sheetsJson).get('sheets')
+    books = Book.objects.all()
+    List = []
+    result = books.filter(id__in = sheets)
+    for obj in result:
+        model = model_to_dict(obj)
+        List.append(model)
+    dict = {}
+    dict['code'] = '1'
+    dict['message'] = '请求成功'
+    dict['result'] = List
+    print(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
+    return HttpResponse(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
