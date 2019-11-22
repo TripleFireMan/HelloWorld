@@ -42,7 +42,8 @@ urlpatterns = [
     url(r'^view/category',view.category),
     url(r'^view/testwebhook', view.testwebhook),
     url(r'^view/sheetUpdate',view.sheetUpdate),
-
+    url(r'^view/readBook',view.readBook),
+    url(r'^view/chapters',view.chapters),
 
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
 ]

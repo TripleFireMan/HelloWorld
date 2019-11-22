@@ -12,7 +12,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
-from TestModel.models import Book,BookCategory
+from TestModel.models import Book,BookCategory,Chapter
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 import pymysql
 from django.forms.models import model_to_dict
@@ -20,6 +20,7 @@ import json
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
+from HelloWorld.settings import STATIC_ROOT
 
 @csrf_exempt
 def hello(request):
@@ -99,6 +100,7 @@ def category(request):
 
 @csrf_exempt
 def testwebhook(request):
+    print(request.Get.get('id'))
     return HttpResponse('hehe')
 
 @csrf_exempt
@@ -117,3 +119,51 @@ def sheetUpdate(request):
     dict['result'] = List
     print(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
     return HttpResponse(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
+
+@csrf_exempt
+def readBook(request):
+    chaptList = Chapter.objects.all()
+    chaptList = Chapter.filterChapters(chaptList, request)
+    dict = {}
+    L = []
+    bookid = request.GET.get('bookId', 3978)
+    chaptid = request.GET.get('chapterId', 0)
+    for p in chaptList:
+        b = model_to_dict(p)
+
+        bookname = ''
+        BookList = Book.objects.all()
+        BookList = BookList.filter(id=int(bookid))
+        for obj in BookList:
+            bookname = obj.name
+        print(bookname)
+
+        fileDirectpath = os.path.join(STATIC_ROOT, 'ebooks')
+        fileDirectpath = os.path.join(fileDirectpath, bookname)
+        fileDirectpath = os.path.join(fileDirectpath, bookname)
+        fileDirectpath = os.path.join(fileDirectpath, '%s.txt' % b.get('chaperIdx'))
+        print(fileDirectpath)
+        content = ''
+        with open(fileDirectpath, 'r') as f:
+            content = f.read()
+        b['content'] = content
+        L.append(b)
+    dict['code'] = '1'
+    dict['message'] = '请求成功'
+    dict['result'] = L
+    return HttpResponse(json.dumps(dict, ensure_ascii=False))
+
+@csrf_exempt
+def chapters(request):
+    chaptList = Chapter.objects.all()
+    chaptList = Chapter.filterAllChapters(chaptList, request)
+    dict = {}
+    L = []
+    for p in chaptList:
+        b = model_to_dict(p)
+        L.append(b)
+    dict['code'] = '1'
+    dict['message'] = '请求成功'
+    dict['result'] = L
+    return HttpResponse(json.dumps(dict, ensure_ascii=False))
+    #从章节列表中获取

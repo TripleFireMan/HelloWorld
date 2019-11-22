@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from  django.db import models
 from  django.utils import timezone
+import os
 
 import datetime
 class Test(models.Model):
@@ -89,8 +90,30 @@ class Chapter(models.Model):
     name = models.CharField(max_length=255,default='')
     book = models.ForeignKey(Book,on_delete=models.CASCADE)
     path = models.CharField(max_length=255,default='')
+    chaperIdx =models.IntegerField(default=0)
     def __unicode__(self):
         return self.name
+
+    def filterChapters(objects,request):
+        bookid = request.GET.get('bookId',3978)
+        print(bookid)
+        chaptid = request.GET.get('chapterId',0)
+        chaptid = int(chaptid)
+        if bookid:
+            objects = objects.filter(book_id=bookid)
+
+        if chaptid == 0:
+                objects = objects.filter(chaperIdx=chaptid) | objects.filter(chaperIdx=chaptid + 1)
+        else:
+            objects = objects.filter(chaperIdx=chaptid) | objects.filter(chaperIdx=chaptid - 1) | objects.filter(
+                chaperIdx=chaptid + 1)
+        return objects
+
+    def filterAllChapters(objects,request):
+        bookid = request.GET.get('bookId', 3978)
+        if bookid:
+            objects = objects.filter(book_id=bookid)
+        return objects
 
 
 
