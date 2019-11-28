@@ -56,17 +56,6 @@ def bookList(request):
     category = request.GET.get('category','1')
     keywords = request.GET.get('keywords','')
 
-    if keywords:
-        try:
-            searchObj = SearchHistory.objects.get(keyword=keywords)
-            if searchObj:
-                searchObj.count = searchObj.count+1
-                searchObj.save()
-                print(searchObj)
-        except SearchHistory.DoesNotExist as e:
-            searchObj = SearchHistory(keyword=keywords)
-            searchObj.save()
-
 
 
     # 保存记录到搜索历史
@@ -92,6 +81,24 @@ def bookList(request):
         # print(p['downloadurl'],'----------------')
         b = model_to_dict(p)
         L.append(b)
+
+    if keywords:
+        listCount = len(L)
+        haveInsert = 0
+        if listCount != 0:
+            haveInsert = 1
+
+        try:
+            searchObj = SearchHistory.objects.get(keyword=keywords)
+            if searchObj:
+                searchObj.count = searchObj.count+1
+                searchObj.haveInsert = haveInsert
+                searchObj.save()
+                print(searchObj)
+        except SearchHistory.DoesNotExist as e:
+            searchObj = SearchHistory(keyword=keywords)
+            searchObj.haveInsert = haveInsert
+            searchObj.save()
     dict['code'] = '1'
     dict['message'] = '请求成功'
     dict['result'] = L

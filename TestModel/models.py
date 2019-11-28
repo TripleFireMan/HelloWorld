@@ -118,6 +118,7 @@ class Chapter(models.Model):
 class SearchHistory(models.Model):
     keyword = models.CharField(max_length=255,default='')
     count= models.IntegerField(default=1)
+    haveInsert = models.IntegerField(default=0)
     def __unicode__(self):
         return self.keyword
 
