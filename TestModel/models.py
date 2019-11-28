@@ -62,8 +62,9 @@ class Book(models.Model):
     update_time = models.DateField(max_length=255, default=timezone.now())
     latest_chapter_name = models.CharField(max_length=255, default='')
     latest_chapter_url = models.CharField(max_length=255, default='')
-    name = models.CharField(max_length=255, default='')
+    name = models.CharField(max_length=1000, default='')
     download_url = models.CharField(max_length=255, default='')
+    isUpload = models.BooleanField(default=False)
     bookCategory = models.ForeignKey(BookCategory, on_delete=models.CASCADE)
     def __unicode__(self):
         return self.name
@@ -114,6 +115,18 @@ class Chapter(models.Model):
         if bookid:
             objects = objects.filter(book_id=bookid)
         return objects
+class SearchHistory(models.Model):
+    keyword = models.CharField(max_length=255,default='')
+    count= models.IntegerField(default=1)
+    def __unicode__(self):
+        return self.keyword
+
+class BookSheet(models.Model):
+    bookids = models.CharField(max_length=255, default='')
+    bookNames = models.CharField(max_length=255,default='')
+    userid = models.CharField(max_length=255,default='')
+    def __unicode__(self):
+        return self.bookids
 
 
 

@@ -12,7 +12,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
-from TestModel.models import Book,BookCategory,Chapter
+from TestModel.models import Book,BookCategory,Chapter,SearchHistory,BookSheet
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 import pymysql
 from django.forms.models import model_to_dict
@@ -48,13 +48,28 @@ class DateEncoder(json.JSONEncoder):
 #获取书籍列表
 @csrf_exempt
 def bookList(request):
-
+    print(request)
     # 获取请求页数
     page = request.GET.get('page',1)
     page = int(page)
     size = int(request.GET.get('size',10))
     category = request.GET.get('category','1')
     keywords = request.GET.get('keywords','')
+
+    if keywords:
+        try:
+            searchObj = SearchHistory.objects.get(keyword=keywords)
+            if searchObj:
+                searchObj.count = searchObj.count+1
+                searchObj.save()
+                print(searchObj)
+        except SearchHistory.DoesNotExist as e:
+            searchObj = SearchHistory(keyword=keywords)
+            searchObj.save()
+
+
+
+    # 保存记录到搜索历史
     # 查询所有书籍列表
     booklist= Book.objects.all()
     booklist = Book.filterBooks(booklist,request)
@@ -110,9 +125,17 @@ def sheetUpdate(request):
     books = Book.objects.all()
     List = []
     result = books.filter(id__in = sheets)
+    ids = ''
+    names = ''
     for obj in result:
         model = model_to_dict(obj)
+        ids = ids + str(model.get('id')) + ','
+        names = names + model.get('name') + ','
         List.append(model)
+    # 存到书架对象上
+    booksheet = BookSheet(bookids=ids,bookNames=names)
+    booksheet.save()
+
     dict = {}
     dict['code'] = '1'
     dict['message'] = '请求成功'
@@ -161,6 +184,8 @@ def chapters(request):
     L = []
     for p in chaptList:
         b = model_to_dict(p)
+        del b['id']
+        del b['path']
         L.append(b)
     dict['code'] = '1'
     dict['message'] = '请求成功'
