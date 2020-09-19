@@ -199,3 +199,6 @@ def chapters(request):
     dict['result'] = L
     return HttpResponse(json.dumps(dict, ensure_ascii=False))
     #从章节列表中获取
+
+def home(request):
+    return render(request,'home.html')
