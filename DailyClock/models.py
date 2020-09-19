@@ -12,7 +12,7 @@ class DKFeedBack(models.Model):
     title = models.CharField(max_length=100)
     content = models.CharField(max_length=150)
     phone = models.CharField(max_length=20)
-    date = models.DateField(default=timezone.now)
+    date = models.DateField(max_length=255,default=timezone.now)
 
 class DKVersionHistory(models.Model):
     version = models.CharField(max_length=10)
