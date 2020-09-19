@@ -32,7 +32,7 @@ def feedBack(request):
         # 获取请求参数
         print('====================')
         print(request.body)
-        body = json.loads(request.body)
+        body = json.loads(request.body,strict=False)
         title = body["title"]
         content = body['content']
         phone = body['phone']
