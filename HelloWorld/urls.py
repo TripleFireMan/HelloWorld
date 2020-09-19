@@ -28,6 +28,7 @@ from . import view,testdb,users
 from django.contrib.staticfiles.views import serve
 from django.urls import re_path
 import DailyClock.views
+from  HelloWorld import settings
 
 def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
@@ -47,10 +48,12 @@ urlpatterns = [
     url(r'^view/chapters',view.chapters),
     url(r'^home',view.home),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
-
     # 极简打卡APP使用接口
     # 问题反馈
     url(r'^dailyClock/feedBack',DailyClock.views.feedBack),
     # 版本历史记录
     url(r'^dailyClock/versionHistory',DailyClock.views.versionHistory),
+    # 上传图片
+    url(r'^dailyClock/index',DailyClock.views.index,name='index'),
+    url(r'^save_profile',DailyClock.views.save_profile,name='save_profile'),
 ]

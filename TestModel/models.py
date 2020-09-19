@@ -59,7 +59,7 @@ class Book(models.Model):
     category = models.CharField(max_length=255, default='')
     author = models.CharField(max_length=255, default='')
     status = models.CharField(max_length=255, default='')
-    update_time = models.DateField(max_length=255, default=timezone.now())
+    update_time = models.DateField(max_length=255, default=timezone.now)
     latest_chapter_name = models.CharField(max_length=255, default='')
     latest_chapter_url = models.CharField(max_length=255, default='')
     name = models.CharField(max_length=1000, default='')
