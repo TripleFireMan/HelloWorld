@@ -81,10 +81,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'hello',
         'USER': 'root',  # 你的用户名
-        # 'PASSWORD': '88888888', # 你的密码
-        # 'HOST': '0.0.0.0', #你的IP地址
-        'PASSWORD': 'Chengyan#251', # 你的密码
-        'HOST': '39.96.77.250', #你的IP地址
+        'PASSWORD': '88888888', # 你的密码
+        'HOST': '0.0.0.0', #你的IP地址
+        # 'PASSWORD': 'Chengyan#251', # 你的密码
+        # 'HOST': '39.96.77.250', #你的IP地址
         'PORT': '3306',  # 你的端口号
     }
 }
@@ -134,7 +134,6 @@ MEDIA_ROOT = os.path.join(STATIC_ROOT,'uploads')
 MEDIA_URL = 'collect_static/uploads/'
 
 STATICFILES_DIRS = (
-    os.path.join(os.path.join(BASE_DIR, 'collect_static')),
     os.path.join(os.path.join(MEDIA_ROOT)),
 )
 

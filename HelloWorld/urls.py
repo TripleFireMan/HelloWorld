@@ -56,4 +56,8 @@ urlpatterns = [
     # 上传图片
     url(r'^dailyClock/index',DailyClock.views.index,name='index'),
     url(r'^save_profile',DailyClock.views.save_profile,name='save_profile'),
+    # 隐私协议
+    url(r'^dailyClock/private',DailyClock.views.private),
+    # 用户协议
+    url(r'^dailyClock/userProtocol', DailyClock.views.userProtocol),
 ]

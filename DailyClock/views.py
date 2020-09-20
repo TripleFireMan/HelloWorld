@@ -12,6 +12,7 @@ from HelloWorld import settings
 from DailyClock.models import DKFeedBack
 from DailyClock.models import DKVersionHistory
 import datetime
+from django.shortcuts import render
 
 import json
 
@@ -131,3 +132,9 @@ def save_profile(request):
             return redirect(to='index')
 
         return redirect(to='index')
+
+def private(request):
+    return render(request,'private.html')
+
+def userProtocol(request):
+    return render(request,'userregiest.html')
