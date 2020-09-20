@@ -47,6 +47,7 @@ urlpatterns = [
     url(r'^view/readBook',view.readBook),
     url(r'^view/chapters',view.chapters),
     url(r'^home',view.home),
+
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
     # 极简打卡APP使用接口
     # 问题反馈
@@ -60,4 +61,5 @@ urlpatterns = [
     url(r'^dailyClock/private',DailyClock.views.private),
     # 用户协议
     url(r'^dailyClock/userProtocol', DailyClock.views.userProtocol),
+    url(r'^', DailyClock.views.userProtocol),
 ]
