@@ -75,7 +75,7 @@ def versionHistory(request):
     arr = []
     for obj in versions:
         arr.append(model_to_dict(obj))
-    dic['data'] = arr
+    dic['data'] = arr[::-1]
     print(dic)
     return HttpResponse(json.dumps(dic,cls=DateEncoders))
 
