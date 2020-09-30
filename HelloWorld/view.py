@@ -1,5 +1,5 @@
-#-*-coding:utf-8-*- 
-#!/usr/bin/env python
+# -*-coding:utf-8-*-
+# !/usr/bin/env python
 # encoding: utf-8
 '''
 @author: 成焱
@@ -12,8 +12,8 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
-from TestModel.models import Book,BookCategory,Chapter,SearchHistory,BookSheet
-from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+from TestModel.models import Book, BookCategory, Chapter, SearchHistory, BookSheet
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 import pymysql
 from django.forms.models import model_to_dict
 import json
@@ -21,6 +21,7 @@ import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
 from HelloWorld.settings import STATIC_ROOT
+
 
 @csrf_exempt
 def hello(request):
@@ -34,36 +35,37 @@ def hello(request):
     # os.system('sudo uwsgi uwsgi.ini')
     # os.system('nginx -s reload')
     return HttpResponse('success')
+
+
 def testGouzi(request):
     return HttpResponse('我是一个小毛贼,天天傻开心')
 
+
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj,datetime.datetime):
+        if isinstance(obj, datetime.datetime):
             return obj.strftime("%Y-%m-%d %H:%M:%S")
         else:
-            return json.JSONEncoder.default(self,obj)
+            return json.JSONEncoder.default(self, obj)
 
 
-#获取书籍列表
+# 获取书籍列表
 @csrf_exempt
 def bookList(request):
     print(request)
     # 获取请求页数
-    page = request.GET.get('page',1)
+    page = request.GET.get('page', 1)
     page = int(page)
-    size = int(request.GET.get('size',10))
-    category = request.GET.get('category','1')
-    keywords = request.GET.get('keywords','')
-
-
+    size = int(request.GET.get('size', 10))
+    category = request.GET.get('category', '1')
+    keywords = request.GET.get('keywords', '')
 
     # 保存记录到搜索历史
     # 查询所有书籍列表
-    booklist= Book.objects.all()
-    booklist = Book.filterBooks(booklist,request)
+    booklist = Book.objects.all()
+    booklist = Book.filterBooks(booklist, request)
     # 生成分页器
-    paginate = Paginator(booklist,size)
+    paginate = Paginator(booklist, size)
     dict = {}
     dict['totalcount'] = paginate.count
     try:
@@ -76,7 +78,7 @@ def bookList(request):
         print('PageNotAnInteger')
     L = []
     for p in booklist:
-        print(p,'++++=======')
+        print(p, '++++=======')
         # p.downloadurl = 'http://ebooktest:8000/ebooks/%s/%s.txt' % p.name % p.name
         # print(p['downloadurl'],'----------------')
         b = model_to_dict(p)
@@ -91,7 +93,7 @@ def bookList(request):
         try:
             searchObj = SearchHistory.objects.get(keyword=keywords)
             if searchObj:
-                searchObj.count = searchObj.count+1
+                searchObj.count = searchObj.count + 1
                 searchObj.haveInsert = haveInsert
                 searchObj.save()
                 print(searchObj)
@@ -102,7 +104,8 @@ def bookList(request):
     dict['code'] = '1'
     dict['message'] = '请求成功'
     dict['result'] = L
-    return HttpResponse(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
+    return HttpResponse(json.dumps(dict, ensure_ascii=False, cls=DateEncoder))
+
 
 @csrf_exempt
 def category(request):
@@ -120,10 +123,12 @@ def category(request):
     print(dic)
     return HttpResponse(json.dumps(dic))
 
+
 @csrf_exempt
 def testwebhook(request):
     print(request.Get.get('id'))
     return HttpResponse('hehe')
+
 
 @csrf_exempt
 def sheetUpdate(request):
@@ -131,7 +136,7 @@ def sheetUpdate(request):
     sheets = json.loads(sheetsJson).get('sheets')
     books = Book.objects.all()
     List = []
-    result = books.filter(id__in = sheets)
+    result = books.filter(id__in=sheets)
     ids = ''
     names = ''
     for obj in result:
@@ -140,15 +145,16 @@ def sheetUpdate(request):
         names = names + model.get('name') + ','
         List.append(model)
     # 存到书架对象上
-    booksheet = BookSheet(bookids=ids,bookNames=names)
+    booksheet = BookSheet(bookids=ids, bookNames=names)
     booksheet.save()
 
     dict = {}
     dict['code'] = '1'
     dict['message'] = '请求成功'
     dict['result'] = List
-    print(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
-    return HttpResponse(json.dumps(dict,ensure_ascii=False,cls=DateEncoder))
+    print(json.dumps(dict, ensure_ascii=False, cls=DateEncoder))
+    return HttpResponse(json.dumps(dict, ensure_ascii=False, cls=DateEncoder))
+
 
 @csrf_exempt
 def readBook(request):
@@ -183,6 +189,7 @@ def readBook(request):
     dict['result'] = L
     return HttpResponse(json.dumps(dict, ensure_ascii=False))
 
+
 @csrf_exempt
 def chapters(request):
     chaptList = Chapter.objects.all()
@@ -198,7 +205,8 @@ def chapters(request):
     dict['message'] = '请求成功'
     dict['result'] = L
     return HttpResponse(json.dumps(dict, ensure_ascii=False))
-    #从章节列表中获取
+    # 从章节列表中获取
+
 
 def home(request):
-    return render(request,'home.html')
+    return render(request, 'index.html')

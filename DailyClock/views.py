@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from DailyClock.models import Profile
 from DailyClock.models import ProfileForm
@@ -16,29 +16,32 @@ from django.shortcuts import render
 
 import json
 
+
 class DateEncoders(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj,datetime.datetime):
+        if isinstance(obj, datetime.datetime):
             return obj.strftime("%Y-%m-%d %H:%M:%S")
         elif isinstance(obj, datetime.date):
             return obj.strftime("%Y-%m-%d")
         else:
-            return json.JSONEncoder.default(self,obj)
+            return json.JSONEncoder.default(self, obj)
+
 
 @csrf_exempt
 def feedBack(request):
     # 请求方式
     method = request.method
-    if (method == 'POST'):
+    if method == 'POST':
         # 获取请求参数
         print('====================')
         print(request.body)
-        body = json.loads(request.body,strict=False)
+        body = json.loads(request.body, strict=False)
+        assert isinstance(body, object)
         title = body["title"]
         content = body['content']
         phone = body['phone']
         strImg = body.get('imgs')
-        FeedBack = DKFeedBack(title=title,content=content,phone = phone)
+        FeedBack = DKFeedBack(title=title, content=content, phone=phone)
         FeedBack.save()
         if strImg:
             imgs = strImg.split(',')
@@ -62,12 +65,13 @@ def feedBack(request):
     else:
         result = Result()
         result.status = 1001
-        result.message= '不支持get请求'
+        result.message = '不支持get请求'
         return HttpResponse(json.dumps(model_to_dict(result)))
+
 
 @csrf_exempt
 def versionHistory(request):
-    versions=  DKVersionHistory.objects.all()
+    versions = DKVersionHistory.objects.all()
     result = Result()
 
     dic = model_to_dict(result)
@@ -77,7 +81,8 @@ def versionHistory(request):
         arr.append(model_to_dict(obj))
     dic['data'] = arr[::-1]
     print(dic)
-    return HttpResponse(json.dumps(dic,cls=DateEncoders))
+    return HttpResponse(json.dumps(dic, cls=DateEncoders))
+
 
 @csrf_exempt
 def index(request):
@@ -87,11 +92,9 @@ def index(request):
     context['form'] = form
     return render(request, 'index.html', context)
 
+
 @csrf_exempt
 def save_profile(request):
-    print(request.method,'==========================')
-    print(request.body, '--------------------------')
-    print(request.FILES, '--------------------------')
     if request.method == "POST":
         # 接收 post 方法传回后端的数据
         MyProfileForm = ProfileForm(request.POST, request.FILES)
@@ -133,8 +136,10 @@ def save_profile(request):
 
         return redirect(to='index')
 
+
 def private(request):
-    return render(request,'private.html')
+    return render(request, 'private.html')
+
 
 def userProtocol(request):
-    return render(request,'userregiest.html')
+    return render(request, 'userregiest.html')

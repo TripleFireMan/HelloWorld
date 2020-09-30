@@ -61,5 +61,5 @@ urlpatterns = [
     url(r'^dailyClock/private',DailyClock.views.private),
     # 用户协议
     url(r'^dailyClock/userProtocol', DailyClock.views.userProtocol),
-    url(r'^', DailyClock.views.userProtocol),
+    url(r'^', view.home),
 ]
