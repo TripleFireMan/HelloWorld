@@ -11,6 +11,7 @@ from django.forms.models import model_to_dict
 from HelloWorld import settings
 from DailyClock.models import DKFeedBack
 from DailyClock.models import DKVersionHistory
+from  DailyClock.models import *
 import datetime
 from django.shortcuts import render
 
@@ -78,6 +79,19 @@ def versionHistory(request):
     del dic['id']
     arr = []
     for obj in versions:
+        arr.append(model_to_dict(obj))
+    dic['data'] = arr[::-1]
+    return HttpResponse(json.dumps(dic, cls=DateEncoders))
+
+
+def fonts(request):
+    all_fonts = DKFonts.objects.all()
+    result = Result()
+
+    dic = model_to_dict(result)
+    del dic['id']
+    arr = []
+    for obj in all_fonts:
         arr.append(model_to_dict(obj))
     dic['data'] = arr[::-1]
     print(dic)

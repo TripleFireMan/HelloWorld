@@ -61,5 +61,8 @@ urlpatterns = [
     url(r'^dailyClock/private',DailyClock.views.private),
     # 用户协议
     url(r'^dailyClock/userProtocol', DailyClock.views.userProtocol),
+    # 下载字体
+    url(r'^dailyClock/fonts', DailyClock.views.fonts),
+
     url(r'^', view.home),
 ]

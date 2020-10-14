@@ -19,6 +19,12 @@ class DKVersionHistory(models.Model):
     des = models.CharField(max_length=150)
     date = models.DateField(max_length=10,default=timezone.now)
 
+class DKFonts(models.Model):
+    name = models.CharField(max_length=50, default='')
+    font_name = models.CharField(max_length=30, default='')
+    font_bold_name = models.CharField(max_length=20, default='')
+    url = models.CharField(max_length=100, default='')
+
 class ProfileForm(forms.Form):
     name = forms.CharField(max_length=100,label='名字:',required=False)
     picture = forms.ImageField(label='图片:')
