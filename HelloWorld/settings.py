@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'TestModel',
     'DailyClock',
-    'django_apscheduler',  # 定时执行任务
+    # 'django_apscheduler',  # 定时执行任务
 ]
 
 MIDDLEWARE = [
@@ -134,11 +134,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'templates/static')
 )
 
-# 设置每分钟执行一个任务，并将日志输出到指定文件
-CRONJOBS = [
-    ('*/1 * * * *','curl https://www.baidu.com/','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
-    ('*/1 * * * *','django.core.management.call_command',['tests'],{},'>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab1.log')),
-]
-
-# 定时任务设置中文字符，如果不设置的话，可能会出现字符异常
-CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
+# # 设置每分钟执行一个任务，并将日志输出到指定文件
+# CRONJOBS = [
+#     ('*/1 * * * *','curl https://www.baidu.com/','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+#     ('*/1 * * * *','django.core.management.call_command',['tests'],{},'>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab1.log')),
+# ]
+#
+# # 定时任务设置中文字符，如果不设置的话，可能会出现字符异常
+# CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
