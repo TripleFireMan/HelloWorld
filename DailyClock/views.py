@@ -14,7 +14,7 @@ from DailyClock.models import DKVersionHistory
 from  DailyClock.models import *
 import datetime
 from django.shortcuts import render
-
+import os
 import json
 
 
@@ -157,3 +157,7 @@ def private(request):
 
 def userProtocol(request):
     return render(request, 'userregiest.html')
+
+def print110():
+    os.system('open /Users')
+    print(110)
