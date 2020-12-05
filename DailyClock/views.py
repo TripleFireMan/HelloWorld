@@ -16,7 +16,7 @@ import datetime
 from django.shortcuts import render
 import os
 import json
-
+from TestModel.models import models
 
 class DateEncoders(json.JSONEncoder):
     def default(self, obj):
@@ -150,6 +150,25 @@ def save_profile(request):
 
         return redirect(to='index')
 
+@csrf_exempt
+def today_card(request):
+    day = datetime.datetime.now().strftime('%d')
+    obj = DKJiTang.objects.filter(id=day)
+    # 获取随机数
+    # result = DKJiTang.objects.all().order_by('?')[:1]
+    Res = Result()
+    dic = model_to_dict(Res)
+
+    del dic['id']
+    data = []
+    l = model_to_dict(obj[0])
+    del l['id']
+    data.append(l)
+
+    dic['data'] = data
+    json_obj = json.dumps(dic,ensure_ascii=False,cls=DateEncoders)
+    return HttpResponse(json_obj)
+
 
 def private(request):
     return render(request, 'private.html')
@@ -157,7 +176,3 @@ def private(request):
 
 def userProtocol(request):
     return render(request, 'userregiest.html')
-
-def print110():
-    os.system('open /Users')
-    print(110)

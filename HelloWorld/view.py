@@ -21,8 +21,6 @@ import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
 from HelloWorld.settings import STATIC_ROOT
-import DailyClock.spider
-from DailyClock.spider import do_work
 
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job

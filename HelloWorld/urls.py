@@ -63,6 +63,7 @@ urlpatterns = [
     url(r'^dailyClock/userProtocol', DailyClock.views.userProtocol),
     # 下载字体
     url(r'^dailyClock/fonts', DailyClock.views.fonts),
-
+    # 今日卡片
+    url(r'^dailyClock/todayCard',DailyClock.views.today_card),
     url(r'^', view.home),
 ]

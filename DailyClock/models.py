@@ -5,7 +5,7 @@ from django.db import  models
 from  django.utils import timezone
 from django import forms
 from system.storage import ImageStorage
-
+from datetime import datetime
 
 # 极简打卡App 问题反馈
 class DKFeedBack(models.Model):
@@ -42,5 +42,17 @@ class Profile(models.Model):
 class Result(models.Model):
     status = models.CharField(max_length=10,default=0)
     message = models.CharField(max_length=20,default='success')
+
+class DKJiTang(models.Model):
+    text = models.CharField(max_length=255, default='')
+    url = models.CharField(max_length=255, default='')
+    wordsInfo = models.CharField(max_length=255,default='')
+    width = models.IntegerField()
+    height = models.IntegerField()
+    date = models.DateTimeField(default=datetime.now)
+    objectId = models.CharField(max_length=255,default='')
+    objects = models.Manager()
+    class Meta:
+        db_table = 'jitang'
 
 

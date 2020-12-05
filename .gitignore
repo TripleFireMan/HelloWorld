@@ -4,3 +4,5 @@ HelloWorld/__pycache__/
 HelloWorld/settings.py
 collect_static/ebooks/
 venv/
+DailyClock/__pycache__/
+TestModel/__pycache__/
