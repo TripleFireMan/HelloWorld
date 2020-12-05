@@ -1,7 +1,6 @@
 .idea
 db.sqlite3
 HelloWorld/__pycache__/
-HelloWorld/settings.py
 collect_static/ebooks/
 venv/
 DailyClock/__pycache__/
