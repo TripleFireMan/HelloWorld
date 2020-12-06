@@ -152,16 +152,14 @@ def save_profile(request):
 
 @csrf_exempt
 def today_card(request):
-    day = datetime.datetime.now().strftime('%d')
-    obj = DKJiTang.objects.filter(id=day)
-    # 获取随机数
-    # result = DKJiTang.objects.all().order_by('?')[:1]
+    # 获取数据库中最后一条数据
+    result = DKJiTang.objects.all().order_by('-id')[:1]
     Res = Result()
     dic = model_to_dict(Res)
 
     del dic['id']
     data = []
-    l = model_to_dict(obj[0])
+    l = model_to_dict(result[0])
     del l['id']
     data.append(l)
 
