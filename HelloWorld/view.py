@@ -327,7 +327,7 @@ def pic(params):
     space = 7
 
     # PIL模块中，确定写入到图片中的文本字体
-    font = ImageFont.truetype('/home/HelloWorld/HelloWorld/static/upload/楷体_GB2312.ttf', 30, encoding='utf-8')
+    font = ImageFont.truetype('/home/HelloWorld/static/uploads/楷体_GB2312.ttf', 30, encoding='utf-8')
     # Image模块创建一个图片对象
     im = Image.new('RGB', (10, 10), (255, 255,255, 0))
     # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
