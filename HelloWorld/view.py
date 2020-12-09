@@ -21,7 +21,9 @@ import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
 from HelloWorld.settings import STATIC_ROOT
-
+from prettytable import PrettyTable
+from PIL import Image, ImageDraw, ImageFont
+import requests
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 #
@@ -237,3 +239,114 @@ def home(request):
 
 def print_helloworld():
     print('hello world')
+
+
+# @csrf_exempt
+def buglyReport(request):
+    obj = request.body
+    json_data = json.loads(obj)
+
+    print(json_data)
+    print('----------start')
+    print(request)
+    print('----------end')
+
+    result = pic(json_data)
+
+
+    params = {}
+    infos = json_data['eventContent']
+
+    params['title'] = infos['date'] + infos['appName'] + 'bugly统计日报'
+    params['appName'] = infos['appName']
+    params['crash'] = result['crash']
+    params['url'] = result['url']
+    params['pic'] = result['pic']
+
+    dingTalk(params)
+
+    return HttpResponse('SUCCESS')
+
+def dingTalk(params):
+    title = params['title']
+    subtitle = '线上最新版{0}crash率为{1}'.format(params['appName'],params['crash'])
+    headers={
+        "Content-Type": "application/json"
+            }
+    data={
+        "msgtype": "markdown",
+        "markdown": {
+            "title": title,
+            "text": "#### {0}\n".format(title) +
+                    "> {0}\n\n".format(subtitle) +
+                    "> ![screenshot]({0})\n".format(params['pic']) +
+                    "> ###### {0} [查看详情]({1}) \n".format(params['appName'],params['url'])
+        },
+        "at": {
+            "atMobiles": [
+            ],
+            "isAtAll": False
+        }
+        }
+    json_data=json.dumps(data)
+
+    print(json_data)
+    # requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
+
+
+def pic(params):
+    print('11')
+    tab = PrettyTable()
+
+    content_event=  params['eventContent']
+    data = content_event['datas']
+    app_name = content_event['appName']
+    app_versions = []
+    app_users = []
+    app_crash_count = []
+    app_crash_user = []
+    app_crash_lv = []
+
+    result = {}
+    # 设置表头
+    tab.field_names = ["app名称", "版本号", "联网用户数", "影响用户数", "crash次数", "crash率"]
+    for index in range(0,len(data)):
+        app_version = data[index]['version']
+        crash_user = data[index]['crashUser']
+        access_user = data[index]['accessUser']
+        crash_count = data[index]['crashCount']
+        crash_lv = "%.2f"%(crash_user * 100.0/access_user) + "%"
+        tab.add_row([app_name,app_version,access_user,crash_user,crash_count,crash_lv])
+        if  index == 0:
+            latest_crash_lv = crash_lv
+            result['crash'] = latest_crash_lv
+            result['url'] = data[index]['url']
+    # 表格内容插入
+
+    tab_info = str(tab)
+    space = 7
+
+    # PIL模块中，确定写入到图片中的文本字体
+    font = ImageFont.truetype('/Users/chengyan/Desktop/楷体_GB2312.ttf', 30, encoding='utf-8')
+    # Image模块创建一个图片对象
+    im = Image.new('RGB', (10, 10), (255, 255,255, 0))
+    # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
+    draw = ImageDraw.Draw(im, "RGB")
+    # 根据插入图片中的文字内容和字体信息，来确定图片的最终大小
+    img_size = draw.multiline_textsize(tab_info, font=font)
+    # 图片初始化的大小为10-10，现在根据图片内容要重新设置图片的大小
+    im_new = im.resize((img_size[0] + space * 2, img_size[1] + space * 2))
+    del draw
+    del im
+    draw = ImageDraw.Draw(im_new, 'RGB')
+    # 批量写入到图片中，这里的multiline_text会自动识别换行符
+    # python2
+    # draw.multiline_text((space, space), unicode(tab_info, 'utf-8'), fill=(255, 255, 255), font=font)
+    # python3
+    draw.multiline_text((space,space), tab_info, fill=(0,0,0), font=font)
+    im_new.save('12345','png')
+    del draw
+
+    pic = 'http://chengyan.shop/static/12345.png'
+    result['pic'] = pic
+    return result

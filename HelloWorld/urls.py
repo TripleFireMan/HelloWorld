@@ -65,5 +65,7 @@ urlpatterns = [
     url(r'^dailyClock/fonts', DailyClock.views.fonts),
     # 今日卡片
     url(r'^dailyClock/todayCard',DailyClock.views.today_card),
+    # bugly统计
+    url(r'^view/buglyReport',view.buglyReport),
     url(r'^', view.home),
 ]
