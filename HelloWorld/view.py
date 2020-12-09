@@ -328,7 +328,7 @@ def pic(params):
     space = 7
 
     # PIL模块中，确定写入到图片中的文本字体
-    font = ImageFont.truetype('/home/HelloWorld/static/uploads/楷体_GB2312.ttf', 60, encoding='utf-8')
+    font = ImageFont.truetype('/home/HelloWorld/collect_static/uploads/楷体_GB2312.ttf', 60, encoding='utf-8')
     # Image模块创建一个图片对象
     im = Image.new('RGB', (10, 10), (255, 255,255, 0))
     # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
@@ -345,7 +345,7 @@ def pic(params):
     # draw.multiline_text((space, space), unicode(tab_info, 'utf-8'), fill=(255, 255, 255), font=font)
     # python3
     draw.multiline_text((space,space), tab_info, fill=(0,0,0), font=font)
-    file_path = os.path.join('/home/HelloWorld/static/uploads/12345.png')
+    file_path = os.path.join('/home/HelloWorld/collect_static/uploads/12345.png')
     im_new.save(file_path)
     del draw
 
