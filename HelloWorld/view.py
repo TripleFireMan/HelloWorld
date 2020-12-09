@@ -291,7 +291,7 @@ def dingTalk(params):
     json_data=json.dumps(data)
 
     print(json_data)
-    # requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
+    requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
 
 
 
