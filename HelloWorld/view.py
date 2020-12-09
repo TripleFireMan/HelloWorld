@@ -291,7 +291,7 @@ def dingTalk(params):
     json_data=json.dumps(data)
 
     print(json_data)
-    # requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
+    requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
 
 
 def pic(params):
@@ -327,7 +327,7 @@ def pic(params):
     space = 7
 
     # PIL模块中，确定写入到图片中的文本字体
-    font = ImageFont.truetype('/Users/chengyan/Desktop/楷体_GB2312.ttf', 30, encoding='utf-8')
+    font = ImageFont.truetype('/home/HelloWorld/HelloWorld/static/uploads/楷体_GB2312.ttf', 30, encoding='utf-8')
     # Image模块创建一个图片对象
     im = Image.new('RGB', (10, 10), (255, 255,255, 0))
     # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
@@ -347,6 +347,6 @@ def pic(params):
     im_new.save('12345','png')
     del draw
 
-    pic = 'http://chengyan.shop/static/12345.png'
+    pic = 'http://chengyan.shop/static/12345.PNG'
     result['pic'] = pic
     return result
