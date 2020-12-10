@@ -24,6 +24,7 @@ from HelloWorld.settings import STATIC_ROOT
 from prettytable import PrettyTable
 from PIL import Image, ImageDraw, ImageFont
 import requests
+import urllib
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 #
@@ -245,42 +246,32 @@ def print_helloworld():
 def buglyReport(request):
     obj = request.body
     json_data = json.loads(obj)
-
-    print(json_data)
-    print('----------start')
-    print(request)
-    print('----------end')
-
     result = pic(json_data)
-
-
     params = {}
     infos = json_data['eventContent']
-
     params['title'] = infos['date'] + infos['appName'] + 'bugly统计日报'
     params['appName'] = infos['appName']
     params['crash'] = result['crash']
     params['url'] = result['url']
     params['pic'] = result['pic']
-
+    params['version'] = result['version']
     dingTalk(params)
-
     return HttpResponse('SUCCESS')
 
 def dingTalk(params):
     title = params['title']
-    subtitle = '线上最新版{0}crash率为{1}'.format(params['appName'],params['crash'])
+    subtitle = '线上最新版{0}-{1}crash率为{2}'.format(params['appName'],params['version'], params['crash'])
     headers={
         "Content-Type": "application/json"
             }
     data={
         "msgtype": "markdown",
         "markdown": {
-            "title": title,
-            "text": "#### {0}\n".format(title) +
+            "title": '##{0}'.format(title),
+            "text": "### {0}\n".format(title) +
                     "> {0}\n\n".format(subtitle) +
                     "> ![screenshot]({0})\n".format(params['pic']) +
-                    "> ###### {0} [查看详情]({1}) \n".format(params['appName'],params['url'])
+                    "> ###### {0}-{1} [查看详情]({1}) \n".format(params['appName'],params['version'], params['url'])
         },
         "at": {
             "atMobiles": [
@@ -302,33 +293,33 @@ def pic(params):
     content_event=  params['eventContent']
     data = content_event['datas']
     app_name = content_event['appName']
-    app_versions = []
-    app_users = []
-    app_crash_count = []
-    app_crash_user = []
-    app_crash_lv = []
 
     result = {}
     # 设置表头
     tab.field_names = ["app名称", "版本号", "联网用户数", "影响用户数", "crash次数", "crash率"]
     for index in range(0,len(data)):
         app_version = data[index]['version']
+        app_version = urllib.parse.unquote(app_version)
         crash_user = data[index]['crashUser']
         access_user = data[index]['accessUser']
         crash_count = data[index]['crashCount']
         crash_lv = "%.2f"%(crash_user * 100.0/access_user) + "%"
         tab.add_row([app_name,app_version,access_user,crash_user,crash_count,crash_lv])
-        if  index == 0:
+        if  index == len(data)-1:
             latest_crash_lv = crash_lv
             result['crash'] = latest_crash_lv
             result['url'] = data[index]['url']
+            result['version'] = app_version
     # 表格内容插入
 
     tab_info = str(tab)
     space = 7
 
+    file_path_url = '/home/HelloWorld/'
+    # file_path_url = '/Users/chengyan/Desktop/Python/HelloWorld/'
+
     # PIL模块中，确定写入到图片中的文本字体
-    font = ImageFont.truetype('/home/HelloWorld/collect_static/uploads/楷体_GB2312.ttf', 60, encoding='utf-8')
+    font = ImageFont.truetype('{0}collect_static/uploads/楷体_GB2312.ttf'.format(file_path_url), 60, encoding='utf-8')
     # Image模块创建一个图片对象
     im = Image.new('RGB', (10, 10), (255, 255,255, 0))
     # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
@@ -345,10 +336,10 @@ def pic(params):
     # draw.multiline_text((space, space), unicode(tab_info, 'utf-8'), fill=(255, 255, 255), font=font)
     # python3
     draw.multiline_text((space,space), tab_info, fill=(0,0,0), font=font)
-    file_path = os.path.join('/home/HelloWorld/collect_static/uploads/12345.png')
+    file_path = os.path.join('{0}collect_static/uploads/12345.png'.format(file_path_url))
     im_new.save(file_path)
     del draw
 
-    pic = 'http://chengyan.shop/static/12345.png'
+    pic = 'http://chengyan.shop/static/uploads/12345.png'
     result['pic'] = pic
     return result

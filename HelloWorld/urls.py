@@ -36,7 +36,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello',view.hello),
     url(r'^justDoIt',view.testGouzi),
-    url(r'^testdb/',testdb.testdb),
     url(r'^users/userList',users.userList),
     url(r'^users/login', users.login),
     url(r'^users/register', users.register),
