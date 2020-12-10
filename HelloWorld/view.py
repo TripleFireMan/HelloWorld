@@ -319,7 +319,7 @@ def pic(params):
     # file_path_url = '/Users/chengyan/Desktop/Python/HelloWorld/'
 
     # PIL模块中，确定写入到图片中的文本字体
-    font = ImageFont.truetype('{0}collect_static/uploads/楷体_GB2312.ttf'.format(file_path_url), 60, encoding='utf-8')
+    font = ImageFont.truetype('{0}collect_static/uploads/楷体_GB2312.ttf'.format(file_path_url), 30, encoding='utf-8')
     # Image模块创建一个图片对象
     im = Image.new('RGB', (10, 10), (255, 255,255, 0))
     # ImageDraw向图片中进行操作，写入文字或者插入线条都可以
