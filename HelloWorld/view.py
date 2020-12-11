@@ -252,7 +252,7 @@ def buglyReport(request):
     params['title'] = infos['date'] + infos['appName'] + 'bugly统计日报'
     params['appName'] = infos['appName']
     params['crash'] = result['crash']
-    params['url'] = result['url']
+    params['url'] = infos['url']
     params['pic'] = result['pic']
     params['version'] = result['version']
     dingTalk(params)
