@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2020/12/13 10:54 下午
 # @Author  : chengyan
