@@ -30,13 +30,13 @@ APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [
+    'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django_crontab',
     'TestModel',
     'DailyClock',
     # 'django_apscheduler',  # 定时执行任务
