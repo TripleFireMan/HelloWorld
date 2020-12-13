@@ -25,6 +25,7 @@ from prettytable import PrettyTable
 from PIL import Image, ImageDraw, ImageFont
 import requests
 import urllib
+from  HelloWorld import qiniuuploader
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 #
@@ -255,8 +256,9 @@ def buglyReport(request):
     params['url'] = infos['appUrl']
     params['pic'] = result['pic']
     params['version'] = result['version']
-    dingTalk(params)
-    return HttpResponse('SUCCESS')
+    print(params)
+    json_data = dingTalk(params)
+    return HttpResponse(json_data)
 
 def dingTalk(params):
     title = params['title']
@@ -271,7 +273,7 @@ def dingTalk(params):
             "text": "### {0}\n".format(title) +
                     "> {0}\n\n".format(subtitle) +
                     "> ![screenshot]({0})\n".format(params['pic']) +
-                    "> ###### {0}-{1} [查看详情]({1}) \n".format(params['appName'],params['version'], params['url'])
+                    "> ###### {0}-{1} [查看详情]({2}) \n".format(params['appName'],params['version'], params['url'])
         },
         "at": {
             "atMobiles": [
@@ -282,9 +284,9 @@ def dingTalk(params):
     json_data=json.dumps(data)
 
     print(json_data)
-    requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
+    # requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
 
-
+    return json_data
 
 def pic(params):
     print('11')
@@ -293,7 +295,6 @@ def pic(params):
     content_event=  params['eventContent']
     data = content_event['datas']
     app_name = content_event['appName']
-
     result = {}
     # 设置表头
     tab.field_names = ["app名称", "版本号", "联网用户数", "影响用户数", "crash次数", "crash率"]
@@ -308,10 +309,9 @@ def pic(params):
         if  index == len(data)-1:
             latest_crash_lv = crash_lv
             result['crash'] = latest_crash_lv
-            result['url'] = data[index]['url']
+
             result['version'] = app_version
     # 表格内容插入
-
     tab_info = str(tab)
     space = 7
 
@@ -338,8 +338,11 @@ def pic(params):
     draw.multiline_text((space,space), tab_info, fill=(0,0,0), font=font)
     file_path = os.path.join('{0}collect_static/uploads/12345.png'.format(file_path_url))
     im_new.save(file_path)
-    del draw
 
-    pic = 'http://chengyan.shop/static/uploads/12345.png'
-    result['pic'] = pic
+    del draw
+    try:
+        res = qiniuuploader.qiniu_upload(file_path)
+        result['pic'] = res
+    except Exception as e:
+        print(e)
     return result

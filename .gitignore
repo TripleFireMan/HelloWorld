@@ -5,3 +5,6 @@ collect_static/ebooks/
 venv/
 DailyClock/__pycache__/
 TestModel/__pycache__/
+.qiniu_pythonsdk_hostscache.json
+HelloWorld/.qiniu_pythonsdk_hostscache.json
+system/__pycache__/
