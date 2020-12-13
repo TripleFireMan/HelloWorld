@@ -129,6 +129,14 @@ class BookSheet(models.Model):
     def __unicode__(self):
         return self.bookids
 
+class BuglyData(models.Model):
+    app_name = models.CharField(max_length=255,default='')
+    app_version = models.CharField(max_length=255,default='')
+    app_ext = models.CharField(max_length=255,default='')
+    app_text = models.CharField(max_length=255,default='')
+    create_At = models.DateField(max_length=255, default=timezone.now)
+
+
 
 
 

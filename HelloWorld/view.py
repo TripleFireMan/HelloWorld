@@ -1,5 +1,5 @@
 # -*-coding:utf-8-*-
-# !/usr/bin/env python
+# !/usr/bin/env python3
 # encoding: utf-8
 '''
 @author: 成焱
@@ -26,6 +26,7 @@ from PIL import Image, ImageDraw, ImageFont
 import requests
 import urllib
 from  HelloWorld import qiniuuploader
+from HelloWorld.buglyReporter import buglyReporter
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 #
@@ -284,7 +285,7 @@ def dingTalk(params):
     json_data=json.dumps(data)
 
     print(json_data)
-    # requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
+    requests.post(url='https://oapi.dingtalk.com/robot/send?access_token=5f43f46a899baf1e16b711a040e775a3237a3a30f044b313bb9b1d6ac2fb4542',data=json_data,headers=headers)
 
     return json_data
 
