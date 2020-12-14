@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 from HelloWorld.config import MyConfig
 
-
 my_config = MyConfig()
 my_config.setup_logging()
 conf = my_config.get_conf()
