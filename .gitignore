@@ -10,7 +10,7 @@ TestModel/__pycache__/
 HelloWorld/.qiniu_pythonsdk_hostscache.json
 system/__pycache__/
 
-
+*.log
 
 # Python #
 *.py[cod]

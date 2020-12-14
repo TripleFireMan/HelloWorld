@@ -6,12 +6,13 @@
 # @Software: macos
 
 import qiniu
+import logging
 
 access_key = 'v_Uty5Twt_JofcObigIeM-CUZYKA00Sd2MzsJ3K4'
 secret_key = 'qWhhplSFLDKhZ42Sk_h31l1xl636zFcGy273VJSv'
 url = 'http://yun.chengyan.shop/'
 bucket_name = 'quanqiuwa251'
-
+logger = logging.getLogger('HelloWorld.qiniu')
 
 def qiniu_upload(localfile):
     file_key = qiniu.etag(localfile) + '.png'
@@ -19,9 +20,10 @@ def qiniu_upload(localfile):
     token = q.upload_token(bucket_name, file_key, 3600)
     ret, info = qiniu.put_file(token, file_key, localfile)
     if ret:
-        print(info)
+        logger.info(ret)
         return '{0}{1}'.format(url, ret['key'])
     else:
+        logger.error(ret)
         raise print('上传失败，请重试')
 
 
