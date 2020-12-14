@@ -8,7 +8,9 @@ import os
 import logging
 import logging.config
 import json
+import sys
 
+RUNNING_DEVSERVER = (len(sys.argv) > 1 and sys.argv[1] == 'runserver')
 logger = logging.getLogger('HelloWorld')
 
 class local():
@@ -39,7 +41,7 @@ class remote():
 
 class MyConfig():
     __conf = None
-    __is_remote = 'SERVER_SOFTWARE' in os.environ
+    __is_remote = not RUNNING_DEVSERVER
 
     def is_remote_env(self):
         return self.__is_remote
