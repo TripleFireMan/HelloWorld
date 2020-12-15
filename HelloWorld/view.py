@@ -334,7 +334,7 @@ def pic(params):
     # draw.multiline_text((space, space), unicode(tab_info, 'utf-8'), fill=(255, 255, 255), font=font)
     # python3
     draw.multiline_text((space,space), tab_info, fill=(0,0,0), font=font)
-    file_path = os.path.join('{0}collect_static/uploads/12345.png'.format(file_path_url))
+    file_path = os.path.join('{0}/collect_static/uploads/12345.png'.format(file_path_url))
     im_new.save(file_path)
 
     del draw
