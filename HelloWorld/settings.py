@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'TestModel',
     'DailyClock',
-    # 'django_apscheduler',  # 定时执行任务
+    'django_apscheduler',  # 定时执行任务
+    'TYMetro',
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "TYMetro.UserProfile"
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -132,7 +135,7 @@ STATICFILES_DIRS = (
 
 # 设置每分钟执行一个任务，并将日志输出到指定文件
 CRONJOBS = [
-    # ('*/1 * * * *','HelloWorld.view.print_110','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+    ('*/1 * * * *','HelloWorld.view.print_110','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
 ]
 #
 # # 定时任务设置中文字符，如果不设置的话，可能会出现字符异常

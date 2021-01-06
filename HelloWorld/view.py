@@ -344,3 +344,7 @@ def pic(params):
     except Exception as e:
         print(e)
     return result
+
+def print_110():
+
+    print(110)

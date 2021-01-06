@@ -34,6 +34,8 @@ class remote():
             'USER': 'root',  # 你的用户名
             'HOST': '39.96.77.250',  # 你的密码
             'PASSWORD': 'Chengyan#251',  # 你的IP地址
+            # 'PASSWORD': '88888888',  # 你的密码
+            # 'HOST': '0.0.0.0',  # 你的IP地址
             'PORT': '3306',  # 你的端口号
         }
     }
