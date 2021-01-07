@@ -103,7 +103,7 @@ def user_login(request):
                 return user_data(request, user)
             except Exception as e:
                 logger.info('未发现appleid用户')
-                user = UserProfile(apple_id=apple_id,username=apple_id,mobile=apple_id)
+                user = UserProfile(apple_id=apple_id,username=apple_id)
                 user.save()
                 user = authenticate(request, username=apple_id)
                 return user_data(request,user)
