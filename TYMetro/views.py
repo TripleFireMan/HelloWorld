@@ -55,14 +55,24 @@ def user_login(request):
     if type == 'sms':
         try:
             user = authenticate(request, username=username)
+            if user is None:
+                user = UserProfile(mobile=username, username=username, nick_name=username)
+                user.save()
+                user = authenticate(request, username=username)
+                return user_data(request, user)
+
             logger.info('---------')
             logger.info(user)
             logger.info('-----------')
             # user = UserProfile.objects.get(Q(mobile=username))
             return user_data(request, user)
         except Exception as e:
-            user = UserProfile(mobile=username)
+            user = UserProfile(mobile=username, username=username, nick_name=username)
+            logger.info('===========')
+            logger.info(model_to_dict(user))
+            logger.info('=============')
             user.save()
+            user = authenticate(request, username=username)
             return user_data(request,user)
 
     elif type == 'password':
