@@ -113,7 +113,7 @@ def user_login(request):
             logger.info('=============')
 
             user.save()
-            user = authenticate(request, username=username)
+            user = authenticate(request, username=phone)
             return user_data(request,user)
 
 
