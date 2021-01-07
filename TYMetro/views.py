@@ -28,7 +28,7 @@ logger = getLogger('HelloWorld')
 class CustomAuth(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         try:
-            user = UserProfile.objects.get(Q(username=username) | Q(mobile=username) | Q(nick_name=username) | Q(apple_id=username))  # 输入username和mobile都能查询到用户
+            user = UserProfile.objects.get(Q(mobile=username))  # 输入username和mobile都能查询到用户
             logger.info(user)
             return user
 
