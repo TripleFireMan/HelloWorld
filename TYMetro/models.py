@@ -21,6 +21,8 @@ class UserProfile(AbstractUser):
     password = models.CharField(max_length=50,verbose_name='密码',default='')
     third_source = models.CharField(max_length=50,verbose_name='来源',help_text='三方来源',default='')
     introduce = models.CharField(max_length=250,default='')
+    apple_id = models.CharField(max_length=250,default='')
+
     class Meta:
         verbose_name='用户信息'
         verbose_name_plural = verbose_name

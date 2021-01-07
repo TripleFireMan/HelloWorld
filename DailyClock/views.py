@@ -131,9 +131,9 @@ def save_profile(request):
             del dic['id']
 
             # 拼接域名
-            HOST = 'http://chengyan.shop/static/'
+            HOST = 'http://chengyan.shop/static/uploads/'
             if settings.DEBUG:
-                HOST = 'http://0.0.0.0:8000/static/'
+                HOST = 'http://0.0.0.0:8000/static/uploads/'
 
             profile.url = HOST + profile.picture.name
             profile.save()

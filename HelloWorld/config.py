@@ -22,6 +22,7 @@ class local():
             'PASSWORD': '88888888',  # 你的密码
             'HOST': '0.0.0.0',  # 你的IP地址
             'PORT': '3306',  # 你的端口号
+            'OPTIONS': {'charset': 'utf8mb4'},
         }
     }
     DEBUG = True
@@ -37,7 +38,8 @@ class remote():
             # 'PASSWORD': '88888888',  # 你的密码
             # 'HOST': '0.0.0.0',  # 你的IP地址
             'PORT': '3306',  # 你的端口号
-        }
+            'OPTIONS': {'charset': 'utf8mb4'},
+    }
     }
     DEBUG = False
 

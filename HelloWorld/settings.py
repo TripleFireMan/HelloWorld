@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import datetime
+
 from HelloWorld.config import MyConfig
 
 my_config = MyConfig()
@@ -36,6 +38,7 @@ APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [
+
     'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,10 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'TestModel',
     'DailyClock',
     'django_apscheduler',  # 定时执行任务
     'TYMetro',
+
 ]
 
 MIDDLEWARE = [
@@ -58,6 +63,23 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated'
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
+
+JWT_AUTH = {
+    # 设置token有效时间
+    # 'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=10)
+}
 
 ROOT_URLCONF = 'HelloWorld.urls'
 
@@ -87,6 +109,10 @@ DATABASES = conf.DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+
+AUTHENTICATION_BACKENDS = [
+    "TYMetro.views.CustomAuth"
+]
 
 AUTH_PASSWORD_VALIDATORS = [
     {

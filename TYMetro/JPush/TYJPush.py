@@ -46,30 +46,15 @@ def get_phone_number(token):
     response = requests.request("POST", url, headers=headers, data=payload)
     json_data = json.loads(response.content)
     print(json_data)
-    result_data = ''
     try:
         if  json_data['phone'] is not None:
             phone_encode = json_data['phone']
             phone = cipher.decrypt(base64.b64decode(phone_encode), None).decode()
-            result = {'status': 0,
-                      'message': 'success'}
-            result['data'] = {
-                'phone': phone
-            }
-            result_data = json.dumps(result)
+            return phone
         else:
-            result = {'status': 0,
-                      'message': 'success'}
-            result['message'] = json_data['content']
-            result['status'] = int(json_data['code'])
-            result['data'] = {
-                'phone': ''
-            }
-            result_data = json.dumps(result)
-
+            return ''
     except Exception as e:
-        print(e)
-    return result_data
+        return ''
 
 
 
