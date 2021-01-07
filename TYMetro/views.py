@@ -28,7 +28,7 @@ logger = getLogger('HelloWorld')
 class CustomAuth(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         try:
-            user = UserProfile.objects.get(Q(mobile=username) | Q(username=username))  # 输入username和mobile都能查询到用户
+            user = UserProfile.objects.get(Q(mobile=username) | Q(username=username) | Q(appe_id=username))  # 输入username和mobile都能查询到用户
             logger.info(user)
             return user
 
@@ -103,8 +103,9 @@ def user_login(request):
                 return user_data(request, user)
             except Exception as e:
                 logger.info('未发现appleid用户')
-                user = UserProfile(apple_id=apple_id)
+                user = UserProfile(apple_id=apple_id,username=apple_id,mobile=apple_id)
                 user.save()
+                user = authenticate(request, username=apple_id)
                 return user_data(request,user)
     elif type == 'onekey':
         login_token = obj.get('loginToken',None)
