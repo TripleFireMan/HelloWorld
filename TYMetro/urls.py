@@ -12,7 +12,6 @@ from django.urls import path
 urlpatterns = [
     url(r'^log110',views.log110),
     url(r'^getPhone',views.get_phone),
-    url(r'^tylogin',views.tylogin),
     url(r'^userLogin', views.user_login),
     path('bindUser',views.bindUser),
     url(r'^getInfo', views.get_info),

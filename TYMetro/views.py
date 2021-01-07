@@ -30,8 +30,10 @@ class CustomAuth(ModelBackend):
         try:
             user = UserProfile.objects.get(Q(username=username) | Q(mobile=username) | Q(nick_name=username) | Q(apple_id=username))  # 输入username和mobile都能查询到用户
             logger.info(user)
-            if user.password == password:  # 校验密码
-                return user
+            return user
+
+            # if user.password == password:  # 校验密码
+            #     return user
         except Exception as e:
             return None
 
@@ -43,75 +45,6 @@ def get_phone(request):
     result = get_phone_number(token)
     return HttpResponse(result)
 
-@csrf_exempt
-def tylogin(request):
-    # 获取请求的参数
-    logger.info(request.body)
-    body = json.loads(request.body)
-    type = body['type']
-    if  type == 'sms':
-        phone = body['phone']
-        phone_user = UserProfile.objects.all().filter(mobile=phone)
-        # 校验账号是否存在,如果不存在创建一个新账号
-        if phone_user.count() == 0:
-            new_user = UserProfile()
-            new_user.mobile = phone
-            new_user.save()
-            # 封装数据
-            result = {'code': 0,
-                      'message': 'success'}
-            result['data'] = model_to_dict(new_user)
-            return JsonResponse(result,safe=False)
-        else:
-            # 封装数据
-            result = {'code': 0,
-                      'message': 'success'}
-
-            # 返回用户的数据
-            for info in phone_user:
-                logger.info(info)
-                dict = model_to_dict(info)
-                logger.info(dict)
-                result['data'] = dict
-            return JsonResponse(result, safe=False)
-    elif type == 'password':
-        phone = body['phone']
-        password = body['password']
-        phone_user = UserProfile.objects.all().filter(mobile=phone)
-
-        # 校验账号是否存在
-        if phone_user.count() == 0:
-            return JsonResponse(({'code':-1,'message':'该用户不存在','data':{}}))
-
-        # 校验密码是否正确
-        user =  phone_user.filter(password=password)
-        logger.info(user)
-        if user.count() == 0:
-            return JsonResponse(({'code':-2,'message':'密码错误','data':{}}))
-
-        # 封装数据
-        result = {'code': 0,
-                  'message': 'success'}
-
-        # 返回用户的数据
-        for info in user:
-            logger.info(info)
-            dict = model_to_dict(info)
-            logger.info(dict)
-            result['data'] = dict
-        return JsonResponse(result, safe=False)
-
-    elif type == 'onekey':
-        pass
-    elif type == 'apple':
-        pass
-
-
-
-
-    return HttpResponse()
-
-
 def user_login(request):
     obj = json.loads(request.body)
     username = obj.get('phone', None)
@@ -121,7 +54,11 @@ def user_login(request):
     # 验证码登录
     if type == 'sms':
         try:
-            user = UserProfile.objects.get(Q(mobile=username))
+            user = authenticate(request, username=username)
+            logger.info('---------')
+            logger.info(user)
+            logger.info('-----------')
+            # user = UserProfile.objects.get(Q(mobile=username))
             return user_data(request, user)
         except Exception as e:
             user = UserProfile(mobile=username)
@@ -163,11 +100,20 @@ def user_login(request):
         login_token = obj.get('loginToken',None)
         phone = get_phone_number(login_token)
         try:
-            user = UserProfile.objects.get(Q(mobile=phone))
+            user = authenticate(request, username=phone)
+            logger.info('1111111111')
+            logger.info(user.mobile)
+            logger.info('2222222222')
             return user_data(request,user)
         except Exception as e:
             user = UserProfile(mobile=phone)
+
+            logger.info('===========')
+            logger.info(model_to_dict(user))
+            logger.info('=============')
+
             user.save()
+            user = authenticate(request, username=username)
             return user_data(request,user)
 
 
