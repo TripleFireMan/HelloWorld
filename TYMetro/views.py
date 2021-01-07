@@ -28,7 +28,7 @@ logger = getLogger('HelloWorld')
 class CustomAuth(ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         try:
-            user = UserProfile.objects.get(Q(mobile=username))  # 输入username和mobile都能查询到用户
+            user = UserProfile.objects.get(Q(mobile=username) | Q(username=username))  # 输入username和mobile都能查询到用户
             logger.info(user)
             return user
 
@@ -101,17 +101,17 @@ def user_login(request):
         phone = get_phone_number(login_token)
         try:
             user = authenticate(request, username=phone)
-            logger.info('1111111111')
-            logger.info(user.mobile)
-            logger.info('2222222222')
+            if user is None:
+                user = UserProfile(mobile=phone, username=phone, nick_name=phone)
+                user.save()
+                user = authenticate(request, username=phone)
+                return user_data(request, user)
             return user_data(request,user)
         except Exception as e:
-            user = UserProfile(mobile=phone)
-
+            user = UserProfile(mobile=phone, username=phone, nick_name=phone)
             logger.info('===========')
             logger.info(model_to_dict(user))
             logger.info('=============')
-
             user.save()
             user = authenticate(request, username=phone)
             return user_data(request,user)
