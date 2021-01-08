@@ -7,8 +7,13 @@ import os
 
 import datetime
 class Test(models.Model):
-    name = models.CharField(max_length=20)
-    title = models.CharField(max_length=200,default="",editable=False)
+    name = models.CharField(max_length=20,verbose_name='姓名')
+    title = models.CharField(max_length=200,default="",editable=True,verbose_name='标题')
+    agreed = models.BooleanField(verbose_name='审核状态',default=False)
+    class Meta:
+        verbose_name_plural = '测试'
+    def __str__(self):
+        return self.name
 
 class Contact(models.Model):
     name = models.CharField(max_length=200)

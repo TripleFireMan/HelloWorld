@@ -29,5 +29,7 @@ class UserProfile(AbstractUser):
     def __str__(self):
         if self.nick_name:
             return self.nick_name
+        elif self.mobile:
+            return self.mobile
         else:
             return self.username
