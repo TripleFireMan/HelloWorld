@@ -60,6 +60,8 @@ def hello(request):
     os.system('cd /home/HelloWorld')
     os.system('git checkout .')
     os.system('git pull')
+    os.system('python3 manage.py makemigrates')
+    os.system('python3 manage.py migrate')
     # os.system('sudo killall -9 uwsgi')
     # os.system('sudo uwsgi uwsgi.ini')
     # os.system('nginx -s reload')
