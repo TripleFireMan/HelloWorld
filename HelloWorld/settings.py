@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import datetime
-
+import django
 from HelloWorld.config import MyConfig
 
 my_config = MyConfig()
@@ -156,7 +156,8 @@ MEDIA_URL = 'collect_static/uploads/'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.join(MEDIA_ROOT)),
-    os.path.join(BASE_DIR, 'templates/static')
+    os.path.join(BASE_DIR, 'templates/static'),
+    os.path.join(django.__file__.rstrip('__init__.py'), 'contrib/admin/static/admin').replace('\\', '/'),
 )
 
 # 设置每分钟执行一个任务，并将日志输出到指定文件
