@@ -18,7 +18,7 @@ class UserProfile(AbstractUser):
     img = models.CharField(max_length=100,verbose_name='头像',default='')
     email = models.EmailField(max_length=200,verbose_name='邮箱',default='')
     username = models.CharField(max_length=50,verbose_name='用户名',default="",unique=True)
-    password = models.CharField(max_length=50,verbose_name='密码',default='')
+    password = models.CharField(max_length=200,verbose_name='密码',default='')
     third_source = models.CharField(max_length=50,verbose_name='来源',help_text='三方来源',default='')
     introduce = models.CharField(max_length=250,default='')
     apple_id = models.CharField(max_length=250,default='')
