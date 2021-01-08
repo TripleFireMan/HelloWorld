@@ -214,7 +214,8 @@ def modifierUser(request):
     user.nick_name = nickname
     user.gender = sex
     user.birthday = birthday
-    user.img = avator
+    if avator is not None and avator != '':
+        user.img = avator
     user.introduce = intruduce
     user.save()
 
