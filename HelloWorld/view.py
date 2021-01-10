@@ -307,7 +307,9 @@ def pic(params):
         crash_user = data[index]['crashUser']
         access_user = data[index]['accessUser']
         crash_count = data[index]['crashCount']
-        crash_lv = "%.2f"%(crash_user * 100.0/access_user) + "%"
+        crash_lv = '0%'
+        if access_user != 0:
+            crash_lv = "%.2f"%(crash_user * 100.0/access_user) + "%"
         tab.add_row([app_name,app_version,access_user,crash_user,crash_count,crash_lv])
         if  index == len(data)-1:
             latest_crash_lv = crash_lv
