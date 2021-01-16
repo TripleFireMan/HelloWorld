@@ -26,6 +26,7 @@ from PIL import Image, ImageDraw, ImageFont
 import requests
 import urllib
 from  HelloWorld import qiniuuploader
+from rest_framework.decorators import api_view
 from HelloWorld.buglyReporter import buglyReporter
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
@@ -246,7 +247,7 @@ def print_helloworld():
     print('hello world')
 
 
-# @csrf_exempt
+@api_view(['POST','GET'])
 def buglyReport(request):
     obj = request.body
     json_data = json.loads(obj)
