@@ -16,4 +16,5 @@ urlpatterns = [
     path('bindUser',views.bindUser),
     url(r'^getInfo', views.get_info),
     path('modifireUserInfo',views.modifierUser),
+    path('feedback',views.feedback),
 ]

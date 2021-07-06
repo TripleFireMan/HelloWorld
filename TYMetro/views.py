@@ -7,9 +7,11 @@ from django.shortcuts import render
 from TYMetro.JPush.TYJPush import get_phone_number
 from logging import getLogger
 from TYMetro.models import UserProfile
+from TYMetro.models import FeedBack
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.core.serializers import serialize
+from  django.views.decorators.http import require_http_methods
 
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login
@@ -191,6 +193,7 @@ def get_info(request):
     user = request.user
     logger.info('=================')
     logger.info(model_to_dict(user))
+
     return JsonResponse(
         {
             'code': 200,
@@ -224,10 +227,25 @@ def modifierUser(request):
 
     return user_data(request,user)
 
-    # return JsonResponse(
-    #     {
-    #         'code': 200,
-    #         'message': '请求成功',
-    #         'data': data
-    #     }
-    # )
+# @require_http_methods(['POST'])
+def feedback(request):
+    logger.info(request.body)
+    body = json.loads(request.body)
+    feed_text = body.get('feedText','')
+    feed_imgs = body.get('feedImages','')
+    if feed_text == '' or feed_text is None:
+        return JsonResponse({
+            'status':-1,
+            'message':'反馈内容不能为空',
+            'data':''
+        })
+    feed_back = FeedBack()
+    feed_back.feed_text = feed_text
+    feed_back.feed_imgs = feed_imgs
+    feed_back.save()
+    feed_info = model_to_dict(feed_back)
+    return JsonResponse({
+        'status':0,
+        'data':feed_info,
+        'message':'success'
+    })

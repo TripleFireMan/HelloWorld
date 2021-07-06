@@ -4,11 +4,13 @@ from django.db import models
 from django.db import models
 from  django.utils import timezone
 from  django.contrib.auth.models import AbstractUser
+
 import datetime
 Gender_choice = (
     ('男','男'),
     ('女','女')
 )
+
 
 class UserProfile(AbstractUser):
     nick_name = models.CharField(max_length=50, verbose_name='昵称',default='',blank=True)
@@ -34,3 +36,17 @@ class UserProfile(AbstractUser):
             return self.mobile
         else:
             return self.username
+
+
+class FeedBack(models.Model):
+    feed_text = models.CharField(max_length=1000, verbose_name='反馈', blank=True)
+    feed_imgs = models.CharField(max_length=1000, verbose_name='图片', blank=True)
+    create_at = models.DateField(max_length=255, default=timezone.now, blank=True)
+    update_at = models.DateField(max_length=255, default=timezone.now, blank=True)
+
+    class Meta:
+        verbose_name='问题反馈'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.feed_text
