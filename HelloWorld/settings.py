@@ -176,7 +176,7 @@ FILER_STORAGES = {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
                 'location': 'collect_static/uploads/filer',
-                'base_url': '/collect_static/filer/',
+                'base_url': '/collect_static/uploads/filer/',
             },
             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
             'UPLOAD_TO_PREFIX': 'filer_public',
@@ -185,7 +185,7 @@ FILER_STORAGES = {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
                 'location': 'collect_static/uploads/filer_thumbnails',
-                'base_url': '/collect_static/filer_thumbnails/',
+                'base_url': '/collect_static/uploads/filer_thumbnails/',
             },
         },
     },
@@ -214,7 +214,7 @@ STATIC_URL = '/collect_static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "collect_static")
 
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'uploads')
-MEDIA_URL = 'collect_static/uploads/'
+MEDIA_URL = 'collect_static/'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.join(MEDIA_ROOT)),
