@@ -68,7 +68,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
- 
+# collections
+collect_static/uploads/
+collect_static/img/
+uploads/
 # mkdocs documentation
 /site
  

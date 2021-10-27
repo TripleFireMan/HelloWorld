@@ -28,8 +28,9 @@ from . import view,testdb,users
 from django.contrib.staticfiles.views import serve
 from django.urls import re_path,include
 import DailyClock.views
-from  HelloWorld import settings
-
+from django.conf.urls.static import static
+from HelloWorld import settings
+# from django.conf import settings
 def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
 urlpatterns = [
@@ -56,8 +57,11 @@ urlpatterns = [
     url(r'^dailyClock/',include('DailyClock.urls')),
     # 太原地铁项目url
     url(r'^ty_metro/',include('TYMetro.urls')),
-
+    url(r'^ZhuaZhou/',include('ZhuaZhou.urls')),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
     url(r'^', view.home),
+    url(r'^files/', include('filer.urls')),
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
