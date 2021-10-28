@@ -93,7 +93,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'collect_static')],
+                 os.path.join(BASE_DIR, 'collect_static'),
+                 os.path.join(BASE_DIR, 'media')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -175,8 +176,8 @@ FILER_STORAGES = {
         'main': {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
-                'location': 'collect_static/uploads/filer',
-                'base_url': '/collect_static/uploads/filer/',
+                'location': 'media/filer',
+                'base_url': '/media/filer/',
             },
             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
             'UPLOAD_TO_PREFIX': 'filer_public',
@@ -184,8 +185,8 @@ FILER_STORAGES = {
         'thumbnails': {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
-                'location': 'collect_static/uploads/filer_thumbnails',
-                'base_url': '/collect_static/uploads/filer_thumbnails/',
+                'location': 'media/filer_thumbnails',
+                'base_url': '/media/filer_thumbnails/',
             },
         },
     },
@@ -193,7 +194,7 @@ FILER_STORAGES = {
         'main': {
             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
             'OPTIONS': {
-                'location': 'collect_static/smedia/filer',
+                'location': 'media/smedia/filer',
                 'base_url': '/smedia/filer/',
             },
             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
@@ -202,7 +203,7 @@ FILER_STORAGES = {
         'thumbnails': {
             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
             'OPTIONS': {
-                'location': 'collect_static/smedia/filer_thumbnails',
+                'location': 'media/smedia/filer_thumbnails',
                 'base_url': '/smedia/filer_thumbnails/',
             },
         },
@@ -210,11 +211,12 @@ FILER_STORAGES = {
 }
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/collect_static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "collect_static")
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-MEDIA_ROOT = os.path.join(STATIC_ROOT, 'uploads')
-MEDIA_URL = 'collect_static/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 
 STATICFILES_DIRS = (
     os.path.join(os.path.join(MEDIA_ROOT)),

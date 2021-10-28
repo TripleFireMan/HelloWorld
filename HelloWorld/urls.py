@@ -30,6 +30,8 @@ from django.urls import re_path,include
 import DailyClock.views
 from django.conf.urls.static import static
 from HelloWorld import settings
+
+from django.views.static import serve
 # from django.conf import settings
 def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
@@ -59,9 +61,10 @@ urlpatterns = [
     url(r'^ty_metro/',include('TYMetro.urls')),
     url(r'^ZhuaZhou/',include('ZhuaZhou.urls')),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
+    re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
     url(r'^', view.home),
     url(r'^files/', include('filer.urls')),
 
 ]
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
