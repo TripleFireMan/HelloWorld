@@ -62,9 +62,7 @@ urlpatterns = [
     url(r'^ZhuaZhou/',include('ZhuaZhou.urls')),
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
-    url(r'^', view.home),
+    url(r'^$', view.home),
     url(r'^files/', include('filer.urls')),
-
 ]
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
