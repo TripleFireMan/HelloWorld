@@ -47,7 +47,7 @@ class remote():
     }
     }
     print('-----------------romote')
-    DEBUG = True
+    DEBUG = False
 
 class MyConfig():
     __conf = None
