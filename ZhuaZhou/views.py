@@ -33,9 +33,9 @@ def tools(request):
     if  gender == None:
           pass
     elif  gender == '男':
-        versions = versions.exclude(gender = '女')
+        versions = versions.filter(gender = '男')
     else:
-        versions = versions.exclude(gender = '男')
+        versions = versions.filter(gender = '女')
     dic = model_to_dict(result)
     del dic['id']
     arr = []
