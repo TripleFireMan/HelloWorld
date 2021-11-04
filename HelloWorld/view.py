@@ -20,13 +20,14 @@ import json
 import datetime
 from django.views.decorators.csrf import csrf_exempt
 import os
-from HelloWorld.settings import STATIC_ROOT
+from HelloWorld.settings import STATIC_ROOT,BASE_DIR
 from prettytable import PrettyTable
 from PIL import Image, ImageDraw, ImageFont
 import requests
 import urllib
 from  HelloWorld import qiniuuploader
 from rest_framework.decorators import api_view
+
 from HelloWorld.buglyReporter import buglyReporter
 # from apscheduler.schedulers.background import BackgroundScheduler
 # from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
@@ -206,7 +207,7 @@ def readBook(request):
             bookname = obj.name
         print(bookname)
 
-        fileDirectpath = os.path.join(STATIC_ROOT, 'ebooks')
+        fileDirectpath = os.path.join(BASE_DIR, 'collect_static/ebooks')
         fileDirectpath = os.path.join(fileDirectpath, bookname)
         fileDirectpath = os.path.join(fileDirectpath, bookname)
         fileDirectpath = os.path.join(fileDirectpath, '%s.txt' % b.get('chaperIdx'))
