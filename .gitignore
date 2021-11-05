@@ -74,7 +74,8 @@ collect_static/img/
 uploads/
 # mkdocs documentation
 /site
- 
+static
+media
 # mypy
 .mypy_cache/
  
