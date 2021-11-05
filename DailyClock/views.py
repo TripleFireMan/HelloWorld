@@ -174,3 +174,6 @@ def private(request):
 
 def userProtocol(request):
     return render(request, 'userregiest.html')
+
+def test(request):
+    return render(request,'test.html')
