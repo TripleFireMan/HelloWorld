@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!lq6&3dj1f9ttdz34ugknhf)ac-4!s5is)tj=)j!4t5urj#@y^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = conf.DEBUG
 
 ALLOWED_HOSTS = ['*']
 
@@ -90,10 +90,8 @@ ROOT_URLCONF = 'HelloWorld.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'collect_static'),
-                 os.path.join(BASE_DIR, 'media')],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': conf.DEBUG,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
