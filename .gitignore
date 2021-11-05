@@ -76,6 +76,7 @@ uploads/
 /site
 static
 media
+*.log
 # mypy
 .mypy_cache/
  
