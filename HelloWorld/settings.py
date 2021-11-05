@@ -50,14 +50,12 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
-
     'rest_framework',
     'TestModel',
     'DailyClock',
     'django_apscheduler',  # 定时执行任务
     'TYMetro',
     'ZhuaZhou',
-
 ]
 
 MIDDLEWARE = [
