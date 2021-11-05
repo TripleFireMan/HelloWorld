@@ -68,7 +68,7 @@ class MyConfig():
         return self.__conf
 
     def setup_logging(self,default_path="loggerConfig.json", default_level=logging.INFO, env_key="LOG_CFG"):
-        path = os.path.join(os.path.abspath('HelloWorld/log'),default_path)
+        path = os.path.join(os.path.abspath('HelloWorld'),default_path)
         value = os.getenv(env_key, None)
         if value:
             path = value
