@@ -361,5 +361,5 @@ def apple_json(request):
     file = open(path, 'rb')
     response = FileResponse(file)
     response['Content-Type'] = 'application/json'
-    response['Content-Disposition'] = 'attachment;filename="apple-app-site-association.json"'
+    response['Content-Disposition'] = 'attachment;filename="apple-app-site-association"'
     return response
