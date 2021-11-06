@@ -11,6 +11,7 @@
 '''
 
 from django.http import HttpResponse
+from django.http import FileResponse
 from django.shortcuts import render
 from TestModel.models import Book, BookCategory, Chapter, SearchHistory, BookSheet
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -354,3 +355,11 @@ def pic(params):
 def print_110():
 
     print(110)
+
+def apple_json(request):
+    path = os.path.join(BASE_DIR,'static/apple-app-site-association.json')
+    file = open(path, 'rb')
+    response = FileResponse(file)
+    response['Content-Type'] = 'application/json'
+    response['Content-Disposition'] = 'attachment;filename="apple-app-site-association.json"'
+    return response

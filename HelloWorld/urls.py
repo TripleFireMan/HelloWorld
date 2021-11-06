@@ -30,7 +30,6 @@ from django.urls import re_path,include
 import DailyClock.views
 from django.conf.urls.static import static
 from HelloWorld import settings
-
 from django.views.static import serve
 # from django.conf import settings
 def return_static(request, path, insecure=True, **kwargs):
@@ -63,6 +62,8 @@ urlpatterns = [
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
     url(r'^$', view.home),
+    # url(r'^apple-app-site-association.json',TemplateView.as_view(template_name='apple-app-site-association.json')),
+    url(r'^apple-app-site-association.json',view.apple_json),
     url(r'^files/', include('filer.urls')),
 ]
 
