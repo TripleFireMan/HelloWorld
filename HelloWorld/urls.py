@@ -63,7 +63,7 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
     url(r'^$', view.home),
     # url(r'^apple-app-site-association.json',TemplateView.as_view(template_name='apple-app-site-association.json')),
-    url(r'^apple-app-site-association.json',view.apple_json),
+    url(r'^apple-app-site-association',view.apple_json),
     url(r'^files/', include('filer.urls')),
 ]
 
