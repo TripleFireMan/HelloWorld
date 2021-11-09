@@ -8,5 +8,6 @@ from django.conf.urls import url
 from ZhuaZhou import views
 from django.urls import path
 urlpatterns = [
-    url(r'^Tools',views.tools)
+    url(r'^Tools',views.tools),
+    url(r'^homePageInfo',views.homePageInfo)
 ]
