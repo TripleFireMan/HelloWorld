@@ -246,7 +246,7 @@ def home(request):
     return render(request, 'index.html')
 
 def zhengweichao(request):
-    return render(request, '郑伟超.html')
+    return render(request, 'zhengweichao.html')
 
 def zengguixia(request):
     return render(request, '曾桂霞.html')
