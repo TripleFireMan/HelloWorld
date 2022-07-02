@@ -221,9 +221,20 @@ STATICFILES_DIRS = (
 )
 
 # 设置每分钟执行一个任务，并将日志输出到指定文件
+# python manage.py crontab add　　添加定时任务
+# python manage.py crontab remove 清除定时任务
+# python manage.py crontab show   显示定时任务
 CRONJOBS = [
-    ('*/1 * * * *','HelloWorld.view.print_110','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+    # ('*/1 * * * *','HelloWorld.view.print_110','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('58 15 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('59 15 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('00 16 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('58 17 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('59 17 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('00 18 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
+# ('31 * * * *','cron.RobCoupons.rob_with_sleep_30s','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'test.log')),
+('59 9,15,17 8-12 * *','cron.RobCoupons.rob_with_sleep_30s','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'test.log')),
 ]
 #
-# # 定时任务设置中文字符，如果不设置的话，可能会出现字符异常
-CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
+# # 定时任务设置中文字符，如py果不设置的话，可能会出现字符异常
+CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_CN.UTF-8'
