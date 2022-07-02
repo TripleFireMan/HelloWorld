@@ -249,7 +249,7 @@ def zhengweichao(request):
     return render(request, 'zhengweichao.html')
 
 def zengguixia(request):
-    return render(request, '曾桂霞.html')
+    return render(request, 'zengguixia.html')
 
 def print_helloworld():
     print('hello world')
