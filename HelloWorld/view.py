@@ -243,7 +243,13 @@ def chapters(request):
 
 
 def home(request):
+    return render(request, 'index.html')
+
+def zhengweichao(request):
     return render(request, '郑伟超.html')
+
+def zengguixia(request):
+    return render(request, '曾桂霞.html')
 
 def print_helloworld():
     print('hello world')
