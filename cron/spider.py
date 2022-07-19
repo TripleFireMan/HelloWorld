@@ -5,7 +5,7 @@ import json
 import pymysql
 import datetime
 import time
-url0 = 'http://leancloud.emotionwp.com/1.1/classes/dataone2?limit=30&order=-postId&where=%7B%22postId%22%3A%7B%22%24lte%22%3A{0}%7D%7D'
+url0 = 'http://leancloud.emotionwp.com/1.1/classes/dataone2?limit=1&order=-postId&where=%7B%22postId%22%3A%7B%22%24lte%22%3A{0}%7D%7D'
 
 payload={}
 headers = {
@@ -41,7 +41,7 @@ def create_table(connect):
         print(str(e))
 # 抓包
 def spider(connect):
-    base_date_str = '2020-12-04'
+    base_date_str = '2021-12-07'
     base_post_id = 1700000308
     base_date = datetime.datetime.strptime(base_date_str,'%Y-%m-%d')
     today = datetime.datetime.now()
