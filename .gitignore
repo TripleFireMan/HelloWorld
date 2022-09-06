@@ -6,6 +6,7 @@ venv/
 /__pycache__/
 DailyClock/__pycache__/
 TestModel/__pycache__/
+HelloWorld/config.py
 .qiniu_pythonsdk_hostscache.json
 HelloWorld/.qiniu_pythonsdk_hostscache.json
 system/__pycache__/
