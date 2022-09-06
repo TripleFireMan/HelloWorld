@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^fonts', views.fonts),
     # 今日卡片
     url(r'^todayCard', views.today_card),
-    url('test.html',views.test)
-
+    url('test.html',views.test),
+    url(r'^userLogin', views.user_login)
 ]

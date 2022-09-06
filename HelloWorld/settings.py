@@ -38,7 +38,7 @@ APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [
-
+    'simpleui',
     'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -233,7 +233,7 @@ CRONJOBS = [
 # ('59 17 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
 # ('00 18 10 * *','cron.RobCoupons.rob_50_time','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'crontab.log')),
 # ('31 * * * *','cron.RobCoupons.rob_with_sleep_30s','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'test.log')),
-('59 9,15,17 8-12 * *','cron.RobCoupons.rob_with_sleep_30s','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'test.log')),
+# ('* * 18 7 *','cron.RobCoupons.rob_with_sleep_30s','>> ' + os.path.join(os.path.dirname(BASE_DIR), 'test.log')),
 ]
 #
 # # 定时任务设置中文字符，如py果不设置的话，可能会出现字符异常

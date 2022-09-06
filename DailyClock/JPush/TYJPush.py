@@ -11,23 +11,27 @@ from Crypto.Cipher import PKCS1_v1_5
 import base64
 import requests
 import json
+from logging import getLogger
+
+logger = getLogger('HelloWorld')
 
 PREFIX = '-----BEGIN RSA PRIVATE KEY-----'
 SUFFIX = '-----END RSA PRIVATE KEY-----'
 
-prikey = '''MIICXQIBAAKBgQDB+Q+/Li0t3o4l/Z0MAiO6HenzovcUaQvsdxTz75XfO7wKjGhJ
-ChifpTdX5QE2jjCDuygJgjbKMoBdTV/SskkRqUuHZjvvh8U3M/LKGp7dGXNVrfsD
-LcWcJDFVKrS0X0D769TAhY+ocXqT4g+jFrnKTVJOUkIM7vJrpDguj8NIJwIDAQAB
-AoGBAIQ1exsmoRqbj62rP+iYaLuJehVapSffNYZV4A0n5rIB5/gUnVvzKrddh+w7
-pWkG32BaJz7b5vZIF6AAheh5Jj1X+ENn/7fOxoYigrH5YOMTOgG1J1wC65j3nPAV
-IAendY9vcjPDNt72G5MT1FG7yI5KD9pdpCAAM+9MiAD2GkRBAkEA7pyRwtFBQsYw
-W/Ut6BIHjJY8su4ohWMxHHpWIudTYxi8FGUJjk7g3OtayA/dUaUOiiFVaK7Yobhx
-Zk4TSbvIBwJBANAbu4qPexsMfU3fnHAP7eC8rWzc1TBQykAOqPYXupwnwFq8lvkG
-qnMU1G73HY05ffAq72D79s+5A8IpjVaBNuECQQCmpWzbnh+xDg+6OasdGHJzSn4M
-DW75ccRb+kjsSZkgbab1q3cYD5jWUf1uGj5dBiT4bb1jxjGACPwSEldAOMjDAkBl
-7z+UZiVRoXN7Am2ZAmRtMV3tNdoC2X/Hkqa2K/dO57WzfC6i+d3hkrFfTRGfjCqg
-yhcItUI2ixRJNZsyZQZhAkA2L0U3RlSfeaEIxVWkh8BPhLr5EQb41ZBL7lCQKIeu
-Cf2rwVQM2iPPUtyosE6twjB0zXQ2P3l3OGes28V9xxBs'''
+prikey = '''MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALDUROK0ve6Fnhup
+x2/MFc1VjRwhpOGwYle26zYdgoMvVzAU+nrseQe8ExF/TubqiBrYLjgRPj3YHTzO
+LtCs2Uvlpzs7Fn2xS33VPyDv+U2rjg1ShY8mr+QJ3fgcnFMgWnbiPD0JG9g0edzK
+wK/7wQZBi4UWRMx1z4x3mc79x6CJAgMBAAECgYBnfDK8Qm6NMuFu6xNumA+CVbj5
+Z68o7aMAFmrdBrQktgXee8iDO/Uw056NNOYmOcdhfna+FUlJxDqIJVo8gYvA5vSr
+PQFtkvrnYpgftxiGdwb5XsKENnzfQQ3NcAghuiZ6A2MfwASPnNqg/DuvCNX/4uVq
+aOT54c2CQeSrpTY3SQJBAOqHAXg47lMgormUZjyzDRr0aIHjXLqBFf2x6xZZMsHk
+YaqZRbr7zFi0W3lyS81ZzmK8ltWTFvi5DijL9LHrPFMCQQDBBOX00G8L4QSxz18C
+TQKIlLqF0yEMZOlSGiVqL03m0sC3jjoY+rzH7suxvL3ioCKLpY1qJd6c2ZfnCJsu
+d3QzAkEAgiUJG738AwVJR9KiKWzzCNI4bFvPSW/41B+3ZV96Wz5xNEp595ljfJYZ
+bPuQNRRxAznEOiC1zrBiuyDzWQhBIQJBAJIRHeBtF4v6xe21S2XXV1J6ksiRJJJX
+j0XFaYj4sVA7LwH5TLf4j4IRkO45Mc1dd6cMKn8ol1VFSTHaDm1UkocCQQCXcCsf
+dn05gD3QXrAz7+QA9dz/sudkBbnxoNSNDXamytBxmSSXhYqhxkNHTLDqp2EI02VV
+sWF3a2b70YrQI+zU'''
 
 key = "{}\n{}\n{}".format(PREFIX, prikey, SUFFIX)
 cipher = PKCS1_v1_5.new(RSA.importKey(key))
@@ -42,10 +46,10 @@ def get_phone_number(token):
         'Content-Type': 'application/json',
         'Authorization': 'Basic MDgyZTRjNDUzOTY3MWE2NzdkNGY3YTc0OjkwNDM4MmM2YjQ4OTY1ZDkwMGNlOTMzNQ=='
     }
-    print(payload)
+    logger.info(payload)
     response = requests.request("POST", url, headers=headers, data=payload)
     json_data = json.loads(response.content)
-    print(json_data)
+    logger.info(json_data)
     try:
         if  json_data['phone'] is not None:
             phone_encode = json_data['phone']

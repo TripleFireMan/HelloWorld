@@ -27,7 +27,6 @@ class local():
                         },
         }
     }
-    print('-----------------local')
     DEBUG = True
 
 class remote():
@@ -46,7 +45,6 @@ class remote():
                         },
     }
     }
-    print('-----------------romote')
     DEBUG = False
 
 class MyConfig():
@@ -59,11 +57,11 @@ class MyConfig():
     def get_conf(self):
         if  self.__conf == None:
             if self.__is_remote:
-                logger.info('set remote config')
+                logger.info('当前数据库运行在正式环境')
 
                 self.__conf = remote()
             else:
-                logger.info('set local config')
+                logger.info('当前数据库运行在测试环境')
                 self.__conf = local()
         return self.__conf
 

@@ -30,30 +30,6 @@ from  HelloWorld import qiniuuploader
 from rest_framework.decorators import api_view
 
 from HelloWorld.buglyReporter import buglyReporter
-# from apscheduler.schedulers.background import BackgroundScheduler
-# from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
-#
-# #开启定时工作
-# try:
-#     # 实例化调度器
-#     scheduler = BackgroundScheduler()
-#     DjangoJobStore().remove_all_jobs()
-#     print(scheduler.get_jobs())
-#     scheduler.add_jobstore(DjangoJobStore(), "default")
-#
-#     # 设置定时任务，选择方式为interval，时间间隔为10s
-#     # 另一种方式为每天固定时间执行任务，对应代码为：
-#     # @register_job(scheduler, 'cron', day_of_week='mon-fri', hour='9', minute='30', second='10',id='task_time')
-#     @register_job(scheduler,"interval", seconds=10)
-#     def my_job_jitang():
-#         # 这里写你要执行的任务
-#         do_work()
-#     scheduler.start()
-# except Exception as e:
-#     print(e)
-#     # 有错误就停止定时器
-#     # scheduler.shutdown()
-
 
 @csrf_exempt
 def hello(request):
@@ -69,10 +45,6 @@ def hello(request):
     # os.system('sudo uwsgi uwsgi.ini')
     # os.system('nginx -s reload')
     return HttpResponse('success')
-
-
-def testGouzi(request):
-    return HttpResponse('我是一个小毛贼,天天傻开心')
 
 
 class DateEncoder(json.JSONEncoder):

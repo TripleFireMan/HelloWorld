@@ -18,7 +18,8 @@ def async_call(fn):
     return wrapper
 
 def rob_with_sleep_30s():
-    rob_sleep_time(53,1,10,50)
+    print('9999999')
+    # rob_sleep_time(53,1,10,50)
 
 def rob_sleep_time(sleeps,interval,step,robtimes):
     # 沉睡时间

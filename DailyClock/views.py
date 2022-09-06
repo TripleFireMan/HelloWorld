@@ -12,12 +12,21 @@ from HelloWorld import settings
 from DailyClock.models import DKFeedBack
 from DailyClock.models import DKVersionHistory
 from  DailyClock.models import *
+from TYMetro.models import UserProfile
+from django.contrib.auth import authenticate, login
 import datetime
+from logging import getLogger
 from django.shortcuts import render
 import os
 import json
 from TestModel.models import models
+from DailyClock.Apple.AppleLogin import decode_jwt
+from DailyClock.JPush.TYJPush import get_phone_number
+from rest_framework_jwt.settings import api_settings
+from django.http import JsonResponse
+from django.db.models import Q
 
+logger = getLogger('HelloWorld')
 class DateEncoders(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime.datetime):
@@ -64,10 +73,18 @@ def feedBack(request):
         data = json.dumps(jsonResult)
         return HttpResponse(data)
     else:
+        feedBacks = DKFeedBack.objects.all()
+        arr = []
+        for feed in feedBacks:
+            item = model_to_dict(feed)
+            del item['id']
+            arr.append(item)
         result = Result()
-        result.status = 1001
-        result.message = '不支持get请求'
-        return HttpResponse(json.dumps(model_to_dict(result)))
+        dic = model_to_dict(result)
+
+        del dic['id']
+        dic['data'] = arr
+        return HttpResponse(json.dumps(dic, cls=DateEncoders))
 
 
 @csrf_exempt
@@ -177,3 +194,106 @@ def userProtocol(request):
 
 def test(request):
     return render(request,'test.html')
+
+def user_data(request,user):
+    login(request, user)
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+    jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+    payload = jwt_payload_handler(user)
+    token = jwt_encode_handler(payload)
+    data = {'token': token}
+    dic = model_to_dict(user)
+    for key in dic:
+        data.setdefault(key, dic[key])
+    return JsonResponse({
+        'code': 0,
+        'message': '登录成功',
+        'data': data
+    })
+
+def user_login(request):
+    obj = json.loads(request.body)
+    username = obj.get('phone', None)
+    password = obj.get('password', None)
+    type = obj.get('type',None)
+
+    # 验证码登录
+    if type == 'sms':
+        try:
+            user = authenticate(request, username=username)
+            if user is None:
+                user = UserProfile(mobile=username, username=username, nick_name=username)
+                user.save()
+                user = authenticate(request, username=username)
+                return user_data(request, user)
+
+            logger.info('---------')
+            logger.info(user)
+            logger.info('-----------')
+            # user = UserProfile.objects.get(Q(mobile=username))
+            return user_data(request, user)
+        except Exception as e:
+            user = UserProfile(mobile=username, username=username, nick_name=username)
+            logger.info('===========')
+            logger.info(model_to_dict(user))
+            logger.info('=============')
+            user.save()
+            user = authenticate(request, username=username)
+            return user_data(request,user)
+
+    elif type == 'password':
+        if username is None or password is None:
+            return JsonResponse({'code': 500, 'message': '请求参数错误'})
+        is_login = authenticate(request, username=username, password=password)
+        if is_login is None:
+            return JsonResponse({'code': 500, 'message': '账号或密码错误'})
+        return user_data(request,is_login)
+    elif type == 'apple':
+        apple_token = obj.get('apple_token',None)
+        tokens =  decode_jwt(apple_token)
+        apple_id = tokens.get('sub',None)
+        logger.info('--------')
+        logger.info(tokens)
+        logger.info('--------')
+        logger.info('appleid:'+apple_id)
+        try:
+            user = UserProfile.objects.get(Q(apple_id=apple_id) & (~Q(mobile='')))
+            logger.info('找到绑定的苹果用户:'+str(user))
+            return user_data(request, user)
+        except Exception as e:
+            logger.info(e)
+            logger.info('查询不到appleid绑定的手机号')
+            try:
+                user = UserProfile.objects.get(Q(apple_id=apple_id))
+                logger.info('找到appleid用户:'+str(user))
+                return user_data(request, user)
+            except Exception as e:
+                logger.error(e)
+                logger.info('未发现appleid用户')
+                user = UserProfile(apple_id=apple_id,username=apple_id)
+                user.save()
+                user = authenticate(request, username=apple_id)
+                return user_data(request,user)
+    elif type == 'onekey':
+        login_token = obj.get('loginToken',None)
+        phone = get_phone_number(login_token)
+        logger.info("----------")
+        logger.info(phone)
+        logger.info("----------")
+        try:
+            user = authenticate(request, username=phone)
+            if user is None:
+                user = UserProfile(mobile=phone, username=phone, nick_name=phone)
+                user.save()
+                user = authenticate(request, username=phone)
+                return user_data(request, user)
+            return user_data(request,user)
+        except Exception as e:
+            user = UserProfile(mobile=phone, username=phone, nick_name=phone)
+            logger.info('===========')
+            logger.info(model_to_dict(user))
+            logger.info('=============')
+            user.save()
+            user = authenticate(request, username=phone)
+            return user_data(request,user)
+

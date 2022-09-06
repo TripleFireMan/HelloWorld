@@ -10,7 +10,7 @@ import simplejson
 import requests
 
 TEAM_ID = ''
-BUNDLE_ID = 'com.chenyan.TaiYuanMetro'
+BUNDLE_ID = 'com.chengyan.DailyClock'
 
 TOKEN_URL = 'https://appleid.apple.com/auth/keys'
 def decode_jwt(data):
@@ -31,9 +31,5 @@ def decode_jwt(data):
         print('Unable to find public key')
         return None
     # 使用公钥来解密
-    try:
-        claims = jwt.decode(data, key=key, verify=True, algorithms=[alg], audience=BUNDLE_ID)
-        return claims
-    except Exception as e :
-        print(e)
-        return  e
+    claims = jwt.decode(data, key=key, verify=True, algorithms=[alg], audience=BUNDLE_ID)
+    return claims
