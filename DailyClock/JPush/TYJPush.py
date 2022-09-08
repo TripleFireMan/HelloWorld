@@ -44,7 +44,7 @@ def get_phone_number(token):
     payload = json.dumps(payloadDic)
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Basic MDgyZTRjNDUzOTY3MWE2NzdkNGY3YTc0OjkwNDM4MmM2YjQ4OTY1ZDkwMGNlOTMzNQ=='
+        'Authorization': 'Basic ZmVlZGEzYzJlMjBiNTllNDMxY2JmZDQzOjJiOTE0NGViOWQ0NDE2YzA5MGY1ZTk3Nw=='
     }
     logger.info(payload)
     response = requests.request("POST", url, headers=headers, data=payload)
