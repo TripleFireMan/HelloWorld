@@ -83,7 +83,7 @@ def feedBack(request):
         dic = model_to_dict(result)
 
         del dic['id']
-        dic['data'] = arr
+        dic['data'] = arr[::-1]
         return HttpResponse(json.dumps(dic, cls=DateEncoders))
 
 
@@ -173,7 +173,6 @@ def today_card(request):
     result = DKJiTang.objects.all().order_by('-id')[:1]
     Res = Result()
     dic = model_to_dict(Res)
-
     del dic['id']
     data = []
     l = model_to_dict(result[0])
