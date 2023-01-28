@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 # -*- coding:UTF-8 -*-
 import requests
 import json
@@ -75,7 +75,7 @@ def save(response,connect):
             print(e)
 
 def do_work():
-    connect = pymysql.connect(host='39.96.77.250', user='root', password='Chengyan#251', port=3306, db='hello')
+    connect = pymysql.connect(host='42.192.160.232', user='root', password='Chengyan#251', port=3306, database='hello')
     # 建表
     create_table(connect)
     # 爬
