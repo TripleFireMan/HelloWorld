@@ -41,7 +41,7 @@ def create_table(connect):
         print(str(e))
 # 抓包
 def spider(connect):
-    base_date_str = '2021-12-07'
+    base_date_str = '2022-12-07'
     base_post_id = 1700000308
     base_date = datetime.datetime.strptime(base_date_str,'%Y-%m-%d')
     today = datetime.datetime.now()
