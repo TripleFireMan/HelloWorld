@@ -220,6 +220,8 @@ STATICFILES_DIRS = (
     os.path.join(django.__file__.rstrip('__init__.py'), 'contrib/admin/static/admin').replace('\\', '/'),
 )
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
 # 设置每分钟执行一个任务，并将日志输出到指定文件
 # python manage.py crontab add　　添加定时任务
 # python manage.py crontab remove 清除定时任务
