@@ -47,8 +47,6 @@ urlpatterns = [
     url(r'^view/readBook',view.readBook),
     url(r'^view/chapters',view.chapters),
     url(r'^home',view.home),
-    url(r'^zhengweichao',view.zhengweichao),
-    url(r'^zengguixia',view.zengguixia),
     url(r'^lovehanju',view.lovehanju),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),
