@@ -217,12 +217,6 @@ def chapters(request):
 def home(request):
     return render(request, 'index.html')
 
-def zhengweichao(request):
-    return render(request, 'zhengweichao.html')
-
-def zengguixia(request):
-    return render(request, 'zengguixia.html')
-
 def lovehanju(request):
     return render(request,'lovehanju.html')
 

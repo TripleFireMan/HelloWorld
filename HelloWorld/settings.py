@@ -216,7 +216,7 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(os.path.join(MEDIA_ROOT)),
-    os.path.join(BASE_DIR, 'templates/static'),
+    os.path.join(BASE_DIR, 'templates/resources'),
     os.path.join(django.__file__.rstrip('__init__.py'), 'contrib/admin/static/admin').replace('\\', '/'),
 )
 
