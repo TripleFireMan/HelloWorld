@@ -223,6 +223,9 @@ def zhengweichao(request):
 def zengguixia(request):
     return render(request, 'zengguixia.html')
 
+def lovehanju(request):
+    return render(request,'lovehanju.html')
+
 def print_helloworld():
     print('hello world')
 

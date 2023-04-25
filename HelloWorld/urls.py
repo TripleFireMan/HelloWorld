@@ -49,6 +49,7 @@ urlpatterns = [
     url(r'^home',view.home),
     url(r'^zhengweichao',view.zhengweichao),
     url(r'^zengguixia',view.zengguixia),
+    url(r'^lovehanju',view.lovehanju),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),
 
