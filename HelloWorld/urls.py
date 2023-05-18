@@ -31,6 +31,7 @@ import DailyClock.views
 from django.conf.urls.static import static
 from HelloWorld import settings
 from django.views.static import serve
+from django.urls import path
 # from django.conf import settings
 def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
@@ -48,6 +49,8 @@ urlpatterns = [
     url(r'^view/chapters',view.chapters),
     url(r'^home',view.home),
     url(r'^lovehanju',view.lovehanju),
+
+    path('grappelli/',include('grappelli.urls')),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),
 

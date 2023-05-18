@@ -14,7 +14,7 @@ Gender_choice = (
 
 class UserProfile(AbstractUser):
     nick_name = models.CharField(max_length=50, verbose_name='昵称',default='',blank=True)
-    birthday = models.DateField(max_length=255,default=timezone.now,blank=True)
+    birthday = models.DateField(max_length=255,verbose_name='生日',default=timezone.now,blank=True)
     gender = models.CharField(max_length=6, verbose_name='性别', choices=Gender_choice,blank=True)
     address = models.CharField(max_length=100,verbose_name='地址',default='',blank=True)
     mobile = models.CharField(max_length=11,verbose_name='手机号',unique=True,default='')
@@ -23,7 +23,7 @@ class UserProfile(AbstractUser):
     username = models.CharField(max_length=50,verbose_name='用户名',default="",unique=True)
     password = models.CharField(max_length=200,verbose_name='密码',default='')
     third_source = models.CharField(max_length=50,verbose_name='来源',help_text='三方来源',default='',blank=True)
-    introduce = models.CharField(max_length=250,default='',blank=True)
+    introduce = models.CharField(max_length=250,verbose_name='个人简介', default='',blank=True)
     apple_id = models.CharField(max_length=250,default='',blank=True)
 
     class Meta:

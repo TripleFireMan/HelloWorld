@@ -39,6 +39,7 @@ APPEND_SLASH = False
 
 INSTALLED_APPS = [
     # 'simpleui',
+    'grappelli',
     'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
