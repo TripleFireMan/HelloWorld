@@ -25,4 +25,4 @@ class DKFontAdmin(admin.ModelAdmin):
 admin.site.register(DKFeedBack, DKFeedBackAdmin)
 admin.site.register(DKVersionHistory,DKVersionHistoryAdmin)
 admin.site.register(DKJiTang,DKJitangAdmin)
-admin.site.register(DKFonts)
+admin.site.register(DKFonts, DKFontAdmin)
