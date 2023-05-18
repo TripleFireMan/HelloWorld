@@ -14,11 +14,18 @@ class DKFeedBack(models.Model):
     phone = models.CharField(max_length=20)
     date = models.DateField(max_length=255,default=timezone.now)
     reply = models.CharField(max_length=255,default="")
-
+    class Meta:
+        verbose_name='打卡反馈'
+        verbose_name_plural = verbose_name
+    def __str__(self):
+        return self.title
 class DKVersionHistory(models.Model):
     version = models.CharField(max_length=10)
     des = models.CharField(max_length=150)
     date = models.DateField(max_length=10,default=timezone.now)
+    class Meta:
+        verbose_name='版本历史'
+        verbose_name_plural = verbose_name
 
 class DKFonts(models.Model):
     name = models.CharField(max_length=50, default='')
@@ -53,7 +60,10 @@ class DKJiTang(models.Model):
     date = models.DateTimeField(default=datetime.now)
     objectId = models.CharField(max_length=255,default='')
     objects = models.Manager()
+
     class Meta:
         db_table = 'jitang'
+        verbose_name = '鸡汤'
+        verbose_name_plural = verbose_name
 
 
