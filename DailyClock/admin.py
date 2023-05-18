@@ -8,6 +8,9 @@ class DKFeedBackAdmin(admin.ModelAdmin):
 class DKJitangAdmin(admin.ModelAdmin):
     list_display = ('text','url','date','wordsInfo')
 
+class DKVersionHistoryAdmin(admin.ModelAdmin):
+    list_display = ('version','des')
+
 admin.site.register(DKFeedBack, DKFeedBackAdmin)
-admin.site.register(DKVersionHistory)
+admin.site.register(DKVersionHistory,DKVersionHistoryAdmin)
 admin.site.register(DKJiTang,DKJitangAdmin)
