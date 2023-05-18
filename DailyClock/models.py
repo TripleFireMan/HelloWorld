@@ -32,6 +32,9 @@ class DKFonts(models.Model):
     font_name = models.CharField(max_length=30, default='')
     font_bold_name = models.CharField(max_length=20, default='')
     url = models.CharField(max_length=100, default='')
+    class Meta:
+        verbose_name = '字体设置'
+        verbose_name_plural = verbose_name
 
 class ProfileForm(forms.Form):
     name = forms.CharField(max_length=100,label='名字:',required=False)
