@@ -220,12 +220,23 @@ def modifierUser(request):
     if avator is not None and avator != '':
         user.img = avator
     user.introduce = intruduce
-    user.save()
-
+    try:
+        user.save()
+    except Exception as e:
+        logger.error(e)
+        return JsonResponse({
+        'status':-1,
+        'code':-1,
+        'data':None,
+        'message':'登录已失效，请退出重新登录'
+        })
+    
     logger.info('=================')
     logger.info(model_to_dict(user))
 
     return user_data(request,user)
+            
+
 
 # @require_http_methods(['POST'])
 def feedback(request):
