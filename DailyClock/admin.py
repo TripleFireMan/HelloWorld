@@ -1,12 +1,20 @@
 from django.contrib import admin
 from DailyClock.models import DKFeedBack,DKJiTang,DKVersionHistory
+from django.utils.html import format_html
 # Register your models here.
 
 class DKFeedBackAdmin(admin.ModelAdmin):
     list_display = ('title','content','phone','date','reply')
 
 class DKJitangAdmin(admin.ModelAdmin):
-    list_display = ('text','url','date','wordsInfo')
+    def image_tag(self,obj):
+        if(obj.url):
+            return format_html('<img src="{}" style="width:100px;height:80px;"/>'.format(obj.url))
+        return ""
+    image_tag.allow_tags = True
+    image_tag.short_description = 'Image'
+    list_display = ('text','date','wordsInfo','image_tag',)
+    fieldsets = ((None,{'fields':('text','wordsInfo','date',)}),)
 
 class DKVersionHistoryAdmin(admin.ModelAdmin):
     list_display = ('version','des')
