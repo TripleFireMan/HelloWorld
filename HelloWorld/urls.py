@@ -49,7 +49,7 @@ urlpatterns = [
     url(r'^view/chapters',view.chapters),
     url(r'^home',view.home),
     url(r'^lovehanju',view.lovehanju),
-
+    url(r'^yangyang',view.yangyang),
     path('grappelli/',include('grappelli.urls')),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),

@@ -25,14 +25,19 @@ from DailyClock.JPush.TYJPush import get_phone_number
 from rest_framework_jwt.settings import api_settings
 from django.http import JsonResponse
 from django.db.models import Q
+from django.db.models.fields.files import FieldFile
 
 logger = getLogger('HelloWorld')
 class DateEncoders(json.JSONEncoder):
     def default(self, obj):
+        print('obj11111')
         if isinstance(obj, datetime.datetime):
             return obj.strftime("%Y-%m-%d %H:%M:%S")
         elif isinstance(obj, datetime.date):
             return obj.strftime("%Y-%m-%d")
+        elif isinstance(obj, FieldFile):
+            print(111)
+            return obj.url
         else:
             return json.JSONEncoder.default(self, obj)
 
