@@ -220,6 +220,9 @@ def home(request):
 def lovehanju(request):
     return render(request,'lovehanju.html')
 
+def lovehanjuTV(request):
+    return render(request,'lovehanjuTV.html')
+
 def yangyang(request):
     return render(request,'yangyang.html')
 
