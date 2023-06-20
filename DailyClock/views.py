@@ -105,7 +105,7 @@ def versionHistory(request):
     dic['data'] = arr[::-1]
     return HttpResponse(json.dumps(dic, cls=DateEncoders))
 
-
+@csrf_exempt
 def fonts(request):
     all_fonts = DKFonts.objects.all()
     result = Result()

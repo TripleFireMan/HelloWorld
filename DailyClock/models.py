@@ -32,7 +32,7 @@ class DKFonts(models.Model):
     font_name = models.CharField(max_length=30, default='')
     font_bold_name = models.CharField(max_length=20, default='')
     url = models.CharField(max_length=100, default='')
-    file = models.FileField(verbose_name='上传文件',upload_to='fonts/',storage=ImageStorage,default=None)
+    #file = models.FileField(verbose_name='上传文件',upload_to='fonts/',storage=ImageStorage,default=None)
     class Meta:
         verbose_name = '字体设置'
         verbose_name_plural = verbose_name
