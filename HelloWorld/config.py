@@ -49,7 +49,7 @@ class remote():
 
 class MyConfig():
     __conf = None
-    __is_remote = True
+    __is_remote = False
     def is_remote_env(self):
         return self.__is_remote
 
