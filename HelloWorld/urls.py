@@ -24,7 +24,7 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib import admin
-from . import view,testdb,users
+from . import view,users
 from django.contrib.staticfiles.views import serve
 from django.urls import re_path,include
 import DailyClock.views
