@@ -32,7 +32,35 @@ from django.conf.urls.static import static
 from HelloWorld import settings
 from django.views.static import serve
 from django.urls import path
+
+from TYMetro.models import UserProfile
+from DailyClock.models import DKJiTang
+from rest_framework import routers, serializers, viewsets
 # from django.conf import settings
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = UserProfile
+        fields = ['url', 'username', 'email', 'is_staff']
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserSerializer
+
+class JitangSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = DKJiTang
+        fields = '__all__'
+class JitangViewSet(viewsets.ModelViewSet):
+    queryset = DKJiTang.objects.all()
+    serializer_class = JitangSerializer
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'jitang',JitangViewSet)
+
 def return_static(request, path, insecure=True, **kwargs):
     return serve(request, path, insecure, **kwargs)
 urlpatterns = [
@@ -68,5 +96,7 @@ urlpatterns = [
     # url(r'^apple-app-site-association.json',TemplateView.as_view(template_name='apple-app-site-association.json')),
     url(r'^apple-app-site-association',view.apple_json),
     url(r'^files/', include('filer.urls')),
+    path('api/', include(router.urls)),
+    url(r'^api-auth/',include('rest_framework.urls')),
 ]
 
