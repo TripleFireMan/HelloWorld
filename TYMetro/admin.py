@@ -12,7 +12,7 @@ class UserProfileAdmin(admin.ModelAdmin):
         return ""
     image_tag.allow_tags = True
     image_tag.short_description = 'Image'
-    exclude = ('date_joined','first_name','last_name','is_staff','is_active','last_login','is_superuser'xxia)
+    exclude = ('date_joined','first_name','last_name','is_staff','is_active','last_login','is_superuser')
     list_display = ('username','nick_name',"birthday","gender","address","mobile","introduce","email","image_tag","third_source","apple_id")
     fieldsets = (
         ('基本信息',{'fields':('username',('nick_name','birthday',"gender",),'introduce','img',"address",)}),
