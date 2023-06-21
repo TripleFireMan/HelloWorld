@@ -26,7 +26,7 @@ class DKFontAdmin(admin.ModelAdmin):
             if (obj.file.url):
                 return obj.file.url
         except Exception as e:
-            return e
+            return ''
 
     list_display = ('name','font_name','font_bold_name','url','file_url')
 

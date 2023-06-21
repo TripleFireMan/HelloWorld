@@ -36,8 +36,11 @@ class DateEncoders(json.JSONEncoder):
         elif isinstance(obj, datetime.date):
             return obj.strftime("%Y-%m-%d")
         elif isinstance(obj, FieldFile):
-            print(111)
-            return obj.url
+            try:
+                if obj.url:
+                    return obj.url
+            except Exception as e:
+                return ''
         else:
             return json.JSONEncoder.default(self, obj)
 
