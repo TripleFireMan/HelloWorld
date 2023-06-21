@@ -20,7 +20,7 @@ class DKVersionHistoryAdmin(admin.ModelAdmin):
     list_display = ('version','des')
 
 class DKFontAdmin(admin.ModelAdmin):
-    list_display = ('name','font_name','font_bold_name','url')
+    list_display = ('name','font_name','font_bold_name','url','file')
 
 admin.site.register(DKFeedBack, DKFeedBackAdmin)
 admin.site.register(DKVersionHistory,DKVersionHistoryAdmin)
