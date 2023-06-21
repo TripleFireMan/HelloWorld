@@ -22,8 +22,8 @@ class DKVersionHistoryAdmin(admin.ModelAdmin):
 
 class DKFontAdmin(admin.ModelAdmin):
     def file_url(self,obj):
-        if (obj.file.url):
-            return obj.file.url
+        # if (obj.file.url):
+        #     return obj.file.url
         return ''
     list_display = ('name','font_name','font_bold_name','url','file_url')
 
