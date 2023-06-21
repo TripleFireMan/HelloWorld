@@ -22,9 +22,12 @@ class DKVersionHistoryAdmin(admin.ModelAdmin):
 
 class DKFontAdmin(admin.ModelAdmin):
     def file_url(self,obj):
-        # if (obj.file.url):
-        #     return obj.file.url
-        return ''
+        try:
+            if (obj.file.url):
+                return obj.file.url
+        except Exception as e:
+            return e
+
     list_display = ('name','font_name','font_bold_name','url','file_url')
 
 admin.site.register(DKFeedBack, DKFeedBackAdmin)
