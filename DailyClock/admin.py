@@ -1,6 +1,7 @@
 from django.contrib import admin
 from DailyClock.models import DKFeedBack,DKJiTang,DKVersionHistory,DKFonts
 from django.utils.html import format_html
+
 # Register your models here.
 
 class DKFeedBackAdmin(admin.ModelAdmin):
@@ -20,7 +21,11 @@ class DKVersionHistoryAdmin(admin.ModelAdmin):
     list_display = ('version','des')
 
 class DKFontAdmin(admin.ModelAdmin):
-    list_display = ('name','font_name','font_bold_name','url','file')
+    def file_url(self,obj):
+        if (obj.file.url):
+            return obj.file.url
+        return obj.file
+    list_display = ('name','font_name','font_bold_name','url','file_url')
 
 admin.site.register(DKFeedBack, DKFeedBackAdmin)
 admin.site.register(DKVersionHistory,DKVersionHistoryAdmin)
