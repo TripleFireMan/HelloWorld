@@ -1,0 +1,727 @@
+2023/09/18 13:23:19 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:19 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:19 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:20 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:21 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:23 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:26 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:33 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:23:46 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:24:12 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:25:03 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:26:03 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:27:04 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:28:04 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:24 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:25 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:25 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:26 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:27 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:29 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:32 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:39 [emerg] 1#1: unexpected "{" in /etc/nginx/conf.d/nginx.conf:2
+2023/09/18 13:36:52 [notice] 1#1: using the "epoll" event method
+2023/09/18 13:36:52 [notice] 1#1: nginx/1.25.2
+2023/09/18 13:36:52 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 13:36:52 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 13:36:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 13:36:52 [notice] 1#1: start worker processes
+2023/09/18 13:36:52 [notice] 1#1: start worker process 20
+2023/09/18 13:36:52 [notice] 1#1: start worker process 21
+2023/09/18 13:36:52 [notice] 1#1: start worker process 22
+2023/09/18 13:36:52 [notice] 1#1: start worker process 23
+2023/09/18 13:38:07 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 13:38:07 [notice] 21#21: gracefully shutting down
+2023/09/18 13:38:07 [notice] 20#20: gracefully shutting down
+2023/09/18 13:38:07 [notice] 22#22: gracefully shutting down
+2023/09/18 13:38:07 [notice] 23#23: gracefully shutting down
+2023/09/18 13:38:07 [notice] 22#22: exiting
+2023/09/18 13:38:07 [notice] 23#23: exiting
+2023/09/18 13:38:07 [notice] 20#20: exiting
+2023/09/18 13:38:07 [notice] 21#21: exiting
+2023/09/18 13:38:07 [notice] 21#21: exit
+2023/09/18 13:38:07 [notice] 22#22: exit
+2023/09/18 13:38:07 [notice] 23#23: exit
+2023/09/18 13:38:07 [notice] 20#20: exit
+2023/09/18 13:38:07 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 13:38:07 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 13:38:07 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 13:38:07 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 13:38:07 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 13:38:07 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 13:38:07 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 13:38:07 [notice] 1#1: exit
+2023/09/18 13:39:42 [notice] 1#1: using the "epoll" event method
+2023/09/18 13:39:42 [notice] 1#1: nginx/1.25.2
+2023/09/18 13:39:42 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 13:39:42 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 13:39:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 13:39:42 [notice] 1#1: start worker processes
+2023/09/18 13:39:42 [notice] 1#1: start worker process 19
+2023/09/18 13:39:42 [notice] 1#1: start worker process 20
+2023/09/18 13:39:42 [notice] 1#1: start worker process 21
+2023/09/18 13:39:42 [notice] 1#1: start worker process 22
+2023/09/18 13:40:16 [error] 19#19: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:40:16 [error] 19#19: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:40:18 [error] 19#19: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:40:18 [error] 21#21: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:40:20 [error] 21#21: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:40:20 [error] 21#21: *6 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:03 [error] 19#19: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:03 [error] 19#19: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:04 [error] 19#19: *15 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:04 [error] 19#19: *15 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:37 [error] 20#20: *20 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:39 [error] 19#19: *27 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0"
+2023/09/18 13:41:39 [error] 19#19: *27 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "0.0.0.0", referrer: "http://0.0.0.0/"
+2023/09/18 13:41:43 [error] 19#19: *31 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:41:43 [error] 19#19: *31 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:13 [error] 19#19: *36 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:13 [error] 19#19: *36 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:14 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:15 [error] 19#19: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:41 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:41 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:41 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:41 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:41 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:42 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:42 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:42 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:43:42 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:43:42 [error] 19#19: *51 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:44:28 [error] 19#19: *64 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:44:28 [error] 19#19: *64 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:44:29 [error] 19#19: *67 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:44:29 [error] 19#19: *67 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:44:29 [error] 19#19: *67 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost"
+2023/09/18 13:44:29 [error] 19#19: *67 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.96.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:48:27 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 13:48:27 [notice] 20#20: gracefully shutting down
+2023/09/18 13:48:27 [notice] 21#21: gracefully shutting down
+2023/09/18 13:48:27 [notice] 19#19: gracefully shutting down
+2023/09/18 13:48:27 [notice] 22#22: gracefully shutting down
+2023/09/18 13:48:27 [notice] 20#20: exiting
+2023/09/18 13:48:27 [notice] 21#21: exiting
+2023/09/18 13:48:27 [notice] 22#22: exiting
+2023/09/18 13:48:27 [notice] 21#21: exit
+2023/09/18 13:48:27 [notice] 19#19: exiting
+2023/09/18 13:48:27 [notice] 20#20: exit
+2023/09/18 13:48:27 [notice] 22#22: exit
+2023/09/18 13:48:27 [notice] 19#19: exit
+2023/09/18 13:48:27 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 13:48:27 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 13:48:27 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 13:48:27 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 13:48:27 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 13:48:27 [notice] 1#1: signal 17 (SIGCHLD) received from 19
+2023/09/18 13:48:27 [notice] 1#1: worker process 19 exited with code 0
+2023/09/18 13:48:27 [notice] 1#1: exit
+2023/09/18 13:48:43 [notice] 1#1: using the "epoll" event method
+2023/09/18 13:48:43 [notice] 1#1: nginx/1.25.2
+2023/09/18 13:48:43 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 13:48:43 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 13:48:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 13:48:43 [notice] 1#1: start worker processes
+2023/09/18 13:48:43 [notice] 1#1: start worker process 20
+2023/09/18 13:48:43 [notice] 1#1: start worker process 21
+2023/09/18 13:48:43 [notice] 1#1: start worker process 22
+2023/09/18 13:48:43 [notice] 1#1: start worker process 23
+2023/09/18 13:48:52 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:48:52 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:48:52 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:48:52 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:48:52 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:48:53 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:49:19 [error] 22#22: *9 directory index of "/usr/share/nginx/html/static/" is forbidden, client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/ HTTP/1.1", host: "localhost"
+2023/09/18 13:49:19 [error] 22#22: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/static/"
+2023/09/18 13:49:21 [error] 22#22: *9 directory index of "/usr/share/nginx/html/static/" is forbidden, client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/ HTTP/1.1", host: "localhost"
+2023/09/18 13:49:21 [error] 22#22: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/static/"
+2023/09/18 13:49:47 [error] 20#20: *13 directory index of "/usr/share/nginx/html/static/" is forbidden, client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/ HTTP/1.1", host: "localhost"
+2023/09/18 13:49:47 [error] 20#20: *13 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/static/"
+2023/09/18 13:49:48 [error] 20#20: *13 directory index of "/usr/share/nginx/html/static/" is forbidden, client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/ HTTP/1.1", host: "localhost"
+2023/09/18 13:49:48 [error] 20#20: *13 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/static/"
+2023/09/18 13:49:52 [error] 20#20: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:49:52 [error] 20#20: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:50 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:50 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:51 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:52 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:53 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:53 [error] 20#20: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:50:54 [error] 20#20: *43 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:50:54 [error] 20#20: *43 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:55:24 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:55:24 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:55:25 [error] 20#20: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:17 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:17 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:17 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:17 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 13:57:18 [error] 20#20: *59 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:00:58 [error] 20#20: *76 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 14:00:58 [error] 20#20: *76 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:01:00 [error] 20#20: *76 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 14:01:00 [error] 20#20: *76 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:07:17 [error] 20#20: *82 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost"
+2023/09/18 14:07:17 [error] 20#20: *82 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "uwsgi://192.168.128.2:8000", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:07:32 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 14:07:32 [notice] 20#20: gracefully shutting down
+2023/09/18 14:07:32 [notice] 21#21: gracefully shutting down
+2023/09/18 14:07:32 [notice] 22#22: gracefully shutting down
+2023/09/18 14:07:32 [notice] 23#23: gracefully shutting down
+2023/09/18 14:07:32 [notice] 20#20: exiting
+2023/09/18 14:07:32 [notice] 20#20: exit
+2023/09/18 14:07:32 [notice] 23#23: exiting
+2023/09/18 14:07:32 [notice] 22#22: exiting
+2023/09/18 14:07:32 [notice] 23#23: exit
+2023/09/18 14:07:32 [notice] 22#22: exit
+2023/09/18 14:07:32 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 14:07:32 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 14:07:32 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 14:07:32 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 14:07:32 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:08:01 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:02 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:02 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:03 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:04 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:05 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:09 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:15 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:28 [emerg] 1#1: unknown directive "http://django" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:08:54 [emerg] 1#1: unexpected ";" in /etc/nginx/conf.d/nginx.conf:32
+2023/09/18 14:09:58 [notice] 1#1: using the "epoll" event method
+2023/09/18 14:09:58 [notice] 1#1: nginx/1.25.2
+2023/09/18 14:09:58 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 14:09:58 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 14:09:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 14:09:58 [notice] 1#1: start worker processes
+2023/09/18 14:09:58 [notice] 1#1: start worker process 19
+2023/09/18 14:09:58 [notice] 1#1: start worker process 20
+2023/09/18 14:09:58 [notice] 1#1: start worker process 21
+2023/09/18 14:09:58 [notice] 1#1: start worker process 22
+2023/09/18 14:27:20 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 14:27:20 [notice] 19#19: gracefully shutting down
+2023/09/18 14:27:20 [notice] 21#21: gracefully shutting down
+2023/09/18 14:27:20 [notice] 22#22: gracefully shutting down
+2023/09/18 14:27:20 [notice] 19#19: exiting
+2023/09/18 14:27:20 [notice] 20#20: gracefully shutting down
+2023/09/18 14:27:20 [notice] 21#21: exiting
+2023/09/18 14:27:20 [notice] 20#20: exiting
+2023/09/18 14:27:20 [notice] 22#22: exiting
+2023/09/18 14:27:20 [notice] 19#19: exit
+2023/09/18 14:27:20 [notice] 22#22: exit
+2023/09/18 14:27:20 [notice] 21#21: exit
+2023/09/18 14:27:20 [notice] 20#20: exit
+2023/09/18 14:27:20 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 14:27:20 [notice] 1#1: worker process 19 exited with code 0
+2023/09/18 14:27:20 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 14:27:20 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 14:27:20 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:27:20 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 14:27:20 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 14:27:20 [notice] 1#1: exit
+2023/09/18 14:28:03 [notice] 1#1: using the "epoll" event method
+2023/09/18 14:28:03 [notice] 1#1: nginx/1.25.2
+2023/09/18 14:28:03 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 14:28:03 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 14:28:03 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 14:28:03 [notice] 1#1: start worker processes
+2023/09/18 14:28:03 [notice] 1#1: start worker process 20
+2023/09/18 14:28:03 [notice] 1#1: start worker process 21
+2023/09/18 14:28:03 [notice] 1#1: start worker process 22
+2023/09/18 14:28:03 [notice] 1#1: start worker process 23
+2023/09/18 14:54:30 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 14:54:30 [notice] 23#23: gracefully shutting down
+2023/09/18 14:54:30 [notice] 20#20: gracefully shutting down
+2023/09/18 14:54:30 [notice] 21#21: gracefully shutting down
+2023/09/18 14:54:30 [notice] 22#22: gracefully shutting down
+2023/09/18 14:54:30 [notice] 23#23: exiting
+2023/09/18 14:54:30 [notice] 20#20: exiting
+2023/09/18 14:54:30 [notice] 20#20: exit
+2023/09/18 14:54:30 [notice] 22#22: exiting
+2023/09/18 14:54:30 [notice] 22#22: exit
+2023/09/18 14:54:30 [notice] 23#23: exit
+2023/09/18 14:54:30 [notice] 21#21: exiting
+2023/09/18 14:54:30 [notice] 21#21: exit
+2023/09/18 14:54:30 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 14:54:30 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 14:54:30 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:54:30 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 14:54:30 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 14:54:30 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 14:54:30 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 14:54:30 [notice] 1#1: exit
+2023/09/18 14:54:49 [notice] 1#1: using the "epoll" event method
+2023/09/18 14:54:49 [notice] 1#1: nginx/1.25.2
+2023/09/18 14:54:49 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 14:54:49 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 14:54:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 14:54:49 [notice] 1#1: start worker processes
+2023/09/18 14:54:49 [notice] 1#1: start worker process 20
+2023/09/18 14:54:49 [notice] 1#1: start worker process 21
+2023/09/18 14:54:49 [notice] 1#1: start worker process 22
+2023/09/18 14:54:49 [notice] 1#1: start worker process 23
+2023/09/18 14:54:55 [error] 20#20: *1 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *1 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *8 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *7 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:55 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *8 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *8 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:56 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *7 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *1 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *7 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *1 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:57 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 20#20: *8 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 20#20: *8 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 20#20: *8 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 22#22: *2 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 23#23: *6 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 21#21: *5 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 20#20: *7 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:54:59 [error] 20#20: *1 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *15 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *16 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *16 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 22#22: *19 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *18 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *20 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *20 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *18 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *18 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *20 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 22#22: *19 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *16 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *21 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:22 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *21 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *21 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *18 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 22#22: *19 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *16 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *20 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *16 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 22#22: *19 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *18 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *21 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *20 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *20 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *20 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 22#22: *19 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *21 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *16 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *18 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *15 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:23 [error] 20#20: *20 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 20#20: *26 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 22#22: *28 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 22#22: *28 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 20#20: *26 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 20#20: *26 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 22#22: *28 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 20#20: *30 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:49 [error] 22#22: *29 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *33 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *35 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *35 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *33 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 22#22: *36 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 21#21: *37 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 22#22: *38 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *39 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 20#20: *39 open() "/etc/nginx/html/static/tem.css" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/tem.css HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:50 [error] 22#22: *38 open() "/etc/nginx/html/static/appicon.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/appicon.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 20#20: *33 open() "/etc/nginx/html/static/1242x2688bb (1).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(1).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 21#21: *37 open() "/etc/nginx/html/static/1242x2688bb (3).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(3).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 22#22: *38 open() "/etc/nginx/html/static/1242x2688bb (5).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(5).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 20#20: *39 open() "/etc/nginx/html/static/1242x2688bb (4).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(4).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 22#22: *36 open() "/etc/nginx/html/static/1242x2688bb (2).png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb%20(2).png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:55:51 [error] 20#20: *35 open() "/etc/nginx/html/static/1242x2688bb.png" failed (2: No such file or directory), client: 192.168.65.1, server: 127.0.0.1, request: "GET /static/1242x2688bb.png HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2023/09/18 14:56:05 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 14:56:05 [notice] 21#21: gracefully shutting down
+2023/09/18 14:56:05 [notice] 23#23: gracefully shutting down
+2023/09/18 14:56:05 [notice] 22#22: gracefully shutting down
+2023/09/18 14:56:05 [notice] 20#20: gracefully shutting down
+2023/09/18 14:56:05 [notice] 21#21: exiting
+2023/09/18 14:56:05 [notice] 23#23: exiting
+2023/09/18 14:56:05 [notice] 22#22: exiting
+2023/09/18 14:56:05 [notice] 20#20: exiting
+2023/09/18 14:56:05 [notice] 23#23: exit
+2023/09/18 14:56:05 [notice] 21#21: exit
+2023/09/18 14:56:05 [notice] 22#22: exit
+2023/09/18 14:56:05 [notice] 20#20: exit
+2023/09/18 14:56:05 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/09/18 14:56:05 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 14:56:05 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 14:56:05 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:56:05 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 14:56:05 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 14:56:05 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:56:05 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 14:56:05 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 14:56:05 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 14:56:05 [notice] 1#1: exit
+2023/09/18 14:58:29 [notice] 1#1: using the "epoll" event method
+2023/09/18 14:58:29 [notice] 1#1: nginx/1.25.2
+2023/09/18 14:58:29 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 14:58:29 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 14:58:29 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 14:58:29 [notice] 1#1: start worker processes
+2023/09/18 14:58:29 [notice] 1#1: start worker process 19
+2023/09/18 14:58:29 [notice] 1#1: start worker process 20
+2023/09/18 14:58:29 [notice] 1#1: start worker process 21
+2023/09/18 14:58:29 [notice] 1#1: start worker process 22
+2023/09/18 14:58:30 [error] 19#19: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://172.19.0.2:8000", host: "localhost"
+2023/09/18 14:59:11 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 14:59:11 [notice] 19#19: gracefully shutting down
+2023/09/18 14:59:11 [notice] 21#21: gracefully shutting down
+2023/09/18 14:59:11 [notice] 20#20: gracefully shutting down
+2023/09/18 14:59:11 [notice] 22#22: gracefully shutting down
+2023/09/18 14:59:11 [notice] 19#19: exiting
+2023/09/18 14:59:11 [notice] 21#21: exiting
+2023/09/18 14:59:11 [notice] 20#20: exiting
+2023/09/18 14:59:11 [notice] 22#22: exiting
+2023/09/18 14:59:11 [notice] 20#20: exit
+2023/09/18 14:59:11 [notice] 19#19: exit
+2023/09/18 14:59:11 [notice] 21#21: exit
+2023/09/18 14:59:11 [notice] 22#22: exit
+2023/09/18 14:59:11 [notice] 1#1: signal 17 (SIGCHLD) received from 19
+2023/09/18 14:59:11 [notice] 1#1: worker process 19 exited with code 0
+2023/09/18 14:59:11 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 14:59:11 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 14:59:11 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 14:59:11 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 14:59:11 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 14:59:11 [notice] 1#1: exit
+2023/09/18 14:59:42 [notice] 1#1: using the "epoll" event method
+2023/09/18 14:59:42 [notice] 1#1: nginx/1.25.2
+2023/09/18 14:59:42 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 14:59:42 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 14:59:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 14:59:42 [notice] 1#1: start worker processes
+2023/09/18 14:59:42 [notice] 1#1: start worker process 20
+2023/09/18 14:59:42 [notice] 1#1: start worker process 21
+2023/09/18 14:59:42 [notice] 1#1: start worker process 22
+2023/09/18 14:59:42 [notice] 1#1: start worker process 23
+2023/09/18 14:59:43 [error] 20#20: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "uwsgi://172.21.0.2:8000", host: "localhost"
+2023/09/18 15:06:00 [notice] 30#30: signal process started
+2023/09/18 15:06:00 [notice] 1#1: signal 1 (SIGHUP) received from 30, reconfiguring
+2023/09/18 15:06:00 [notice] 1#1: reconfiguring
+2023/09/18 15:06:00 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:06:00 [notice] 1#1: start worker processes
+2023/09/18 15:06:00 [notice] 1#1: start worker process 31
+2023/09/18 15:06:00 [notice] 1#1: start worker process 32
+2023/09/18 15:06:00 [notice] 1#1: start worker process 33
+2023/09/18 15:06:00 [notice] 1#1: start worker process 34
+2023/09/18 15:06:00 [notice] 20#20: gracefully shutting down
+2023/09/18 15:06:00 [notice] 21#21: gracefully shutting down
+2023/09/18 15:06:00 [notice] 23#23: gracefully shutting down
+2023/09/18 15:06:00 [notice] 22#22: gracefully shutting down
+2023/09/18 15:06:00 [notice] 20#20: exiting
+2023/09/18 15:06:00 [notice] 21#21: exiting
+2023/09/18 15:06:00 [notice] 20#20: exit
+2023/09/18 15:06:00 [notice] 23#23: exiting
+2023/09/18 15:06:00 [notice] 22#22: exiting
+2023/09/18 15:06:00 [notice] 21#21: exit
+2023/09/18 15:06:00 [notice] 22#22: exit
+2023/09/18 15:06:00 [notice] 23#23: exit
+2023/09/18 15:06:00 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:06:00 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:06:00 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:06:00 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/09/18 15:06:00 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 15:06:00 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:06:00 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 15:06:00 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 15:06:00 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:06:00 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 15:06:00 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:06:00 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:07:02 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:07:02 [notice] 32#32: gracefully shutting down
+2023/09/18 15:07:02 [notice] 33#33: gracefully shutting down
+2023/09/18 15:07:02 [notice] 34#34: gracefully shutting down
+2023/09/18 15:07:02 [notice] 32#32: exiting
+2023/09/18 15:07:02 [notice] 31#31: gracefully shutting down
+2023/09/18 15:07:02 [notice] 33#33: exiting
+2023/09/18 15:07:02 [notice] 34#34: exiting
+2023/09/18 15:07:02 [notice] 32#32: exit
+2023/09/18 15:07:02 [notice] 31#31: exiting
+2023/09/18 15:07:02 [notice] 33#33: exit
+2023/09/18 15:07:02 [notice] 34#34: exit
+2023/09/18 15:07:02 [notice] 31#31: exit
+2023/09/18 15:07:02 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2023/09/18 15:07:02 [notice] 1#1: worker process 32 exited with code 0
+2023/09/18 15:07:02 [notice] 1#1: worker process 33 exited with code 0
+2023/09/18 15:07:02 [notice] 1#1: worker process 34 exited with code 0
+2023/09/18 15:07:02 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:07:02 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2023/09/18 15:07:02 [notice] 1#1: worker process 31 exited with code 0
+2023/09/18 15:07:02 [notice] 1#1: exit
+2023/09/18 15:07:03 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:07:03 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:07:03 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:07:03 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:07:03 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:07:03 [notice] 1#1: start worker processes
+2023/09/18 15:07:03 [notice] 1#1: start worker process 20
+2023/09/18 15:07:03 [notice] 1#1: start worker process 21
+2023/09/18 15:07:03 [notice] 1#1: start worker process 22
+2023/09/18 15:07:03 [notice] 1#1: start worker process 23
+2023/09/18 15:07:10 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:07:10 [notice] 21#21: gracefully shutting down
+2023/09/18 15:07:10 [notice] 21#21: exiting
+2023/09/18 15:07:10 [notice] 23#23: gracefully shutting down
+2023/09/18 15:07:10 [notice] 23#23: exiting
+2023/09/18 15:07:10 [notice] 22#22: gracefully shutting down
+2023/09/18 15:07:10 [notice] 22#22: exiting
+2023/09/18 15:07:10 [notice] 20#20: gracefully shutting down
+2023/09/18 15:07:10 [notice] 21#21: exit
+2023/09/18 15:07:10 [notice] 23#23: exit
+2023/09/18 15:07:10 [notice] 22#22: exit
+2023/09/18 15:07:10 [notice] 20#20: exiting
+2023/09/18 15:07:10 [notice] 20#20: exit
+2023/09/18 15:07:10 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:07:10 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 15:07:10 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:07:10 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:07:10 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 15:07:10 [notice] 1#1: exit
+2023/09/18 15:07:10 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:07:10 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:07:10 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:07:10 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:07:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:07:10 [notice] 1#1: start worker processes
+2023/09/18 15:07:10 [notice] 1#1: start worker process 20
+2023/09/18 15:07:10 [notice] 1#1: start worker process 21
+2023/09/18 15:07:10 [notice] 1#1: start worker process 22
+2023/09/18 15:07:10 [notice] 1#1: start worker process 23
+2023/09/18 15:07:22 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:07:22 [notice] 20#20: gracefully shutting down
+2023/09/18 15:07:22 [notice] 21#21: gracefully shutting down
+2023/09/18 15:07:22 [notice] 23#23: gracefully shutting down
+2023/09/18 15:07:22 [notice] 22#22: gracefully shutting down
+2023/09/18 15:07:22 [notice] 21#21: exiting
+2023/09/18 15:07:22 [notice] 23#23: exiting
+2023/09/18 15:07:22 [notice] 22#22: exiting
+2023/09/18 15:07:22 [notice] 20#20: exiting
+2023/09/18 15:07:22 [notice] 21#21: exit
+2023/09/18 15:07:22 [notice] 23#23: exit
+2023/09/18 15:07:22 [notice] 22#22: exit
+2023/09/18 15:07:22 [notice] 20#20: exit
+2023/09/18 15:07:22 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:07:22 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:07:22 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 15:07:22 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 15:07:22 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:07:22 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 15:07:22 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 15:07:22 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:07:22 [notice] 1#1: exit
+2023/09/18 15:07:25 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:07:25 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:07:25 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:07:25 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:07:25 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:07:25 [notice] 1#1: start worker processes
+2023/09/18 15:07:25 [notice] 1#1: start worker process 20
+2023/09/18 15:07:25 [notice] 1#1: start worker process 21
+2023/09/18 15:07:25 [notice] 1#1: start worker process 22
+2023/09/18 15:07:25 [notice] 1#1: start worker process 23
+2023/09/18 15:09:11 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:09:11 [notice] 20#20: gracefully shutting down
+2023/09/18 15:09:11 [notice] 22#22: gracefully shutting down
+2023/09/18 15:09:11 [notice] 23#23: gracefully shutting down
+2023/09/18 15:09:11 [notice] 23#23: exiting
+2023/09/18 15:09:11 [notice] 21#21: gracefully shutting down
+2023/09/18 15:09:11 [notice] 22#22: exiting
+2023/09/18 15:09:11 [notice] 23#23: exit
+2023/09/18 15:09:11 [notice] 20#20: exiting
+2023/09/18 15:09:11 [notice] 22#22: exit
+2023/09/18 15:09:11 [notice] 21#21: exiting
+2023/09/18 15:09:11 [notice] 20#20: exit
+2023/09/18 15:09:11 [notice] 21#21: exit
+2023/09/18 15:09:11 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2023/09/18 15:09:11 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 15:09:11 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:09:11 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2023/09/18 15:09:11 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 15:09:11 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:09:11 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:09:11 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 15:09:11 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:09:11 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:09:11 [notice] 1#1: exit
+2023/09/18 15:09:26 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:09:26 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:09:26 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:09:26 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:09:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:09:26 [notice] 1#1: start worker processes
+2023/09/18 15:09:26 [notice] 1#1: start worker process 21
+2023/09/18 15:09:26 [notice] 1#1: start worker process 22
+2023/09/18 15:09:26 [notice] 1#1: start worker process 23
+2023/09/18 15:09:26 [notice] 1#1: start worker process 24
+2023/09/18 15:16:11 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:16:11 [notice] 23#23: gracefully shutting down
+2023/09/18 15:16:11 [notice] 21#21: gracefully shutting down
+2023/09/18 15:16:11 [notice] 23#23: exiting
+2023/09/18 15:16:11 [notice] 22#22: gracefully shutting down
+2023/09/18 15:16:11 [notice] 24#24: gracefully shutting down
+2023/09/18 15:16:11 [notice] 21#21: exiting
+2023/09/18 15:16:11 [notice] 23#23: exit
+2023/09/18 15:16:11 [notice] 22#22: exiting
+2023/09/18 15:16:11 [notice] 24#24: exiting
+2023/09/18 15:16:11 [notice] 24#24: exit
+2023/09/18 15:16:11 [notice] 21#21: exit
+2023/09/18 15:16:11 [notice] 22#22: exit
+2023/09/18 15:16:11 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2023/09/18 15:16:11 [notice] 1#1: worker process 23 exited with code 0
+2023/09/18 15:16:11 [notice] 1#1: worker process 24 exited with code 0
+2023/09/18 15:16:11 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:16:11 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 15:16:11 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:16:11 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:16:11 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:16:11 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:16:11 [notice] 1#1: exit
+2023/09/18 15:16:28 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:16:28 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:16:28 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:16:28 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:16:28 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:16:28 [notice] 1#1: start worker processes
+2023/09/18 15:16:28 [notice] 1#1: start worker process 19
+2023/09/18 15:16:28 [notice] 1#1: start worker process 20
+2023/09/18 15:16:28 [notice] 1#1: start worker process 21
+2023/09/18 15:16:28 [notice] 1#1: start worker process 22
+2023/09/18 15:21:57 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/09/18 15:21:57 [notice] 20#20: gracefully shutting down
+2023/09/18 15:21:57 [notice] 19#19: gracefully shutting down
+2023/09/18 15:21:57 [notice] 20#20: exiting
+2023/09/18 15:21:57 [notice] 19#19: exiting
+2023/09/18 15:21:57 [notice] 21#21: gracefully shutting down
+2023/09/18 15:21:57 [notice] 21#21: exiting
+2023/09/18 15:21:57 [notice] 22#22: gracefully shutting down
+2023/09/18 15:21:57 [notice] 22#22: exiting
+2023/09/18 15:21:57 [notice] 19#19: exit
+2023/09/18 15:21:57 [notice] 20#20: exit
+2023/09/18 15:21:57 [notice] 21#21: exit
+2023/09/18 15:21:57 [notice] 22#22: exit
+2023/09/18 15:21:58 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/09/18 15:21:58 [notice] 1#1: worker process 19 exited with code 0
+2023/09/18 15:21:58 [notice] 1#1: worker process 21 exited with code 0
+2023/09/18 15:21:58 [notice] 1#1: worker process 20 exited with code 0
+2023/09/18 15:21:58 [notice] 1#1: signal 29 (SIGIO) received
+2023/09/18 15:21:58 [notice] 1#1: signal 17 (SIGCHLD) received from 19
+2023/09/18 15:21:58 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/09/18 15:21:58 [notice] 1#1: worker process 22 exited with code 0
+2023/09/18 15:21:58 [notice] 1#1: exit
+2023/09/18 15:22:04 [notice] 1#1: using the "epoll" event method
+2023/09/18 15:22:04 [notice] 1#1: nginx/1.25.2
+2023/09/18 15:22:04 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/09/18 15:22:04 [notice] 1#1: OS: Linux 6.3.13-linuxkit
+2023/09/18 15:22:04 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/09/18 15:22:04 [notice] 1#1: start worker processes
+2023/09/18 15:22:04 [notice] 1#1: start worker process 20
+2023/09/18 15:22:04 [notice] 1#1: start worker process 21
+2023/09/18 15:22:04 [notice] 1#1: start worker process 22
+2023/09/18 15:22:04 [notice] 1#1: start worker process 23
