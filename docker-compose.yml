@@ -10,7 +10,6 @@ networks: # 自定义网络(默认桥接), 不使用links通信
     driver: bridge
   redis_network:
     driver: bridge
-
 services:
   db:
     image: mysql:8.0.34
