@@ -18,7 +18,6 @@ from django.shortcuts import get_object_or_404
 import json
 @csrf_exempt
 def userList(request):
-
     list = []
     result = Contact.objects.all()
     for user in result:

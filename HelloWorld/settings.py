@@ -31,7 +31,7 @@ SECRET_KEY = '!lq6&3dj1f9ttdz34ugknhf)ac-4!s5is)tj=)j!4t5urj#@y^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = conf.DEBUG
-
+TEMPLATE_DEBUG = conf.DEBUG
 ALLOWED_HOSTS = ['*']
 
 APPEND_SLASH = False
@@ -225,10 +225,10 @@ STATICFILES_DIRS = (
     os.path.join(os.path.join(MEDIA_ROOT)),
     os.path.join(BASE_DIR, 'templates/resources'),
     os.path.join(django.__file__.rstrip('__init__.py'), 'contrib/admin/static/admin').replace('\\', '/'),
-    os.path.join(BASE_DIR, 'templates'),
+    # os.path.join(BASE_DIR, 'templates'),
 )
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+# TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # 设置每分钟执行一个任务，并将日志输出到指定文件
 # python manage.py crontab add　　添加定时任务
