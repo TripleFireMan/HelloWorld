@@ -36,7 +36,7 @@ class remote():
             'NAME': 'hello',
             'USER': 'root',  # 你的用户名
             # 'HOST': '42.192.160.232',  # 你的密码
-            'HOST': 'db',  # 你的密码
+            # 'HOST': 'db',  # 你的密码
             'PASSWORD': 'Chengyan#251',  # 你的IP地址
             # 'PASSWORD': '88888888',  # 你的密码
             # 'HOST': '0.0.0.0',  # 你的IP地址
@@ -50,7 +50,7 @@ class remote():
 
 class MyConfig():
     __conf = None
-    __is_remote = True
+    __is_remote = False
     def is_remote_env(self):
         return self.__is_remote
 

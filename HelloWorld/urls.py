@@ -66,7 +66,7 @@ def return_static(request, path, insecure=True, **kwargs):
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hello',view.hello),
-    url(r'^users/userList',users.userList),
+    # url(r'^users/userList',users.userList),
     url(r'^users/login', users.login),
     url(r'^users/register', users.register),
     url(r'^view/bookList',view.bookList),

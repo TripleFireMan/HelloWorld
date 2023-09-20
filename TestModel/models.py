@@ -6,26 +6,6 @@ from  django.utils import timezone
 import os
 
 import datetime
-class Test(models.Model):
-    name = models.CharField(max_length=20,verbose_name='姓名')
-    title = models.CharField(max_length=200,default="",editable=True,verbose_name='标题')
-    agreed = models.BooleanField(verbose_name='审核状态',default=False)
-    class Meta:
-        verbose_name_plural = '测试'
-    def __str__(self):
-        return self.name
-
-class Contact(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.EmailField()
-    age = models.IntegerField(default=0)
-    def __unicode__(self):
-        return self.name
-class Tag(models.Model):
-    name = models.CharField(max_length=20)
-    contact = models.ForeignKey(Contact,on_delete=models.CASCADE,)
-    def __unicode__(self):
-        return self.name
 
 class User(models.Model):
     #用户名

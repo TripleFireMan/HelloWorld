@@ -10808,3 +10808,862 @@ spawned uWSGI worker 4 (pid: 275, cores: 2)
 [pid: 268|app: 0|req: 1/1] 192.168.65.1 () {60 vars in 1354 bytes} [Tue Sep 19 11:49:07 2023] GET / => generated 3914 bytes in 274 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
 [pid: 268|app: 0|req: 2/2] 192.168.65.1 () {60 vars in 1354 bytes} [Tue Sep 19 11:49:10 2023] GET / => generated 3914 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
 [pid: 275|app: 0|req: 1/3] 192.168.65.1 () {60 vars in 1354 bytes} [Tue Sep 19 11:49:11 2023] GET / => generated 3914 bytes in 349 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 274)...
+Gracefully killing worker 1 (pid: 268)...
+Gracefully killing worker 4 (pid: 275)...
+Gracefully killing worker 2 (pid: 269)...
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Sep 19 14:00:51 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: a4ccf5ec5656
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaad5c2b970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-19 14:00:53,031 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xaaaad5c2b970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 284, cores: 2)
+spawned uWSGI worker 2 (pid: 285, cores: 2)
+spawned uWSGI worker 3 (pid: 288, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 4 (pid: 292, cores: 2)
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+[uwsgi-python-reloader] module/file ./HelloWorld/config.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 284)...
+Gracefully killing worker 4 (pid: 292)...
+Gracefully killing worker 2 (pid: 285)...
+Gracefully killing worker 3 (pid: 288)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Tue Sep 19 14:01:02 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: a4ccf5ec5656
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaae1728970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-19 14:01:03,468 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaae1728970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 298, cores: 2)
+spawned uWSGI worker 2 (pid: 299, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 303, cores: 2)
+spawned uWSGI worker 4 (pid: 305, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 11:13:09 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: 01f39f9995c6
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaaea3ede90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 11:13:09,224 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaaea3ede90 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 25, cores: 2)
+spawned uWSGI worker 2 (pid: 26, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 29, cores: 2)
+spawned uWSGI worker 4 (pid: 32, cores: 2)
+[pid: 25|app: 0|req: 1/1] 192.168.65.1 () {42 vars in 857 bytes} [Wed Sep 20 19:13:16 2023] GET / => generated 3914 bytes in 450 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+2023-09-20 19:13:18,131 - django.request - WARNING - Not Found: /favicon.ico
+[pid: 32|app: 0|req: 1/2] 192.168.65.1 () {42 vars in 804 bytes} [Wed Sep 20 19:13:17 2023] GET /favicon.ico => generated 5055 bytes in 413 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 2/3] 192.168.65.1 () {42 vars in 869 bytes} [Wed Sep 20 19:13:22 2023] GET /admin/ => generated 0 bytes in 84 msecs (HTTP/1.1 302) 10 headers in 430 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 3/4] 192.168.65.1 () {42 vars in 862 bytes} [Wed Sep 20 19:13:22 2023] GET /admin/login/?next=/admin/ => generated 6072 bytes in 45 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+[pid: 29|app: 0|req: 1/5] 192.168.65.1 () {42 vars in 813 bytes} [Wed Sep 20 19:13:26 2023] GET / => generated 3914 bytes in 385 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 4/6] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:43 2023] GET / => generated 3916 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 5/7] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:43 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 6/8] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:43 2023] GET / => generated 3916 bytes in 1 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 7/9] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:44 2023] GET / => generated 3916 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 8/10] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:44 2023] GET / => generated 3916 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 9/11] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:44 2023] GET / => generated 3916 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 10/12] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:44 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 11/13] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:44 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 12/14] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:45 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 13/15] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:45 2023] GET / => generated 3916 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 14/16] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:45 2023] GET / => generated 3916 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 15/17] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:45 2023] GET / => generated 3916 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 29|app: 0|req: 2/18] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:46 2023] GET / => generated 3916 bytes in 10 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 16/19] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:46 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 29|app: 0|req: 3/20] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:46 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 2/21] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:46 2023] GET / => generated 3916 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 29|app: 0|req: 4/22] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:46 2023] GET / => generated 3916 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 29|app: 0|req: 5/23] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:47 2023] GET / => generated 3916 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 17/24] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:47 2023] GET / => generated 3916 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 29|app: 0|req: 6/25] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:47 2023] GET / => generated 3916 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 3/26] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:48 2023] GET / => generated 3916 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 18/27] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:53 2023] GET / => generated 3914 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 19/28] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:54 2023] GET / => generated 3914 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 20/29] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:54 2023] GET / => generated 3914 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 4/30] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:54 2023] GET / => generated 3914 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 21/31] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:55 2023] GET / => generated 3914 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 22/32] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:55 2023] GET / => generated 3914 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[pid: 32|app: 0|req: 23/33] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:55 2023] GET / => generated 3914 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 32|app: 0|req: 24/34] 192.168.65.1 () {44 vars in 844 bytes} [Wed Sep 20 19:13:56 2023] GET / => generated 3914 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./DailyClock/models.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/models.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/models.py has been modified
+...gracefully killing workers...
+[uwsgi-python-reloader] module/file ./DailyClock/models.py has been modified
+Gracefully killing worker 1 (pid: 25)...
+Gracefully killing worker 2 (pid: 26)...
+Gracefully killing worker 3 (pid: 29)...
+Gracefully killing worker 4 (pid: 32)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:21:40 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: 01f39f9995c6
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaab05da1970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:21:41,724 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaab05da1970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 42, cores: 2)
+spawned uWSGI worker 2 (pid: 44, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 47, cores: 2)
+spawned uWSGI worker 4 (pid: 51, cores: 2)
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 11:22:12 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: effb2f6b2c67
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaae6498e90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 11:22:12,147 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaae6498e90 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 25, cores: 2)
+spawned uWSGI worker 2 (pid: 28, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 31, cores: 2)
+spawned uWSGI worker 4 (pid: 34, cores: 2)
+[pid: 28|app: 0|req: 1/1] 192.168.65.1 () {42 vars in 825 bytes} [Wed Sep 20 19:22:27 2023] GET /admin/ => generated 0 bytes in 292 msecs (HTTP/1.1 302) 9 headers in 331 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 1/2] 192.168.65.1 () {42 vars in 862 bytes} [Wed Sep 20 19:22:27 2023] GET /admin/login/?next=/admin/ => generated 6072 bytes in 272 msecs (HTTP/1.1 200) 9 headers in 461 bytes (1 switches on core 0)
+2023-09-20 19:22:32,243 - HelloWorld - INFO - 18612545535
+[pid: 31|app: 0|req: 1/3] 192.168.65.1 () {52 vars in 1095 bytes} [Wed Sep 20 19:22:31 2023] POST /admin/login/?next=/admin/ => generated 0 bytes in 305 msecs (HTTP/1.1 302) 11 headers in 625 bytes (1 switches on core 0)
+[pid: 28|app: 0|req: 2/4] 192.168.65.1 () {46 vars in 956 bytes} [Wed Sep 20 19:22:32 2023] GET /admin/ => generated 24445 bytes in 37 msecs (HTTP/1.1 200) 8 headers in 294 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 2/5] 192.168.65.1 () {44 vars in 950 bytes} [Wed Sep 20 19:22:36 2023] GET /admin/DailyClock/dkfeedback/ => generated 21588 bytes in 71 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 3/6] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:22:36 2023] GET /admin/jsi18n/ => generated 7732 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+...gracefully killing workers...
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+Gracefully killing worker 1 (pid: 25)...
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+Gracefully killing worker 3 (pid: 31)...
+Gracefully killing worker 2 (pid: 28)...
+Gracefully killing worker 4 (pid: 34)...
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:22:51 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: effb2f6b2c67
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaaf54f9970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:22:52,165 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaaf54f9970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 42, cores: 2)
+spawned uWSGI worker 2 (pid: 44, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 46, cores: 2)
+spawned uWSGI worker 4 (pid: 51, cores: 2)
+[pid: 42|app: 0|req: 1/1] 192.168.65.1 () {46 vars in 981 bytes} [Wed Sep 20 19:22:52 2023] GET /admin/DailyClock/dkfeedback/ => generated 21588 bytes in 299 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 44|app: 0|req: 1/2] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:22:52 2023] GET /admin/jsi18n/ => generated 7732 bytes in 202 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 44|app: 0|req: 2/3] 192.168.65.1 () {46 vars in 981 bytes} [Wed Sep 20 19:22:56 2023] GET /admin/DailyClock/dkfeedback/ => generated 21588 bytes in 99 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 42|app: 0|req: 2/4] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:22:56 2023] GET /admin/jsi18n/ => generated 7732 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 44)...
+Gracefully killing worker 1 (pid: 42)...
+Gracefully killing worker 4 (pid: 51)...
+Gracefully killing worker 3 (pid: 46)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:23:13 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: effb2f6b2c67
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaae0aa3970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:23:13,863 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaae0aa3970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 58, cores: 2)
+spawned uWSGI worker 2 (pid: 61, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 62, cores: 2)
+spawned uWSGI worker 4 (pid: 67, cores: 2)
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+[uwsgi-python-reloader] module/file ./DailyClock/admin.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 58)...
+Gracefully killing worker 2 (pid: 61)...
+Gracefully killing worker 4 (pid: 67)...
+Gracefully killing worker 3 (pid: 62)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:23:19 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: effb2f6b2c67
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaab40c4970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:23:20,170 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaab40c4970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 72, cores: 2)
+spawned uWSGI worker 2 (pid: 74, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 78, cores: 2)
+spawned uWSGI worker 4 (pid: 81, cores: 2)
+[pid: 72|app: 0|req: 1/1] 192.168.65.1 () {46 vars in 981 bytes} [Wed Sep 20 19:23:20 2023] GET /admin/DailyClock/dkfeedback/ => generated 22215 bytes in 271 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 72|app: 0|req: 2/2] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:23:20 2023] GET /admin/jsi18n/ => generated 7732 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 1/3] 192.168.65.1 () {46 vars in 981 bytes} [Wed Sep 20 19:23:20 2023] GET /admin/DailyClock/dkfeedback/ => generated 22215 bytes in 254 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 81|app: 0|req: 2/4] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:23:20 2023] GET /admin/jsi18n/ => generated 7732 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 3/5] 192.168.65.1 () {44 vars in 980 bytes} [Wed Sep 20 19:23:36 2023] GET /admin/DailyClock/dkfeedback/add/ => generated 17949 bytes in 66 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 81|app: 0|req: 4/6] 192.168.65.1 () {42 vars in 779 bytes} [Wed Sep 20 19:23:36 2023] GET /admin/jsi18n/ => generated 7732 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 5/7] 192.168.65.1 () {46 vars in 1011 bytes} [Wed Sep 20 19:38:52 2023] GET /admin/DailyClock/dkfeedback/add/ => generated 17949 bytes in 81 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 78|app: 0|req: 1/8] 192.168.65.1 () {42 vars in 779 bytes} [Wed Sep 20 19:38:52 2023] GET /admin/jsi18n/ => generated 7732 bytes in 328 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 81|app: 0|req: 6/9] 192.168.65.1 () {44 vars in 976 bytes} [Wed Sep 20 19:38:57 2023] GET /admin/DailyClock/dkfeedback/ => generated 22215 bytes in 49 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 7/10] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:38:57 2023] GET /admin/jsi18n/ => generated 7732 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 81|app: 0|req: 8/11] 192.168.65.1 () {44 vars in 992 bytes} [Wed Sep 20 19:39:04 2023] GET /admin/DailyClock/dkfeedback/12/change/ => generated 18661 bytes in 54 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 9/12] 192.168.65.1 () {42 vars in 785 bytes} [Wed Sep 20 19:39:04 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 81|app: 0|req: 10/13] 192.168.65.1 () {44 vars in 976 bytes} [Wed Sep 20 19:39:06 2023] GET /admin/DailyClock/dkfeedback/ => generated 22215 bytes in 66 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 81|app: 0|req: 11/14] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:39:07 2023] GET /admin/jsi18n/ => generated 7732 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 72|app: 0|req: 3/15] 192.168.65.1 () {44 vars in 928 bytes} [Wed Sep 20 19:39:11 2023] GET /admin/ => generated 24445 bytes in 45 msecs (HTTP/1.1 200) 8 headers in 294 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 78)...
+Gracefully killing worker 1 (pid: 72)...
+Gracefully killing worker 2 (pid: 74)...
+Gracefully killing worker 4 (pid: 81)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:41:54 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: effb2f6b2c67
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaaece0d970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:41:55,801 - HelloWorld - INFO - 当前数据库运行在测试环境
+Traceback (most recent call last):
+  File "HelloWorld/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.7/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.7/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.7/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/usr/local/lib/python3.7/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python3.7/site-packages/django/contrib/admin/__init__.py", line 24, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/usr/local/lib/python3.7/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "./TestModel/admin.py", line 2, in <module>
+    from TestModel.models import Test,Contact,Tag
+ImportError: cannot import name 'Tag' from 'TestModel.models' (./TestModel/models.py)
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 89, cores: 2)
+spawned uWSGI worker 2 (pid: 92, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 95, cores: 2)
+spawned uWSGI worker 4 (pid: 98, cores: 2)
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 11:42:59 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: e0b1de530bae
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaab090b4e90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 11:42:59,350 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaab090b4e90 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 25, cores: 2)
+spawned uWSGI worker 2 (pid: 28, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 31, cores: 2)
+spawned uWSGI worker 4 (pid: 34, cores: 2)
+[pid: 31|app: 0|req: 1/1] 192.168.65.1 () {46 vars in 959 bytes} [Wed Sep 20 19:43:07 2023] GET /admin/ => generated 23816 bytes in 444 msecs (HTTP/1.1 200) 8 headers in 294 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 1/2] 192.168.65.1 () {44 vars in 936 bytes} [Wed Sep 20 19:43:10 2023] GET /admin/TestModel/test/ => generated 11903 bytes in 318 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 2/3] 192.168.65.1 () {42 vars in 768 bytes} [Wed Sep 20 19:43:10 2023] GET /admin/jsi18n/ => generated 7732 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 3/4] 192.168.65.1 () {44 vars in 941 bytes} [Wed Sep 20 19:43:12 2023] GET /admin/TestModel/ => generated 9562 bytes in 36 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 4/5] 192.168.65.1 () {44 vars in 952 bytes} [Wed Sep 20 19:43:14 2023] GET /admin/TestModel/contact/ => generated 11918 bytes in 52 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 5/6] 192.168.65.1 () {42 vars in 771 bytes} [Wed Sep 20 19:43:14 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 6/7] 192.168.65.1 () {44 vars in 941 bytes} [Wed Sep 20 19:43:16 2023] GET /admin/TestModel/ => generated 9562 bytes in 38 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+...gracefully killing workers...
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+Gracefully killing worker 3 (pid: 31)...
+Gracefully killing worker 1 (pid: 25)...
+Gracefully killing worker 2 (pid: 28)...
+Gracefully killing worker 4 (pid: 34)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:43:35 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: e0b1de530bae
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaab086a8970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:43:36,281 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaab086a8970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 41, cores: 2)
+spawned uWSGI worker 2 (pid: 43, cores: 2)
+spawned uWSGI worker 3 (pid: 45, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 4 (pid: 48, cores: 2)
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 11:48:16 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: f25b82b6f30f
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaafd8d6e90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 11:48:16,500 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaafd8d6e90 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 25, cores: 2)
+spawned uWSGI worker 2 (pid: 28, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 31, cores: 2)
+spawned uWSGI worker 4 (pid: 34, cores: 2)
+Not Found: /admin/TestModel/
+2023-09-20 19:48:21,874 - django.request - WARNING - Not Found: /admin/TestModel/
+[pid: 31|app: 0|req: 1/1] 192.168.65.1 () {46 vars in 972 bytes} [Wed Sep 20 19:48:21 2023] GET /admin/TestModel/ => generated 9380 bytes in 309 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /admin/TestModel/
+2023-09-20 19:48:23,370 - django.request - WARNING - Not Found: /admin/TestModel/
+[pid: 34|app: 0|req: 1/2] 192.168.65.1 () {46 vars in 972 bytes} [Wed Sep 20 19:48:23 2023] GET /admin/TestModel/ => generated 9380 bytes in 228 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 0)
+Not Found: /admin/TestModel/test/
+2023-09-20 19:48:24,238 - django.request - WARNING - Not Found: /admin/TestModel/test/
+[pid: 34|app: 0|req: 2/3] 192.168.65.1 () {44 vars in 936 bytes} [Wed Sep 20 19:48:24 2023] GET /admin/TestModel/test/ => generated 9395 bytes in 18 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 3/4] 192.168.65.1 () {42 vars in 869 bytes} [Wed Sep 20 19:48:27 2023] GET /admin/ => generated 22311 bytes in 142 msecs (HTTP/1.1 200) 8 headers in 294 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 4/5] 192.168.65.1 () {44 vars in 964 bytes} [Wed Sep 20 19:48:40 2023] GET /admin/django_apscheduler/djangojob/ => generated 12952 bytes in 90 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 5/6] 192.168.65.1 () {42 vars in 782 bytes} [Wed Sep 20 19:48:40 2023] GET /admin/jsi18n/ => generated 7732 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 6/7] 192.168.65.1 () {44 vars in 1001 bytes} [Wed Sep 20 19:48:43 2023] GET /admin/django_apscheduler/djangojob/add/ => generated 16989 bytes in 43 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 7/8] 192.168.65.1 () {42 vars in 786 bytes} [Wed Sep 20 19:48:43 2023] GET /admin/jsi18n/ => generated 7732 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 31|app: 0|req: 2/9] 192.168.65.1 () {52 vars in 1182 bytes} [Wed Sep 20 19:49:12 2023] POST /admin/django_apscheduler/djangojob/add/ => generated 0 bytes in 124 msecs (HTTP/1.1 302) 10 headers in 687 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 8/10] 192.168.65.1 () {46 vars in 1329 bytes} [Wed Sep 20 19:49:12 2023] GET /admin/django_apscheduler/djangojob/ => generated 15480 bytes in 48 msecs (HTTP/1.1 200) 10 headers in 560 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 1/11] 192.168.65.1 () {42 vars in 782 bytes} [Wed Sep 20 19:49:12 2023] GET /admin/jsi18n/ => generated 7732 bytes in 287 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 9/12] 192.168.65.1 () {44 vars in 1013 bytes} [Wed Sep 20 19:49:16 2023] GET /admin/django_apscheduler/djangojob/TT/change/ => generated 17399 bytes in 57 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 10/13] 192.168.65.1 () {42 vars in 792 bytes} [Wed Sep 20 19:49:16 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 2/14] 192.168.65.1 () {44 vars in 1003 bytes} [Wed Sep 20 19:49:20 2023] GET /admin/django_apscheduler/djangojob/ => generated 15022 bytes in 110 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 31|app: 0|req: 3/15] 192.168.65.1 () {42 vars in 782 bytes} [Wed Sep 20 19:49:20 2023] GET /admin/jsi18n/ => generated 7732 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 31|app: 0|req: 4/16] 192.168.65.1 () {44 vars in 973 bytes} [Wed Sep 20 19:49:21 2023] GET /admin/django_apscheduler/ => generated 9648 bytes in 52 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 3/17] 192.168.65.1 () {44 vars in 1001 bytes} [Wed Sep 20 19:49:23 2023] GET /admin/django_apscheduler/djangojobexecution/ => generated 14581 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 4/18] 192.168.65.1 () {42 vars in 791 bytes} [Wed Sep 20 19:49:23 2023] GET /admin/jsi18n/ => generated 7732 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 11/19] 192.168.65.1 () {44 vars in 1028 bytes} [Wed Sep 20 19:49:25 2023] GET /admin/django_apscheduler/djangojobexecution/add/ => generated 19977 bytes in 58 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 12/20] 192.168.65.1 () {42 vars in 795 bytes} [Wed Sep 20 19:49:25 2023] GET /admin/jsi18n/ => generated 7732 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 13/21] 192.168.65.1 () {44 vars in 1024 bytes} [Wed Sep 20 19:49:55 2023] GET /admin/django_apscheduler/djangojobexecution/ => generated 14581 bytes in 84 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 14/22] 192.168.65.1 () {42 vars in 791 bytes} [Wed Sep 20 19:49:55 2023] GET /admin/jsi18n/ => generated 7732 bytes in 8 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 15/23] 192.168.65.1 () {44 vars in 982 bytes} [Wed Sep 20 19:49:56 2023] GET /admin/django_apscheduler/ => generated 9648 bytes in 34 msecs (HTTP/1.1 200) 8 headers in 293 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 16/24] 192.168.65.1 () {44 vars in 983 bytes} [Wed Sep 20 19:49:57 2023] GET /admin/django_apscheduler/djangojob/ => generated 15022 bytes in 56 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 5/25] 192.168.65.1 () {42 vars in 782 bytes} [Wed Sep 20 19:49:57 2023] GET /admin/jsi18n/ => generated 7732 bytes in 12 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 17/26] 192.168.65.1 () {44 vars in 1013 bytes} [Wed Sep 20 19:50:00 2023] GET /admin/django_apscheduler/djangojob/TT/change/ => generated 17399 bytes in 51 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 18/27] 192.168.65.1 () {42 vars in 792 bytes} [Wed Sep 20 19:50:00 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 31|app: 0|req: 5/28] 192.168.65.1 () {44 vars in 945 bytes} [Wed Sep 20 19:50:05 2023] GET /admin/ => generated 22334 bytes in 85 msecs (HTTP/1.1 200) 8 headers in 294 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 19/29] 192.168.65.1 () {44 vars in 932 bytes} [Wed Sep 20 19:50:07 2023] GET /admin/filer/folder/ => generated 30082 bytes in 82 msecs (HTTP/1.1 200) 10 headers in 607 bytes (1 switches on core 0)
+[pid: 31|app: 0|req: 6/30] 192.168.65.1 () {42 vars in 766 bytes} [Wed Sep 20 19:50:07 2023] GET /admin/jsi18n/ => generated 7732 bytes in 10 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 20/31] 192.168.65.1 () {44 vars in 959 bytes} [Wed Sep 20 19:50:08 2023] GET /admin/filer/folder/2/list/ => generated 65006 bytes in 99 msecs (HTTP/1.1 200) 10 headers in 607 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 21/32] 192.168.65.1 () {42 vars in 773 bytes} [Wed Sep 20 19:50:08 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 31|app: 0|req: 7/33] 192.168.65.1 () {44 vars in 970 bytes} [Wed Sep 20 19:50:10 2023] GET /admin/filer/image/16/change/ => generated 23908 bytes in 84 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 6/34] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:50:10 2023] GET /admin/jsi18n/ => generated 7732 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+Not Found: /admin/filer/image/16/change/@2x.
+2023-09-20 19:50:10,648 - django.request - WARNING - Not Found: /admin/filer/image/16/change/@2x.
+[pid: 34|app: 0|req: 22/35] 192.168.65.1 () {42 vars in 814 bytes} [Wed Sep 20 19:50:10 2023] HEAD /admin/filer/image/16/change/@2x. => generated 11055 bytes in 6 msecs (HTTP/1.1 404) 5 headers in 160 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 23/36] 192.168.65.1 () {44 vars in 970 bytes} [Wed Sep 20 19:50:16 2023] GET /admin/filer/image/16/change/ => generated 23908 bytes in 74 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 24/37] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:50:16 2023] GET /admin/jsi18n/ => generated 7732 bytes in 5 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+Not Found: /admin/filer/image/16/change/@2x.
+2023-09-20 19:50:17,208 - django.request - WARNING - Not Found: /admin/filer/image/16/change/@2x.
+[pid: 28|app: 0|req: 1/38] 192.168.65.1 () {42 vars in 814 bytes} [Wed Sep 20 19:50:16 2023] HEAD /admin/filer/image/16/change/@2x. => generated 11055 bytes in 463 msecs (HTTP/1.1 404) 5 headers in 160 bytes (1 switches on core 0)
+[pid: 31|app: 0|req: 8/39] 192.168.65.1 () {44 vars in 976 bytes} [Wed Sep 20 19:50:19 2023] GET /files/canonical/1687009119/16/ => generated 0 bytes in 26 msecs (HTTP/1.1 302) 6 headers in 315 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 25/40] 192.168.65.1 () {44 vars in 970 bytes} [Wed Sep 20 19:50:20 2023] GET /admin/filer/image/16/change/ => generated 23908 bytes in 73 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 26/41] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:50:21 2023] GET /admin/jsi18n/ => generated 7732 bytes in 9 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 1)
+Not Found: /admin/filer/image/16/change/@2x.
+2023-09-20 19:50:21,221 - django.request - WARNING - Not Found: /admin/filer/image/16/change/@2x.
+[pid: 28|app: 0|req: 2/42] 192.168.65.1 () {42 vars in 814 bytes} [Wed Sep 20 19:50:21 2023] HEAD /admin/filer/image/16/change/@2x. => generated 11055 bytes in 6 msecs (HTTP/1.1 404) 5 headers in 160 bytes (1 switches on core 1)
+[pid: 25|app: 0|req: 7/43] 192.168.65.1 () {44 vars in 959 bytes} [Wed Sep 20 19:50:21 2023] GET /admin/filer/folder/2/list/ => generated 65006 bytes in 113 msecs (HTTP/1.1 200) 10 headers in 607 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 27/44] 192.168.65.1 () {42 vars in 773 bytes} [Wed Sep 20 19:50:22 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+[pid: 34|app: 0|req: 28/45] 192.168.65.1 () {44 vars in 970 bytes} [Wed Sep 20 19:50:23 2023] GET /admin/filer/image/14/change/ => generated 23650 bytes in 68 msecs (HTTP/1.1 200) 9 headers in 462 bytes (1 switches on core 1)
+[pid: 34|app: 0|req: 29/46] 192.168.65.1 () {42 vars in 775 bytes} [Wed Sep 20 19:50:23 2023] GET /admin/jsi18n/ => generated 7732 bytes in 7 msecs (HTTP/1.1 200) 6 headers in 189 bytes (1 switches on core 0)
+Not Found: /admin/filer/image/14/change/@2x.
+2023-09-20 19:50:23,596 - django.request - WARNING - Not Found: /admin/filer/image/14/change/@2x.
+[pid: 34|app: 0|req: 30/47] 192.168.65.1 () {42 vars in 814 bytes} [Wed Sep 20 19:50:23 2023] HEAD /admin/filer/image/14/change/@2x. => generated 11055 bytes in 8 msecs (HTTP/1.1 404) 5 headers in 160 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+[uwsgi-python-reloader] module/file ./TestModel/models.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 25)...
+Gracefully killing worker 2 (pid: 28)...
+Gracefully killing worker 4 (pid: 34)...
+Gracefully killing worker 3 (pid: 31)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /app
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Wed Sep 20 19:55:42 2023] ***
+compiled with version: 12.2.0 on 18 September 2023 13:39:31
+os: Linux-6.3.13-linuxkit #1 SMP PREEMPT Thu Sep  7 07:48:47 UTC 2023
+nodename: f25b82b6f30f
+machine: aarch64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /app/
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep  7 2023, 19:26:08)  [GCC 12.2.0]
+Python main interpreter initialized at 0xaaaad1e25970
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+2023-09-20 19:55:43,267 - HelloWorld - INFO - 当前数据库运行在测试环境
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xaaaad1e25970 pid: 21 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21)
+spawned uWSGI worker 1 (pid: 43, cores: 2)
+spawned uWSGI worker 2 (pid: 45, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 49, cores: 2)
+spawned uWSGI worker 4 (pid: 52, cores: 2)

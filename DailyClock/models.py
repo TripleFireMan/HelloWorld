@@ -14,6 +14,7 @@ class DKFeedBack(models.Model):
     phone = models.CharField(max_length=20)
     date = models.DateField(max_length=255,default=timezone.now)
     reply = models.CharField(max_length=255,default="")
+    remark = models.CharField(max_length=255, default='')
     class Meta:
         verbose_name='打卡反馈'
         verbose_name_plural = verbose_name
