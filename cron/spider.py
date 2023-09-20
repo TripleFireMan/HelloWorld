@@ -76,6 +76,7 @@ def save(response,connect):
 
 def do_work():
     connect = pymysql.connect(host='42.192.160.232', user='root', password='Chengyan#251', port=3306, database='hello')
+    # connect = pymysql.connect(host='localhost', user='root', password='Chengyan#251', port=3306, database='hello')
     # 建表
     create_table(connect)
     # 爬

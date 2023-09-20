@@ -5,7 +5,7 @@ from django.utils.html import format_html
 # Register your models here.
 
 class DKFeedBackAdmin(admin.ModelAdmin):
-    list_display = ('title','content','phone','date','reply')
+    list_display = ('title','content','phone','date','reply','remark')
 
 class DKJitangAdmin(admin.ModelAdmin):
     def image_tag(self,obj):

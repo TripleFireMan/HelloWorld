@@ -9,28 +9,12 @@
 @time: 2019/11/5 3:31 PM
 @desc:
 '''
-from TestModel.models import Contact,User
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
 
 
 import json
-@csrf_exempt
-def userList(request):
-
-    list = []
-    result = Contact.objects.all()
-    for user in result:
-        dic = {'name':user.name,'age':user.age,'email':user.email}
-        list.append(dic)
-        print(user.name)
-        print(user.age)
-        print(user.email)
-    jsonList = json.dumps(list)
-    jsonString = str(jsonList)
-
-    return HttpResponse([jsonString])
 @csrf_exempt
 def login(request):
 
