@@ -20,7 +20,7 @@ class local():
             'NAME': 'hello',
             'USER': 'root',  # 你的用户名
             'PASSWORD': 'Chengyan#251',  # 你的密码
-            'HOST': 'db',  # 你的IP地址
+            'HOST': '42.192.160.232',  # 你的IP地址
             'PORT': '3306',  # 你的端口号
             'OPTIONS': {'charset': 'utf8mb4',
                         "init_command":"SET foreign_key_checks = 0;",
@@ -35,7 +35,7 @@ class remote():
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'hello',
             'USER': 'root',  # 你的用户名
-            # 'HOST': '42.192.160.232',  # 你的密码
+            'HOST': '42.192.160.232',  # 你的密码
             # 'HOST': 'db',  # 你的密码
             'PASSWORD': 'Chengyan#251',  # 你的IP地址
             # 'PASSWORD': '88888888',  # 你的密码
