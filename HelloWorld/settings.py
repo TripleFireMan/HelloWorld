@@ -226,6 +226,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'templates/resources'),
     os.path.join(django.__file__.rstrip('__init__.py'), 'contrib/admin/static/admin').replace('\\', '/'),
     # os.path.join(BASE_DIR, 'templates'),
+    # os.path.join(BASE_DIR, 'templates'),
 )
 
 # TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
