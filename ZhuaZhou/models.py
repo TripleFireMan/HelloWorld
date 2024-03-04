@@ -10,6 +10,7 @@ class ZhuaZhouModel(models.Model):
     intrduce = models.CharField(max_length=255,verbose_name='介绍')
     gender = models.CharField(max_length=20,choices=Gender_choice,blank=True,verbose_name='性别')
     img =  FilerImageField(related_name='product_image',on_delete=models.CASCADE,blank=True)
+    
     class Meta:
         verbose_name='抓周数据'
         verbose_name_plural = verbose_name
