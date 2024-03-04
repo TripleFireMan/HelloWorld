@@ -227,7 +227,8 @@ def yangyang(request):
 
 def print_helloworld():
     print('hello world')
-
+def jianlongCodeReview():
+    print("jianlong")
 
 @api_view(['POST','GET'])
 def buglyReport(request):
