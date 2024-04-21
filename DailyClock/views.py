@@ -129,7 +129,7 @@ def index(request):
     form = ProfileForm
     context['form'] = form
     return render(request, 'index.html', context)
-def userProfile(request):
+def indexClock(request):
     print('1238918391')
     return render(request,'indexClock.html',{})
 
