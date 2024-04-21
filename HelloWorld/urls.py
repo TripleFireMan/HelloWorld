@@ -101,6 +101,7 @@ urlpatterns = [
     url(r'^files/', include('filer.urls')),
     path('api/', include(router.urls)),
     path('gitPull?',view.gitPull),
+    
     url(r'^api-auth/',include('rest_framework.urls')),
     # url(r'^static/(?P<path>.*)$', static.serve,{'document_root': settings.STATIC_ROOT}, name='static'),
 ]
