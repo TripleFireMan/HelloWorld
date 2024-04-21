@@ -25,5 +25,4 @@ urlpatterns = [
     url(r'^todayCard', views.today_card),
     url('test.html',views.test),
     url(r'^userLogin', views.user_login),
-
 ]
