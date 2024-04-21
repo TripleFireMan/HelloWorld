@@ -46,6 +46,16 @@ def hello(request):
     # os.system('nginx -s reload')
     return HttpResponse('success')
 
+def gitPull(request):
+    try:
+        os.system('cd /home/HelloWorld')
+        os.system('git checkout .')
+        os.system('git pull')
+        os.system('python3 manage.py makemigrates')
+        os.system('python3 manage.py migrate')
+    except Exception as e:
+        print(e)
+    return HttpResponse('success')
 
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -214,6 +224,7 @@ def chapters(request):
 
 def home(request):
     return render(request, 'index.html')
+
 
 def lovehanju(request):
     return render(request,'lovehanju.html')
