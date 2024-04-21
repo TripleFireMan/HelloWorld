@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^feedBack', views.feedBack),
     # 版本历史记录
     url(r'^versionHistory', views.versionHistory),
-    path('Clock.html',views.indexClock),
+    path('userProfile.html',views.indexClock),
     # 上传图片
     url(r'^index', views.index, name='index'),
     # 隐私协议
