@@ -122,7 +122,6 @@ def fonts(request):
     print(dic)
     return HttpResponse(json.dumps(dic, cls=DateEncoders))
 
-
 @csrf_exempt
 def index(request):
     context = {}
@@ -130,6 +129,9 @@ def index(request):
     form = ProfileForm
     context['form'] = form
     return render(request, 'index.html', context)
+def indexClock(request):
+    print('1238918391')
+    return render(request,'indexClock.html',{})
 
 
 @csrf_exempt

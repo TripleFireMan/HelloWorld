@@ -6,12 +6,13 @@
 # @Software: macos
 from django.conf.urls import url
 from DailyClock import views
-
+from django.urls import path
 urlpatterns = [
     # 问题反馈
     url(r'^feedBack', views.feedBack),
     # 版本历史记录
     url(r'^versionHistory', views.versionHistory),
+    path('Clock.html',views.indexClock),
     # 上传图片
     url(r'^index', views.index, name='index'),
     # 隐私协议
@@ -23,5 +24,6 @@ urlpatterns = [
     # 今日卡片
     url(r'^todayCard', views.today_card),
     url('test.html',views.test),
-    url(r'^userLogin', views.user_login)
+    url(r'^userLogin', views.user_login),
+
 ]
