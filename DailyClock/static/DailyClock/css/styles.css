@@ -1,0 +1,222 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background: url('https://source.unsplash.com/featured/?nature,water') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+.contact-info p, .education p, .experience article, .projects article, .skills ul li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 允许项目在需要时换行 */
+    align-items: flex-start; /* 居左对齐 */
+    padding: 20px 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 5px;
+    min-width: 150px; /* 为每个项目设置最小宽度 */
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #ffcc00;
+}
+
+.contact-item a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .contact-info {
+        flex-direction: column; /* 在小屏幕上堆叠元素 */
+    }
+
+    .contact-item {
+        justify-content: flex-start; /* 在小屏幕上居中对齐 */
+        width: 100%; /* 允许项目宽度填充容器 */
+    }
+
+    .contact-item a {
+        font-size: 0.9em; /* 在小屏幕上调整字体大小 */
+    }
+}
+
+
+
+a {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+.projects article {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* 轻微的背景色增加可读性 */
+    border-left: 5px solid gold; /* 左边界高亮 */
+}
+
+.projects h3 {
+    color: #ffcc00;
+}
+
+.projects p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.projects ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.projects li {
+    font-size: 0.8rem;
+    color: #ddd;
+}
+
+.education {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.education h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.education-item i {
+    font-size: 30px;
+    color: #ffcc00;
+    margin-right: 15px;
+}
+
+.education-content p {
+    margin: 2px 0;
+    color: #fff;
+}
+
+.education-content p:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.education-content p:nth-child(2) {
+    font-size: 1.1em;
+}
+
+
+.experience {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.experience h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.experience-item i {
+    font-size: 30px;
+    color: #ffcc00;
+    margin-right: 15px;
+}
+
+.experience-content h3 {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.experience-content p {
+    margin: 2px 0;
+    color: #fff;
+}
+
+.experience-content p:first-child {
+    font-size: 1.1em; /* Highlight the role */
+}
+
+.experience-content p:nth-child(2) {
+    font-size: 0.9em; /* Dates and details in a smaller font */
+}
+
+.skills {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+}
+
+.skills h2 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.skills li {
+    margin: 10px 0;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+}
+
+.skills li i {
+    margin-right: 10px;
+    color: #ffcc00; /* Gold color for icons to match the theme */
+    font-size: 1.2em; /* Larger icons */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
