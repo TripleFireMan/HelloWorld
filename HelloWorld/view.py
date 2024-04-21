@@ -53,6 +53,7 @@ def gitPull(request):
         os.system('git pull')
         os.system('python3 manage.py makemigrates')
         os.system('python3 manage.py migrate')
+        os.system('python3 manage.py collectstatic --clear --noinput')
     except Exception as e:
         print(e)
     return HttpResponse('success')

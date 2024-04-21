@@ -204,6 +204,14 @@ def userProtocol(request):
 def test(request):
     return render(request,'test.html')
 
+def auto_template(request, dynamic_part):
+    # 获取动态部分
+    dynamic_part_value = dynamic_part
+
+    # 打印动态部分
+    print("动态部分：", dynamic_part_value)
+    return render(request, dynamic_part)
+
 def user_data(request,user):
     login(request, user)
     jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
