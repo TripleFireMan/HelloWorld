@@ -26,6 +26,6 @@ urlpatterns = [
     url('test.html',views.test),
     url(r'^userLogin', views.user_login),
     re_path(r'^templates/(?P<dynamic_part>[^/]+\.html)$', views.auto_template, name='auto_template'),
-    
+
     # re_path(r'^users/<str:dynamic_part>',views.auto_template,name='auto_template')
 ]
