@@ -63,6 +63,7 @@ router.register(r'jitang',JitangViewSet)
 
 def return_static(request, path, insecure=True, **kwargs):
     print(f'path==========={path}')
+    
     return serve(request, path, insecure, **kwargs)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
