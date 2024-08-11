@@ -60,6 +60,7 @@ class JitangViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'jitang',JitangViewSet)
+
 def return_static(request, path, insecure=True, **kwargs):
     print(f'path==========={path}')
     
