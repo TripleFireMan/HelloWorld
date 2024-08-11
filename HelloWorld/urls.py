@@ -87,8 +87,6 @@ urlpatterns = [
     path('grappelli/',include('grappelli.urls')),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),
-
-
     # 极简打卡APP使用接口
     url(r'^save_profile', DailyClock.views.save_profile, name='save_profile'),
     # 极简打卡url
