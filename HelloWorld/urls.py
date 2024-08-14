@@ -82,7 +82,6 @@ urlpatterns = [
     url(r'^lovehanjuTV',view.lovehanjuTV),
     url(r'^lovehanju',view.lovehanju),
     url(r'^duoduoplay',view.duoduoplay),
-    
     url(r'^yangyang',view.yangyang),
     path('grappelli/',include('grappelli.urls')),
     # bugly统计
