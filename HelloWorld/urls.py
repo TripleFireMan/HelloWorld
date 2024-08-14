@@ -48,7 +48,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserSerializer
-
 class JitangSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = DKJiTang
