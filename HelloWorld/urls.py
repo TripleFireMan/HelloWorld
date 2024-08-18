@@ -38,7 +38,6 @@ from DailyClock.models import DKJiTang
 from rest_framework import routers, serializers, viewsets
 # from django.conf import settings
 # Serializers define the API representation.
-
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = UserProfile
@@ -48,7 +47,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserSerializer
-    
+
 class JitangSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = DKJiTang
