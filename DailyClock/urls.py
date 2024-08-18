@@ -8,6 +8,7 @@ from django.conf.urls import url,re_path
 from DailyClock import views
 from django.urls import path
 urlpatterns = [
+    
     # 问题反馈
     url(r'^feedBack', views.feedBack),
     # 版本历史记录
