@@ -84,6 +84,7 @@ urlpatterns = [
     url(r'^lovehanju',view.lovehanju),
     url(r'^duoduoplay',view.duoduoplay),
     url(r'^yangyang',view.yangyang),
+    url(r'^gaorenhui/appstoreConfig',view.gaorenhuiAppstoreConfig),
     path('grappelli/',include('grappelli.urls')),
     # bugly统计
     url(r'^view/buglyReport', view.buglyReport),
