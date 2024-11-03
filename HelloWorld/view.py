@@ -234,6 +234,15 @@ def duoduoplay(request):
 def lovehanjuTV(request):
     return render(request,'lovehanjuTV.html')
 
+def gaorenhuiAppstoreConfig(request):
+    config = {}
+    config["code"] = 200
+    config["data"] = {
+        'in':True
+    }
+    config['message']= '请求成功'
+    return HttpResponse(json.dumps(config,ensure_ascii=False))
+
 def yangyang(request):
     return render(request,'yangyang.html')
 
