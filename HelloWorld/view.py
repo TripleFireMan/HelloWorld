@@ -238,7 +238,7 @@ def gaorenhuiAppstoreConfig(request):
     config = {}
     config["code"] = 200
     config["data"] = {
-
+        'in':True
     }
     config['message']= '请求成功'
     return HttpResponse(json.dumps(config,ensure_ascii=False))
