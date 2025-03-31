@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django_apscheduler',  # 定时执行任务
     'TYMetro',
     'ZhuaZhou',
+    'SportRecord'
 ]
 
 MIDDLEWARE = [

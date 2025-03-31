@@ -95,6 +95,8 @@ urlpatterns = [
     # 太原地铁项目url
     url(r'^ty_metro/',include('TYMetro.urls')),
     url(r'^ZhuaZhou/',include('ZhuaZhou.urls')),
+    url(r"^SportRecord/", include('SportRecord.urls')),
+    
     re_path(r'^static/(?P<path>.*)$', return_static, name='static'),  # 添加这行
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
     url(r'^$', view.home),
