@@ -62,4 +62,22 @@ class SRPartner(models.Model):
     def __str__(self):
         return self.name
     
+class SRProperty(models.Model):
+    name = models.CharField(_("名称"), max_length=50)
+    icon = models.ImageField(_("图标"), upload_to="sportRecod/%Y%m%d", height_field=None, width_field=None, max_length=None, default=None)
+    bgColor = models.CharField(_("背景色"), max_length=50)
+    class Meta:
+        verbose_name = '道具'
+        verbose_name_plural = '道具'
+    def __str__(self):
+        return self.name
+
+class SRSystemConfig(models.Model):
+    name = models.CharField(_("应用名称"), max_length=50)
+    isInAppStoreView = models.BooleanField(_("是否在审核"))
+    class Meta:
+        verbose_name = '系统配置接口'
+        verbose_name_plural = '系统配置接口'
+    def __str__(self):
+        return self.name
     

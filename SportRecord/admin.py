@@ -13,7 +13,13 @@ class SRPartnerAdmin(admin.ModelAdmin):
         if (obj.avator):
             return format_html('<img src="https://triplefireman.com/media/{}" style="height:25px;width:25px">'.format(obj.avator))
     list_display = ['id','name','avator_tag','gender','mobile','birthday','remark']
+class SRPropertyAdmin(admin.ModelAdmin):
+    list_display = ['name','icon']
+class SRSystemConfigAdmin(admin.ModelAdmin):
+    list_display = ['name','isInAppStoreView']
 admin.site.register(SRUserProfile,SRUserAdmin)
 admin.site.register(SRSportCategory,SRCategroyAdmin)
 admin.site.register(SRUserSportRecord,SRRecordAdmin)
 admin.site.register(SRPartner,SRPartnerAdmin)
+admin.site.register(SRProperty,SRPropertyAdmin)
+admin.site.register(SRSystemConfig,SRSystemConfigAdmin)
