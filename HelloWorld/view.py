@@ -33,6 +33,7 @@ from HelloWorld.buglyReporter import buglyReporter
 
 @csrf_exempt
 def hello(request):
+    return HttpResponse('success')
     # context = {}
     # context['hello'] = 'hello world'
     # print(request)
@@ -47,6 +48,7 @@ def hello(request):
     return HttpResponse('success')
 
 def gitPull(request):
+    return HttpResponse('success')
     try:
         os.system('cd /home/HelloWorld')
         os.system('git checkout .')
