@@ -53,15 +53,18 @@ INSTALLED_APPS = [
     'filer',
     'mptt',
     'rest_framework',
+    'rest_framework_jwt',
     'TestModel',
     'DailyClock',
     'django_apscheduler',  # 定时执行任务
     'TYMetro',
     'ZhuaZhou',
-    'SportRecord'
+    'SportRecord',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -69,10 +72,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'SportRecord.middleware.JwtAuthenticationMiddleware',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+# 配置跨域访问
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = ['*']
 REST_FRAMEWORK = {
     # 'DEFAULT_PERMISSION_CLASSES': (
     #     'rest_framework.permissions.IsAuthenticated'
@@ -90,7 +97,7 @@ REST_FRAMEWORK = {
 
 JWT_AUTH = {
     # 设置token有效时间
-    # 'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=10)
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1)
 }
 
 ROOT_URLCONF = 'HelloWorld.urls'
@@ -262,3 +269,4 @@ CRONJOBS = [
 #
 # # 定时任务设置中文字符，如py果不设置的话，可能会出现字符异常
 CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_CN.UTF-8'
+
