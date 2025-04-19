@@ -32,7 +32,7 @@ from django.conf.urls.static import static
 from HelloWorld import settings
 from django.views.static import serve
 from django.urls import path
-
+import SportRecord.views
 from TYMetro.models import UserProfile
 from DailyClock.models import DKJiTang
 from rest_framework import routers, serializers, viewsets
@@ -61,7 +61,7 @@ class JitangViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'jitang',JitangViewSet)
-
+# router.register(r'sportUsers',SportRecord.views.SRUserViewSet)
 def return_static(request, path, insecure=True, **kwargs):
     print(f'path==========={path}')
     

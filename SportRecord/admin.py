@@ -99,18 +99,18 @@ class SRClothingAdmin(iconNameBaseAdmin):
     list_display = ['id', 'name','image_tag']
     pass
 
-@admin.register(SRPhoto)
-class SRPhotoAdmin(admin.ModelAdmin):
-    def image_tag(self,obj):
-        if(obj.url):
-            return format_html('<img src="https://triplefireman.com/media/{}" style="width:100px;height:80px;"/>'.format(obj.url))
-        return ""
-    list_display = ['image_tag','url']
-    fieldsets = (
-        (None, {
-            "fields": (
-                'url',
-            ),
-        }),
-    )
+# @admin.register(SRPhoto)
+# class SRPhotoAdmin(admin.ModelAdmin):
+#     def image_tag(self,obj):
+#         if(obj.url):
+#             return format_html('<img src="https://triplefireman.com/media/{}" style="width:100px;height:80px;"/>'.format(obj.url))
+#         return ""
+#     list_display = ['image_tag','url']
+#     fieldsets = (
+#         (None, {
+#             "fields": (
+#                 'url',
+#             ),
+#         }),
+#     )
     

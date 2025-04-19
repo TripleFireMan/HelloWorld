@@ -5,14 +5,12 @@ from jwt import ExpiredSignatureError, InvalidTokenError, PyJWTError
 class JwtAuthenticationMiddleware(MiddlewareMixin):
     def process_request(self, request):
 
-        white_list = ['/SportRecord/login','/SportRecord/jwt_test','/SportRecord/search'] # 请求白名单
+        white_list = ['/SportRecord/login','/SportRecord/jwt_test','/SportRecord/search','/SportRecord/config'] # 请求白名单
         path = request.path
-
+        return None
         if path.startswith('/media') or path.startswith('/static'):
             print('不需要token验证')
             return None
-        
-        
         if path not in white_list and path.startswith('/SportRecord'):
             token = request.META.get('HTTP_AUTHORIZATION')
             try:

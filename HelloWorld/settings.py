@@ -14,6 +14,7 @@ import os
 import datetime
 import django
 from HelloWorld.config import MyConfig
+import SportRecord
 # from rest_framework import routers, serializers, viewsets
 
 my_config = MyConfig()
@@ -48,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 验证电话号码
+    "phonenumber_field",
     # 图片上传模块 django-filer
     'easy_thumbnails',
     'filer',
@@ -76,10 +79,11 @@ MIDDLEWARE = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+PHONENUMBER_DEFAULT_REGION = 'CN'# 例如，设置为中国
 # 配置跨域访问
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_METHODS = ['*']
+CORS_ALLOW_METHODS = ['*','PUT']
 REST_FRAMEWORK = {
     # 'DEFAULT_PERMISSION_CLASSES': (
     #     'rest_framework.permissions.IsAuthenticated'
@@ -91,8 +95,13 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+
+    'DEFAULT_PAGINATION_CLASS': 'SportRecord.pagination.SportRecordNumberPagination',
+    'DEFAULT_FILTER_BACKENDS' :['django_filters.rest_framework.DjangoFilterBackend'],
+    'PAGE_SIZE': 10,  # 每页显示的条目数
+    'SEARCH_PARAM' : 'query'
 }
 
 JWT_AUTH = {
@@ -198,7 +207,7 @@ FILER_STORAGES = {
         'main': {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
-                'location': 'media/filer',
+                'location': '/mnt/sdc/HelloWorld/media/filer',
                 'base_url': '/media/filer/',
             },
             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
@@ -207,7 +216,7 @@ FILER_STORAGES = {
         'thumbnails': {
             'ENGINE': 'filer.storage.PublicFileSystemStorage',
             'OPTIONS': {
-                'location': 'media/filer_thumbnails',
+                'location': '/mnt/sdc/HelloWorld/media/filer_thumbnails',
                 'base_url': '/media/filer_thumbnails/',
             },
         },
@@ -216,7 +225,7 @@ FILER_STORAGES = {
         'main': {
             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
             'OPTIONS': {
-                'location': 'media/smedia/filer',
+                'location': '/mnt/sdc/HelloWorld/media/smedia/filer',
                 'base_url': '/smedia/filer/',
             },
             'UPLOAD_TO': 'filer.utils.generate_filename.randomized',
@@ -225,18 +234,20 @@ FILER_STORAGES = {
         'thumbnails': {
             'ENGINE': 'filer.storage.PrivateFileSystemStorage',
             'OPTIONS': {
-                'location': 'media/smedia/filer_thumbnails',
+                'location': '/mnt/sdc/HelloWorld/media/smedia/filer_thumbnails',
                 'base_url': '/smedia/filer_thumbnails/',
             },
         },
     },
 }
 
+  
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = '/mnt/sdc/HelloWorld/media'
 MEDIA_URL = '/media/'
 
 
